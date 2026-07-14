@@ -1,0 +1,4976 @@
+
+===== PAGE 1 =====
+ 
+   
+ 
+PRODUCT DATA 
+PN: 8012420 / INT-034 – 100 L Seed Bioreactor (GPF-N, 500L Scale, Process 1) 
+MPR Process Order No.: General Supplies Process Order 
+No.(s): Recorded By/Date:  
+   
+   
+   
+   
+   
+   
+   
+   
+This record is an accurate 
+reproduction of the Master. 
+Issued By: Date Issued: 
+   
+Completed Record Reviewed By: Production: Date: 
+Quality Assurance: Date: 
+ 
+ 
+  
+MABR-0027688 v1.0    Status: Effective    Effective Date: 20 Nov 2025    Page 1 of 106
+PN: 8012420  / INT-034 - 100 L Seed Bioreactor (GPF-N, 500L, Process 1)
+Check this is the latest version of the document before use.
+Printed by Bradley Scanlon on 18 Dec 2025 20:04 GMT+00:00
+
+===== PAGE 2 =====
+ 
+   
+ 
+1 Introduction 
+1.1 Purpose and Scope 
+1.1.1 This document describes the Intensified Fed Batch - 100 L Seed Bioreactor process in the Gaithersburg 
+Pilot Facility-North (GPF-N).  
+1.2 General Instructions for Master Production Records 
+1.2.1 All personnel shall follow gowning requirements and personnel flows per SOP-0080154. 
+1.2.2 All equipment and materials shall flow through the GPF-N according to SOP-0080155. 
+1.2.3 A Batch ID is assigned by PCS. 
+  
+MABR-0027688 v1.0    Status: Effective    Effective Date: 20 Nov 2025    Page 2 of 106
+PN: 8012420  / INT-034 - 100 L Seed Bioreactor (GPF-N, 500L, Process 1)
+Check this is the latest version of the document before use.
+Printed by Bradley Scanlon on 18 Dec 2025 20:04 GMT+00:00
+
+===== PAGE 3 =====
+ 
+   
+ 
+2 Referenced Documents  
+2.1  SOP-0080273 Operation of Advanced MicroOsmometer 
+2.2  SOP-0080295 DLIMS Sample Submission for Manufacturing Sciences 
+2.3  SOP-0115565 Operation of the Beckman Coulter Vi-Cell BLU 
+2.4  SOP-0107252 Siemens BGA Operation 
+2.5  SOP-0080519 Gaithersburg Pilot Facility Upstream Viral Contamination Response Procedure  
+2.6  SOP-0107438 Biological Safety Cabinet Operation 
+2.7  SOP-0080812 C’eal-Flex TPE Ultra Sealer 
+2.8  SOP-0080522 Operation, Cleaning and Maintenance of the Vante TPE Tubing Sealer Model 4160 
+2.9  SOP-0080297 Benchtop pH and Conductivity Meter Operation 
+2.10  SOP-0080154 General Gowning Procedure 
+2.11  SOP-0107219 General Cleaning of Equipment, Supplies, and Materials for Entry into GPF-North 
+2.12  SOP-0080249 Operation, Cleaning, and Maintenance of Scales and Balances 
+2.13  SOP-0080257 Operation and Maintenance of the Sartorius BioWelder 
+2.14  SOP-0080224 Operation of Floor Scales 
+2.15  SOP-0107414 Operation of Masterflex Pumps 
+2.16  SOP-0107187 Operation of the Terumo SCD 11B Sterile Tubing Welder 
+2.17  SOP-0126420 Operation and Maintenance of the 100L ABEC CSR at the Gaithersburg Pilot Facility -North 
+2.18  SOP-0126879 Single-Use Tangential Flow Filter Operations for Integrated Dynamic Bioprocessing 
+2.19  SOP-0126942 Feed Cart Operations at GPF-North 
+2.20  SOP-0080155 General GPF-N Facility Information and Flow 
+2.21  SOP-0107056 cGMP Labeling Practices for Controlled Materials, Equipment, and Product  
+2.22  SOP-0081641      Manufacturing Sciences SAP Usage at Gaithersburg Pilot Facilities 
+2.23  FORM-0122774 ABEC Custom Single Run (CSR) – Parent Document SOP-0122730 
+2.24  FORM-0122776 Tangential Flow Filter (TFF) Parent Document SOP-0126879 
+2.25  MABR-0027687 PN: 8012419 / INT-034 – Inoculum Expansion (GPFN, 500 L Scale, Process 1) 
+2.26  MABR-0027689 PN: 8012421 / INT-034 – 500 L Production Bioreactor (GPFN, 500 L Scale, Process 1) 
+ 
+ 
+  
+  
+MABR-0027688 v1.0    Status: Effective    Effective Date: 20 Nov 2025    Page 3 of 106
+PN: 8012420  / INT-034 - 100 L Seed Bioreactor (GPF-N, 500L, Process 1)
+Check this is the latest version of the document before use.
+Printed by Bradley Scanlon on 18 Dec 2025 20:04 GMT+00:00
+
+===== PAGE 4 =====
+ 
+   
+ 
+3 Attachments 
+3.1 Attachment 1:  Sample Assembly Attachment and Sampling 
+3.2 Attachment 2: Permeate Bag Replacement 
+3.3 Attachment 3: Additional Exhaust Filter Assembly 
+3.4 Attachment 4:  Antifoam Addition 
+3.5 Attachment 5: Non-Routine Sampling Record 
+3.6 Attachment 6:  Additional pH Monitoring - pH samples’ information 
+3.7 Attachment 7: Retain Samples 
+3.8 Attachment 8: Additional Sampling Pages (N-2) 
+3.9 Attachment 9: Additional Sampling Pages (N-1) 
+3.10 Attachment 10: Comments Section 
+  
+MABR-0027688 v1.0    Status: Effective    Effective Date: 20 Nov 2025    Page 4 of 106
+PN: 8012420  / INT-034 - 100 L Seed Bioreactor (GPF-N, 500L, Process 1)
+Check this is the latest version of the document before use.
+Printed by Bradley Scanlon on 18 Dec 2025 20:04 GMT+00:00
+
+===== PAGE 5 =====
+ 
+   
+ 
+4 Bill of Materials  
+4.1 Equipment/ Components 
+Item Number Quantity Description 
+BRX-4513 1 100 L Bioreactor 
+ 
+As Needed 
+Tubing Welder 
+ Tubing Sealer 
+ Scale/Balance 
+ Peristaltic Pump 
+ Benchtop pH/Conductivity Meter  
+ 1 Vi-CELL BLU Automated Cell Counter 
+ 1 BGA (RAPIDpoint® 500) 
+ 1 Osmometer 
+6005457 1 Single-Use Bioreactor Bag – 100 L (Custom) 
+6005503 
+As Needed 
+3/8 Pump Runner  
+6005484 AQS Male-Purefit 
+6005501 1/8" Pump Runner w AQS 
+6005484 AQS Male-Purefit 
+6005500 1/16 Pump Runner w AQS 
+4102603 Antifoam 1L 
+4102604 Antifoam 5L 
+6002363 Sample Assembly 
+6005501 1/8" Pump Runner w AQS 
+6005483 AQS Female-Purefit 
+6005485 1/8 Perfusion Manifold 
+4102461 300L Bioprocess Bag 
+ 
+  
+MABR-0027688 v1.0    Status: Effective    Effective Date: 20 Nov 2025    Page 5 of 106
+PN: 8012420  / INT-034 - 100 L Seed Bioreactor (GPF-N, 500L, Process 1)
+Check this is the latest version of the document before use.
+Printed by Bradley Scanlon on 18 Dec 2025 20:04 GMT+00:00
+
+===== PAGE 6 =====
+ 
+   
+ 
+4.1       Equipment/Components (continued) 
+Item Number Quantity Description 
+6002348 
+As Needed 
+Exhaust Trap Line Bottle 
+6002392 Harvest Bag Transfer Assembly 
+6002347 Exhaust Filter Assembly 
+6001963 Pump Assembly 
+6002393 Pump runner assembly (1/8” x 1/4”) 
+4101924 Flask with Attached C-Flex and Acro-50 (500 mL) 
+6002363 Cell Culture Sample Assembly Sterile (60 mL syringe) 
+6000391 Custom Assembly - Sampling Bags with 10 mL Syringe (250 mL)  
+ 
+ 
+  
+4.2 Raw Materials 
+Part Number Description 
+8012419 INT-034 - Inoculum Expansion 
+   
+   
+4.3 Solutions 
+Part Number Approximate 
+Quantity Description 
+8006887 40 kg CCMB1 Medium (M-030-V19) 
+8010764 55 kg CCMB1 Medium (M-030-V38) 
+8012342 500 kg CCMB1 Perfusion Medium (M-051-V4) 
+4102603 
+4102604 
+OR 
+4102057 
+5 kg 
+OR 
+2 kg 
+EX-CELL Antifoam 
+OR 
+Foam Away, Irradiated AOF, Sterile 
+MABR-0027688 v1.0    Status: Effective    Effective Date: 20 Nov 2025    Page 6 of 106
+PN: 8012420  / INT-034 - 100 L Seed Bioreactor (GPF-N, 500L, Process 1)
+Check this is the latest version of the document before use.
+Printed by Bradley Scanlon on 18 Dec 2025 20:04 GMT+00:00
+
+===== PAGE 7 =====
+ 
+   
+ 
+5 Process Notes 
+5.1  The day of the inoculation is N-2 Seed Day 0. The day of medium dilution is N-1 Seed Day 0. 
+5.2  For the purpose of this record, 1 kg = 1 L, unless stated otherwise. 
+5.3  Record all decimals to the place indicated by the number of Xs, i.e., for “X.XX”, record two decimal places and for 
+“X.X”, record to one decimal place. 
+5.4  Contact the area supervisor/designee if any of the operating conditions are outside of the specified range.  
+5.5  When proceeding with comments, the supervisor/designee is responsible for contacting the appropriate 
+departments (i.e. Quality, CCFS-TT) to make an assessment. The process decisions need to be documented in 
+Attachment 10: Comments Section.  
+5.6  Airflow rates and agitation speeds defined within this MPR are initial set points. These set points can be adjusted 
+at the supervisor/designee's discretion. Record all chages in Attachment 10: Comments Section. 
+5.7  Airflow rates for both sparge and overlay and agitation speeds are defined as initial set points.  These set points 
+can be adjusted at the supervisor/designee's discretion, as long as the pO2 level is maintained within range.  
+Record all changes on Attachment 10: Comments Section. 
+5.8  The initial pO2 alarm set points can be adjusted at the supervisor/designee's discretion, as long as the new 
+alarm set points are within pO2 specified process limits. A supervisor/designee’s signature is required and all 
+changes need to be documented in Attachment 10: Comments Section. 
+5.9  Whenever the BGA is unavailable, measure pH levels using the Benchtop pH and Conductivity meter per SOP -
+0080297. Record the temperature compensated values denoted with (T), if applicable.  
+5.10  Minimize medium and nutrient feed exposure to light during storage or use. 
+5.11  Whenever sample bags/flasks are used for sampling, record the information in Attachment 1:  Sample 
+Assembly Attachment and Sampling. 
+5.12  Whenever a benchtop balance or floor scale is used, perform a weight check before use per SOP-0107155 or 
+SOP-0080294. 
+5.13  Whenever a sealer is used, operate equipment per SOP-0080812 or SOP-0080522.  
+5.14  Additional samples for pH monitoring may be taken at supervisor/designee’s discretion. Record the results in  
+Attachment 6:  Additional pH Monitoring - pH samples’ information. 
+5.15  All Sections leading up to Media Charge and TFF Priming operation can be performed concurrently. 
+MABR-0027688 v1.0    Status: Effective    Effective Date: 20 Nov 2025    Page 7 of 106
+PN: 8012420  / INT-034 - 100 L Seed Bioreactor (GPF-N, 500L, Process 1)
+Check this is the latest version of the document before use.
+Printed by Bradley Scanlon on 18 Dec 2025 20:04 GMT+00:00
+
+===== PAGE 8 =====
+ 
+   
+ 
+6 Process Flow Diagram 
+Seed (N-2) Phase 
+46 L Working Volume 
+Seed at ≥ 0.3 x 106 viable cells/mL 
+Medium Charge 
+40 kg of medium  
+PN:8006887 CCMB1 Medium (M-030-V19) 
+Medium Dilution (N-1) 
+100 L Working Volume 
+Seed at ≥ 0.95 x 106 viable cells/mL 
+Dilution Trigger ≥ 2.1 x 106 viable cells/mL 
+Dilution Medium 55 kg of medium 
+PN: 8010764 CCMB1 Medium (M-030-V38) 
+Perfusion Start (N-1) 
+Perfusion Phase Trigger 
+≥ 1.8 x 106 viable cells/mL 
+48 ± 6 hours after dilution 
+Feed Cart Recipe Name IFBN1 PermG 
+Addition Strategy Flow Rates 
+Solution Flow Rates  
+Antifoam Addition as needed  
+PN: 8012342 
+Perfusion Medium CCM-
+FR-2 (M-051-V4) 
+Hours Post Dilution: 48 – 
+72  0.3 VVD 
+Hours Post Dilution: 72 – 
+96 0.70 VVD 
+Hours Post Dilution:  96 – 
+120 1.50 VVD 
+Hours Post Dilution: 120 - 
+end 2.00 VVD 
+NOTE: Time range for perfusion rate changes have a ± 6 hour window on either end. 
+Transfer to 500 L Production STR  
+VCD Trigger 26 x 106 viable cells/mL 
+ 
+ 
+MABR-0027688 v1.0    Status: Effective    Effective Date: 20 Nov 2025    Page 8 of 106
+PN: 8012420  / INT-034 - 100 L Seed Bioreactor (GPF-N, 500L, Process 1)
+Check this is the latest version of the document before use.
+Printed by Bradley Scanlon on 18 Dec 2025 20:04 GMT+00:00
+
+===== PAGE 9 =====
+ 
+   
+ 
+7 Bioreactor Set-Up 
+Step Description Performed 
+By/Date 
+Witnessed 
+By/Date 
+7.1  Label BRX-4513 status tag with “INT-034 ”, 8012420, and batch number, initials 
+and date.    
+7.2  If maintenance has been performed, verify that the Start Up procedure has been 
+performed per SOP-0126420.   
+7.3  Verify that the pre-use cleaning of the CSR has been performed on FORM-
+0130911 per SOP-0126420. 
+  
+7.4  • Obtain the Disposable Container (DC) (6005457). 
+• Record the Batch and expiry below.  
+  
+Part Number Batch Number Exp. Date 
+   
+SAP Consumption Performed by/Date   
+7.5  • Set up the DC per SOP-0126420. 
+• Connect all exhaust, overlay and sparge filters. 
+  
+7.6  • Complete the Docking procedure of the DC per SOP-0126420. 
+• Record the HMI Batch ID entered in the system below.   
+HMI Batch ID   
+7.7  Ensure all major creases have been removed through air inflation.   
+7.8  • Confirm the pressure hold test set points per SOP-0126420. 
+• Perform an automated pressure hold test of the DC per SOP-0126420 and 
+record required information in FORM-0130911.  
+• If the P-Test on the DC after a third test, contact a supervisor and document 
+the actions taken in the Attachment 10: Comments Section 
+  
+DC Pressure Test 
+Result 
+Test #1 Pass/Fail _____________ 
+Test #2 Pass/Fail ______________ □N/A 
+Test #3 Pass/Fail ______________ □N/A 
+  
+MABR-0027688 v1.0    Status: Effective    Effective Date: 20 Nov 2025    Page 9 of 106
+PN: 8012420  / INT-034 - 100 L Seed Bioreactor (GPF-N, 500L, Process 1)
+Check this is the latest version of the document before use.
+Printed by Bradley Scanlon on 18 Dec 2025 20:04 GMT+00:00
+
+===== PAGE 10 =====
+ 
+   
+ 
+Step Description Performed 
+By/Date 
+Witnessed 
+By/Date 
+7.9  Obtain and weld Cell Culture Sample Assembly (Y-Assembly) (6002363). 
+  
+Description Part Number Batch Number Exp Date: Quantity 
+Cell Culture 
+Sample Assembly 
+(Y-Assembly) 
+6002363 
+   
+Welder ID:   
+SAP Consumption Performed by/Date   
+7.10  • If applicable, obtain the following materials and record information below. 
+• Weld the Exhaust Trap Line Bottle to the DC per SOP-0080257. 
+  
+Description Part Number Batch Number Exp. Date 
+Exhaust Trap Line 
+Bottle 6002348   
+Harvest Transfer 
+Assembly 6002392   
+3/8 to ¼ Pump 
+Assembly 6001963   
+Welder ID:  
+7.11  • Per SOP-0126420, install and connect the probes and cables listed below into 
+the probe belt of the ABEC DC: 
+o 2 Hamilton pH probes  
+o 2 Hamilton DO probes 
+o 1 Thermowell temperature probe 
+• Record the Transmitter location and Serial number for each probe.  
+NOTE: The temperature probe does not have a serial number or dedicated 
+DC transmitter.  
+  
+Probe label DC Transmitter location Probe Serial No.  
+pH Probe 1   
+pH Probe 2   
+DO Probe 1    
+DO Probe 2   
+  
+MABR-0027688 v1.0    Status: Effective    Effective Date: 20 Nov 2025    Page 10 of 106
+PN: 8012420  / INT-034 - 100 L Seed Bioreactor (GPF-N, 500L, Process 1)
+Check this is the latest version of the document before use.
+Printed by Bradley Scanlon on 18 Dec 2025 20:04 GMT+00:00
+
+===== PAGE 11 =====
+ 
+   
+ 
+Step Description Performed 
+By/Date 
+Witnessed 
+By/Date 
+7.12  On the Loops Screen, set the following parameters per SOP-0126420. 
+  
+Parameter Set Point 
+Air Overlay 2.0 SLPM 
+Exhaust Filter Heater 70°C 
+Exhaust Deadband 0°C 
+7.13  • Input the initial pH probe calibration values per SOP-0126420. 
+• Record the Slope inputted into the HMI. 
+  
+Probe Slope  
+(mV/pH) 
+Offset (Zero-Point) 
+(mV) 
+1   
+2   
+ 
+  
+MABR-0027688 v1.0    Status: Effective    Effective Date: 20 Nov 2025    Page 11 of 106
+PN: 8012420  / INT-034 - 100 L Seed Bioreactor (GPF-N, 500L, Process 1)
+Check this is the latest version of the document before use.
+Printed by Bradley Scanlon on 18 Dec 2025 20:04 GMT+00:00
+
+===== PAGE 12 =====
+ 
+   
+ 
+8 Process Recipe and Alarm Configuration 
+Step Description Performed 
+By/Date 
+Witnessed 
+By/Date 
+This section can be completed at any time, prior to Section 11.  
+8.1  For the following steps set up the Recipe Set points on the ABEC HMI through 
+Recipe Manager.  
+  
+8.2  Set up the Recipe Tuning with the following parameters: 
+Loop P I D 
+Temperature Tuning 
+Vessel Temp 5.0 0.010 0.100 
+pH Tuning 
+Primary CO2 
+Sparge 0.08 0.030 0.000 
+Base Pump 0.000 0.000 0.000 
+Level Tuning 
+ 4.000 0.900 0.000 
+DO Profile Control Tuning 
+DO Control 0.010 0.010 0.000 
+ 
+  
+8.3  Set the DO Profile Output Tuning: 
+• Select the checkboxes for Agitation and Primary O2 Sparge. 
+• Input the DO Cascade Strategy set points below: 
+DO Profile Setpoints 
+DO Output % Agitation (rpm) Primary O2 Sparge 
+(slpm) 
+0 75 0.0 
+20 80 2.0 
+40 90 4.0 
+60 105 6.0 
+80 120 8.0 
+100 140 10.0 
+ 
+  
+  
+MABR-0027688 v1.0    Status: Effective    Effective Date: 20 Nov 2025    Page 12 of 106
+PN: 8012420  / INT-034 - 100 L Seed Bioreactor (GPF-N, 500L, Process 1)
+Check this is the latest version of the document before use.
+Printed by Bradley Scanlon on 18 Dec 2025 20:04 GMT+00:00
+
+===== PAGE 13 =====
+ 
+   
+ 
+Step Description Performed 
+By/Date 
+Witnessed 
+By/Date 
+8.4  On the Recipe Tuning page, select DO Auto Tuning: 
+• Under DO Setpoints “Cascade Strategy”, set option 1 to “Primary O2 
+Sparge”. Ensure options 2 - 4 are set to “None”. 
+• Set the DO Tuning parameters per the table below: 
+Loop P I D 
+DO Tuning 
+Primary O2 Sparge 0.001 0.001 0.000 
+• Set the Primary O2 Sparge Cascade Ranges per the table below: 
+Loop Min (slpm) Max (slpm) 
+Primary O2 Sparge 0 20 
+ 
+  
+  
+MABR-0027688 v1.0    Status: Effective    Effective Date: 20 Nov 2025    Page 13 of 106
+PN: 8012420  / INT-034 - 100 L Seed Bioreactor (GPF-N, 500L, Process 1)
+Check this is the latest version of the document before use.
+Printed by Bradley Scanlon on 18 Dec 2025 20:04 GMT+00:00
+
+===== PAGE 14 =====
+ 
+   
+ 
+Step Description Performed 
+By/Date 
+Witnessed 
+By/Date 
+8.5  Under Recipe Set Points, input the Recipe Set Points for the Charge step with the 
+following parameters: 
+Charge Recipe 
+Vessel Temp SP 36.5 °C 
+Primary Air Sparge SP 3.1 slpm 
+Air Overlay SP 5.0 slpm 
+Primary CO2 Sparge SP 0.2 slpm 
+Agitation On Weight CP 30 kg 
+Agitation On SP 75 rpm 
+Agitation Ramp UP SP 75 rpm 
+Pre-Fill Weight CP 35 kg 
+Main Fill Weight CP 40 kg 
+ 
+  
+8.6  Under Recipe Set Points, input the Recipe Set Points for the Growth Stabilize 
+phase with the following parameters:  
+Growth Stabilize 
+Vessel Temp SP 36.5 °C 
+pH SP 7.35 
+pH deadband 0.10 
+DO SP 100% 
+Agitation SP 75 rpm 
+Air Overlay SP 5.0 slpm 
+Primary Air Sparge SP 0.5 slpm 
+Secondary Air Sparge SP 0 
+Primary O2 Sparge SP 0 
+Secondary O2 Sparge SP 0 
+pH Strategy Auto CO2 
+DO Strategy OFF 
+ 
+  
+ 
+  
+MABR-0027688 v1.0    Status: Effective    Effective Date: 20 Nov 2025    Page 14 of 106
+PN: 8012420  / INT-034 - 100 L Seed Bioreactor (GPF-N, 500L, Process 1)
+Check this is the latest version of the document before use.
+Printed by Bradley Scanlon on 18 Dec 2025 20:04 GMT+00:00
+
+===== PAGE 15 =====
+ 
+   
+ 
+Step Description Performed 
+By/Date 
+Witnessed 
+By/Date 
+8.7  Under Recipe Set Points, input the recipe set points for the Growth Inoculate/Grow 1 
+(N-2) phase: 
+Growth Inoculate/Grow 1 (N-2) 
+Vessel Temp SP 36.5 °C 
+pH SP 7.35 
+pH deadband 0.10 
+DO SP 50% 
+Agitation SP 75 rpm 
+Air Overlay SP 5.0 slpm 
+Primary Air Sparge SP 0.5 slpm 
+Secondary Air Sparge SP 0 
+Primary O2 Sparge SP 0 
+Secondary O2 Sparge SP 0 
+pH Strategy Auto CO2 
+DO Strategy Profile 
+ 
+  
+  
+MABR-0027688 v1.0    Status: Effective    Effective Date: 20 Nov 2025    Page 15 of 106
+PN: 8012420  / INT-034 - 100 L Seed Bioreactor (GPF-N, 500L, Process 1)
+Check this is the latest version of the document before use.
+Printed by Bradley Scanlon on 18 Dec 2025 20:04 GMT+00:00
+
+===== PAGE 16 =====
+ 
+   
+ 
+Step Description Performed 
+By/Date 
+Witnessed 
+By/Date 
+8.8  Under Recipe Set Points, input the recipe set points for the Growth Grow 2 (N-1): 
+Growth Grow 2 (N-1) 
+Vessel Temp SP 36.5 °C 
+pH SP 7.10 
+pH deadband 0.20 
+DO SP 50% 
+Agitation SP 75 rpm 
+Air Overlay SP 5.0 slpm 
+Primary Air Sparge SP 0.5 slpm 
+Secondary Air Sparge SP 0 
+Primary O2 Sparge SP 0 
+Secondary O2 Sparge SP 0 
+pH Strategy Auto CO2 
+DO Strategy Profile 
+ 
+  
+ 
+  
+MABR-0027688 v1.0    Status: Effective    Effective Date: 20 Nov 2025    Page 16 of 106
+PN: 8012420  / INT-034 - 100 L Seed Bioreactor (GPF-N, 500L, Process 1)
+Check this is the latest version of the document before use.
+Printed by Bradley Scanlon on 18 Dec 2025 20:04 GMT+00:00
+
+===== PAGE 17 =====
+ 
+   
+ 
+Step Description Performed 
+By/Date 
+Witnessed 
+By/Date 
+8.9  For the Following steps set up the alarms on the ABEC HMI.    
+8.10  Under the Recipe Alarms, input the follow ABEC System Alarms:  
+Bioreactor System Alarms 
+ Low 
+Interlock Low High High 
+Interlock Variance 
+Vessel Temp (°C)    38.5  
+Vessel Pressure (psi)   0.4 0.45  
+Vessel Weight (kg) 0   130  
+Agitation (rpm)      
+pH 6.2   7.7 0.2 
+DO (%)     20 
+Auxiliary DO (%)  0 200   
+ 
+  
+8.11   Under the Recipe Alarms, input the follow Setup/Charge/Stabilize Alarms:  
+Setup/Charge/Stabilize Alarm 
+ Low Deviation High 
+Vessel Temp (°C) 35.0 1.0 38.0 
+Vessel Weight (kg) 30 5 50 
+Agitation (rpm) 65  85 
+pH 6.85 0.11 7.50 
+DO (%) 10 10 110 
+ 
+  
+  
+MABR-0027688 v1.0    Status: Effective    Effective Date: 20 Nov 2025    Page 17 of 106
+PN: 8012420  / INT-034 - 100 L Seed Bioreactor (GPF-N, 500L, Process 1)
+Check this is the latest version of the document before use.
+Printed by Bradley Scanlon on 18 Dec 2025 20:04 GMT+00:00
+
+===== PAGE 18 =====
+ 
+   
+ 
+Step Description Performed 
+By/Date 
+Witnessed 
+By/Date 
+8.12  Under the Recipe Alarms, input the Inoculate/Grow 1 (N-2) Alarms: 
+Inoculate/Grow 1 (N-2) Alarms 
+ Low Deviation High 
+Vessel Temp (°C) 35.0 1.0 38.0 
+Vessel Weight (kg) 35 5 55 
+Agitation (rpm) 60  150 
+pH 6.85 0.11 7.50 
+DO (%) 10 10 110 
+ 
+  
+8.13  Under the Recipe Alarms, input the Grow 2 (N-1) Alarms: 
+Grow 2 (N-1) 
+ Low Deviation High 
+Vessel Temp (°C) 35.0 1.0 38.0 
+Vessel Weight (kg) 85 10 115 
+Agitation (rpm) 60  150 
+pH 6.70 0.22 7.50 
+DO (%) 10 10 110 
+ 
+  
+8.14  Under the Recipe Alarms, input the Levitronix 1 Alarms: 
+Levitronix 1 Alarms 
+ Low High 
+Pump Speed (RPM) 600 3000 
+Flow rate (L/hr) 2.4 6.4 
+Temp (°C)   
+TMP (psi) 0 0.5 
+P1 (psi) 0 3 
+P2 (psi) 0 3 
+P3 (psi) 0 3 
+ 
+  
+  
+MABR-0027688 v1.0    Status: Effective    Effective Date: 20 Nov 2025    Page 18 of 106
+PN: 8012420  / INT-034 - 100 L Seed Bioreactor (GPF-N, 500L, Process 1)
+Check this is the latest version of the document before use.
+Printed by Bradley Scanlon on 18 Dec 2025 20:04 GMT+00:00
+
+===== PAGE 19 =====
+ 
+   
+ 
+9 TFF Set up  
+Step Description Performed 
+By/Date 
+Witnessed 
+By/Date 
+9.1  Obtain 1 TFF Filter assembly: 
+  
+Description Part Number Serial No. Batch Number Expiry Date 
+TFF 1 6005470    
+SAP Consumption Performed by/Date   
+9.2  Verify per FORM-0122776 that TFF Filter Holder pre-use cleaning has been 
+performed.  
+  
+9.3  • Perform a P-Test on the filter in Step 9.1 per SOP-0126879.  
+• If the P-Test on the filter fails after a second test, contact a supervisor and 
+document the actions taken in the Attachment 10: Comments Section. 
+• Utilize the following P-Test criteria. 
+  
+Pressurize the 
+TFF 
+Stabilization 
+Time 
+Minimum P-Test hold 
+time 
+Acceptable TFF pressure 
+loss 
+5 psi 10 min 30 min ≤ 0.10 psi 
+9.4  Record the P-Test result of the TFF filter below and record required information on 
+FORM-0122776. 
+  
+TFF 1 Pressure 
+Test Result 
+Test #1 Pass/Fail __________________ 
+Test #2 Pass/Fail __________________ □N/A 
+9.5  If needed, obtain the following material for TFF Set Up: 
+  Description Part Number Batch Number Expiry Date Quantity 
+1’ G-to-G Jumper 6005498    
+SAP Consumption Performed by/Date   
+  
+MABR-0027688 v1.0    Status: Effective    Effective Date: 20 Nov 2025    Page 19 of 106
+PN: 8012420  / INT-034 - 100 L Seed Bioreactor (GPF-N, 500L, Process 1)
+Check this is the latest version of the document before use.
+Printed by Bradley Scanlon on 18 Dec 2025 20:04 GMT+00:00
+
+===== PAGE 20 =====
+ 
+   
+ 
+Step Description Performed 
+By/Date 
+Witnessed 
+By/Date 
+9.6  • Set up the TFF per SOP-0126879. 
+• Record the Levitronix pump ID attached to the filter. 
+  TFF Filter Levitronix Pump 
+TFF 1  
+9.7  • Perform a system P-Test of the TFF System loop per SOP-0126879. 
+• If the P-Test for the system fails after a second test, contact a supervisor and 
+document the actions taken in the Attachment 10: Comments Section. 
+• Utilize the following parameters for the system P-Test: 
+Pressurize the 
+TFF 
+Stabilization 
+Time 
+Minimum Stabilization 
+hold time 
+Acceptable TFF pressure 
+loss 
+5 psi 10 min 30 min ≤ 0.10 psi 
+ 
+ 
+ 
+9.8  Record the P-Test result of the TFF System below: 
+ 
+ 
+TFF System P-Test 
+Result 
+Test #1 Pass/Fail _________________ 
+Test #2 Pass/Fail _________________ □N/A 
+  
+MABR-0027688 v1.0    Status: Effective    Effective Date: 20 Nov 2025    Page 20 of 106
+PN: 8012420  / INT-034 - 100 L Seed Bioreactor (GPF-N, 500L, Process 1)
+Check this is the latest version of the document before use.
+Printed by Bradley Scanlon on 18 Dec 2025 20:04 GMT+00:00
+
+===== PAGE 21 =====
+ 
+   
+ 
+10 Connections to Bioreactor  
+Step Description Performed 
+By/Date 
+Witnessed 
+By/Date 
+10.1  Obtain the material needed to set up the permeate line and waste bag  
+  
+Description Part 
+Number Batch Number Expiry Date Quantity 
+1/8” Pump Runner with 
+AQS 6005501    
+S-to-S Jumper 
+□ 6005492    
+□ 6005491    
+Bioprocess Bag 
+□ 4102462 
+□ 4102461 
+   
+Purefit Female to AQS 
+Adapter 6005483*    
+*If PN 6005483 is not available, weld the permeate waste bag in Step 10.2. 
+SAP Consumption Performed by/Date   
+10.2  Set up the permeate line and waste bag per SOP-0126420. 
+  
+Welder ID, if applicable  
+10.3  Label the permeate bag with “INT-034 Permeate Waste”, 8012420, Batch Number, 
+Initials/Date. 
+  
+10.4  Obtain the net weight of the permeate vessel after attaching to the DC. 
+  
+Scale ID  
+Calibration Due Date  
+Tare Weight of Permeate Vessel kg 
+  
+MABR-0027688 v1.0    Status: Effective    Effective Date: 20 Nov 2025    Page 21 of 106
+PN: 8012420  / INT-034 - 100 L Seed Bioreactor (GPF-N, 500L, Process 1)
+Check this is the latest version of the document before use.
+Printed by Bradley Scanlon on 18 Dec 2025 20:04 GMT+00:00
+
+===== PAGE 22 =====
+ 
+   
+ 
+Step Description Performed 
+By/Date 
+Witnessed 
+By/Date 
+Steps 10.5 - 10.7 can be done at any time prior to Section 15. 
+10.5  • Obtain all the material needed to set up the connection to the Antifoam bag.   
+• Record the batch number, expiry and quantity used. 
+  
+Description Part Number Batch No. Expiry Quantity 
+Antifoam 
+□ 4102603 
+   □ 4102604 
+□ 4102057 
+1/8” Pump Runner 6002393    
+SAP Consumption Performed by/Date   
+10.6  • Weld the antifoam bag to the DC per SOP-0107187 and record welder 
+information below: 
+  
+Welder ID  
+10.7  • Tare the balance.  
+• Place the antifoam bag on the balance. 
+• Record the weight of the antifoam bag before priming. 
+• Prime the antifoam line per SOP-0080233. 
+• Record the weight of the antifoam bag after priming. 
+  
+Scale / Balance ID:  
+Calibration Due Date  
+Weight of Antifoam Bag (X) 
+Weight before priming g 
+Weight after priming g 
+Configuration for Tare weight   weigh with tubing 
+  weigh inside container 
+ 
+ 
+  
+MABR-0027688 v1.0    Status: Effective    Effective Date: 20 Nov 2025    Page 22 of 106
+PN: 8012420  / INT-034 - 100 L Seed Bioreactor (GPF-N, 500L, Process 1)
+Check this is the latest version of the document before use.
+Printed by Bradley Scanlon on 18 Dec 2025 20:04 GMT+00:00
+
+===== PAGE 23 =====
+ 
+   
+ 
+Step Description Performed 
+By/Date 
+Witnessed 
+By/Date 
+All Steps past this point can be done at any time prior to Section 18. 
+10.8  • Obtain the materials needed to connect the DC to the Perfusion Medium line. 
+• Record the batch number, expiry and quantity used. 
+  
+Description Part Number Batch No. Exp. Date Quantity. 
+1/8” Pump Runner with 
+AQS  6005501    
+Male Purefit to AQS 6005484*    
+*If PN 6005484 is not available, weld the Perfusion Medium in Step 10.10. 
+SAP Consumption Performed by/Date   
+10.9  • Obtain CCM-FR-2 Perfusion Medium (M-051-V4) (PN: 8012342). 
+• Record the Perfusion Medium information below. 
+  
+Part Number:  
+Batch Number:  
+Expiration Date:  
+Scale ID:  
+Calibration Due Date:  
+Gross Weight of CCM-FR-2 Perfusion 
+Medium (M-051-V4) (PN: 8012342) 
+before use 
+kg 
+10.10  Set up and connect the Perfusion Medium bag to the ABEC port per SOP-0126420. 
+  
+Welder ID, if applicable:  
+  
+MABR-0027688 v1.0    Status: Effective    Effective Date: 20 Nov 2025    Page 23 of 106
+PN: 8012420  / INT-034 - 100 L Seed Bioreactor (GPF-N, 500L, Process 1)
+Check this is the latest version of the document before use.
+Printed by Bradley Scanlon on 18 Dec 2025 20:04 GMT+00:00
+
+===== PAGE 24 =====
+ 
+   
+ 
+Step Description Performed 
+By/Date 
+Witnessed 
+By/Date 
+10.11  Perfusion Medium Sample: 
+• Obtain a sampling assembly (6000391). 
+• Record the assembly and welder information. 
+• Label this assembly with “INT-034”, 8012420 and batch number, bioreactor ID, 
+“100 L Charge Medium”, initials, and date. 
+• Weld the assembly to the Medium bag per SOP-0107187 or SOP-0107297. 
+  
+Welder ID  
+Part No.:  
+Batch No.:  
+Exp. Date:  
+SAP Consumption Performed By/Date   
+10.12  • Dispense approximately 50 mL to be stored as investigational sample. 
+• Seal off assembly for removal and record sealer information. 
+• Record the sample collection in Attachment 7: Retain Samples. 
+  
+Sealer ID  
+ 
+  
+MABR-0027688 v1.0    Status: Effective    Effective Date: 20 Nov 2025    Page 24 of 106
+PN: 8012420  / INT-034 - 100 L Seed Bioreactor (GPF-N, 500L, Process 1)
+Check this is the latest version of the document before use.
+Printed by Bradley Scanlon on 18 Dec 2025 20:04 GMT+00:00
+
+===== PAGE 25 =====
+ 
+   
+ 
+11 Media Charge and TFF Priming 
+Step Description Performed 
+By/Date 
+Witnessed 
+By/Date 
+11.1  Ensure Sections 7 - 9 and Steps 10.1 - 10.4 are completed prior to starting 
+Section 11.   
+11.2  Verify the process trends for BRX-4513 and TFF-4501 are activated.   
+11.3  Obtain the following material and record the information below. 
+  
+Description Part No. Batch No. Expiry Date 
+Male Purefit to 
+AQS 6005484*   
+*If PN 6005484 is not available, weld the CCMB1 Medium in Step 11.4. 
+SAP Consumption Performed By/Date   
+11.4  • Obtain CCMB1 Medium (M-030-V19) (PN: 8006887). 
+• Connect medium to the DC charge line per SOP-0162420. 
+  
+Part No.:  
+Batch No.:  
+Exp. Date:  
+Welder ID, if applicable  
+11.5  Medium Sample: 
+• Obtain a sampling assembly (6000391). 
+• Record the assembly and welder information. 
+• Label this assembly with “INT-034”, 8012420 and batch number, bioreactor 
+ID, “100 L Charge Medium”, initials, and date. 
+• Weld the assembly to the Medium bag per SOP-0107187 or SOP-0107297.  
+Welder ID  
+Part No.:  
+Batch No.:  
+Exp. Date:  
+ 
+  
+SAP Consumption Performed By/Date   
+  
+MABR-0027688 v1.0    Status: Effective    Effective Date: 20 Nov 2025    Page 25 of 106
+PN: 8012420  / INT-034 - 100 L Seed Bioreactor (GPF-N, 500L, Process 1)
+Check this is the latest version of the document before use.
+Printed by Bradley Scanlon on 18 Dec 2025 20:04 GMT+00:00
+
+===== PAGE 26 =====
+ 
+   
+ 
+Step Description Performed 
+By/Date 
+Witnessed 
+By/Date 
+11.6  • Dispense approximately 50 mL to be stored as investigational sample. 
+• Seal off assembly for removal and record sealer information. 
+• Record the sample collection in Attachment 7: Retain Samples. 
+  
+Sealer ID  
+11.7  • Advance to the Charge phase on the ABEC HMI per SOP-0126420. 
+• Verify the parameters align with Step 8.5. 
+  
+11.8  • Prime the DC medium charge line. 
+• Tare the Bioreactor Weight. 
+• Record the weight of the bioreactor after completing the tare.   
+  
+Bioreactor Tare Weight  kg 
+11.9  Transfer 40 ± 2 kg of medium (PN: 8006887) into the bioreactor per SOP-
+0126420. 
+  
+Transfer 
+Start time: 
+Transfer 
+End time: 
+Amount 
+Added: 
+Post Addition 
+Exp. Date: 
+  
+_____________ 
+(38 – 42 kg) 
+____________________  
+(5 days after medium charge) 
+SAP Consumption Performed By/Date   
+  
+MABR-0027688 v1.0    Status: Effective    Effective Date: 20 Nov 2025    Page 26 of 106
+PN: 8012420  / INT-034 - 100 L Seed Bioreactor (GPF-N, 500L, Process 1)
+Check this is the latest version of the document before use.
+Printed by Bradley Scanlon on 18 Dec 2025 20:04 GMT+00:00
+
+===== PAGE 27 =====
+ 
+   
+ 
+Step Description Performed 
+By/Date 
+Witnessed 
+By/Date 
+11.10  NOTE: Do not proceed to the Growth Stabilize phase in the ABEC HMI. 
+Prior to starting TFF priming, record the Bioreactor weight.   
+Bioreactor weight kg 
+11.11  Ensure the system stays in Manual Addition mode for the TFF Priming procedures. 
+ 
+  
+11.12  Ensure the TFF 1 permeate line is clamped and the clamp-on flow meter is installed per 
+SOP-0126879. 
+  
+11.13  • Record the bioreactor weight pre-priming below. 
+• Prime the TFF1 retentate line per SOP-0126879. 
+• After fully priming the filter, record the post-prime BRX weight (excluding the 
+permeate line). 
+  
+TFF 
+Description  BRX Weight Pre-Priming Weight  BRX Weight Post Prime  
+TFF 1 kg kg  
+11.14  Calculate the TFF 1 Hold up volume.   
+BRX Weight Pre-
+Priming 
+(Step 11.13) - 
+BRX Weight Post Prime 
+(Step 11.13) = 
+TFF 1 Hold Up 
+Volume 
+kg kg kg 
+  
+MABR-0027688 v1.0    Status: Effective    Effective Date: 20 Nov 2025    Page 27 of 106
+PN: 8012420  / INT-034 - 100 L Seed Bioreactor (GPF-N, 500L, Process 1)
+Check this is the latest version of the document before use.
+Printed by Bradley Scanlon on 18 Dec 2025 20:04 GMT+00:00
+
+===== PAGE 28 =====
+ 
+   
+ 
+Step Description Performed 
+By/Date 
+Witnessed 
+By/Date 
+11.15  After Levitronix is turned off, per SOP-0126879: 
+• Clamp the DC supply line to the TFF.   
+• Clamp the DC return line. 
+  
+11.16  Zero the TFF 1 retentate clamp-on flow meter per SOP-0126879.   
+11.17  Zero the TFF 1 pressure sensors per SOP-0126879.   
+11.18  • Open the DC return line. 
+• Open the DC supply line to the TFF. 
+• Record the TFF Selection corresponding to the TFF set up in Step 9.6 in the 
+table below 
+• Turn on the TFF 1 Recirculation set points in the Levitronix per SOP-0126420. 
+TFF Selection Flow Rate Control Selection 
+______________ 4.4 lpm Flow 
+ 
+  
+11.19  On the ABEC Loops Screen, ensure the temperature is set per the table below. 
+Parameter Set point 
+Vessel Temp SP 36.5 °C 
+ 
+  
+  
+MABR-0027688 v1.0    Status: Effective    Effective Date: 20 Nov 2025    Page 28 of 106
+PN: 8012420  / INT-034 - 100 L Seed Bioreactor (GPF-N, 500L, Process 1)
+Check this is the latest version of the document before use.
+Printed by Bradley Scanlon on 18 Dec 2025 20:04 GMT+00:00
+
+===== PAGE 29 =====
+ 
+   
+ 
+Step Description Performed 
+By/Date 
+Witnessed 
+By/Date 
+11.20  Calculate the Target Bioreactor Weight needed for The TCCV target.   
+Target Media Charge 
+weight prior to 
+Inoculation -  
+TFF 1 Hold up Volume 
+(Step 11.14)  = 
+Target Bioreactor 
+Weight  
+40 kg kg kg 
+11.21  • Record the current bioreactor weight on the HMI.  
+• Calculate the difference between the target bioreactor weight and the current 
+bioreactor weight.  
+  
+Current Bioreactor 
+Weight 
+(ABEC HMI) - 
+Target Bioreactor Weight 
+(Step 11.20) = 
+Bioreactor weight 
+difference 
+kg kg kg 
+11.22  Check and complete the following activity based on the bioreactor weight difference. 
+Bioreactor weight 
+difference condition Action To take 
+Check the 
+action 
+completed 
+Step 11.21 > 0 Flush medium through TFF 1 
+permeate until the amount 
+calculated in Step 11.20 is reached 
+on the ABEC HMI. 
+ 
+Step 11.21 < 0 Transfer the amount of CCMB1 
+Medium (M-030-V19) (PN: 8006887) 
+to reach the calculated target 
+bioreactor weight in Step 11.20. 
+ 
+Step 11.21 = 0 Continue to the next step.  
+ 
+ 
+ 
+  
+MABR-0027688 v1.0    Status: Effective    Effective Date: 20 Nov 2025    Page 29 of 106
+PN: 8012420  / INT-034 - 100 L Seed Bioreactor (GPF-N, 500L, Process 1)
+Check this is the latest version of the document before use.
+Printed by Bradley Scanlon on 18 Dec 2025 20:04 GMT+00:00
+
+===== PAGE 30 =====
+ 
+   
+ 
+Step Description Performed 
+By/Date 
+Witnessed 
+By/Date 
+11.23  Ensure that the temperature reading is within the process limits of 35.0 – 38.0 °C and 
+that the pO2 readings on the HMI are stable before proceeding to Step 11.24. 
+NOTE: If readings are not stable after 4 hours, contact supervisor/designee and record 
+provided instructions in Attachment 10: Comments Section. 
+Supervisor/designee contacted: _____________________________ 
+  
+11.24  Once the readings are stable, standardize the DO probe to 100% per  
+SOP-0126420. 
+  Time 100% Standardization performed (AIT-01):  
+Time 100% Standardization performed (AIT-03):  
+11.25  • Record the bioreactor temperature and pH. 
+• Prepare sample assembly by flushing 50 mL per SOP-0126420.  
+• Collect approximately 10 mL sample per SOP-0126420. 
+• Perform offline pH check per SOP-0107252. 
+  
+Bioreactor Temperature*: pH AIT-02: pH AIT-04 
+°C (A) (B) 
+Offline pH measurement:   BGA        pH Meter 
+BGA/ pH Meter ID: Sample Temperature*: Sample pH (T): 
+ °C (C) 
+*If BGA is used, Bioreactor Temperature and Sample Temperature are the same.  
+11.26  • Calculate the difference between the bioreactor pH and the offline pH reading.  
+• Perform a 1-point standardization if the difference between the bioreactor pH and 
+offline pH reading of either probe is ≤ -0.05 or ≥ +0.05 pH unit per SOP-0107196. 
+• Record the time the one-point standardization was performed. 
+  pH probe Bioreactor 
+pH  Offline 
+pH  pH 
+Difference 
+One-point 
+standardization? 
+Time 
+performed 
+AIT-02 ________ 
+(A) 
+– _______ 
+(C) 
+=    Yes 
+  No  
+AIT-04 _____  
+(B) 
+– ______ 
+(C) 
+=    Yes 
+  No  
+11.27  Select the controlling pH and pO2 probes. 
+  Controlling pH probe:   AIT-02    AIT-04 
+Controlling pO2 probe:    AIT-01    AIT-03 
+MABR-0027688 v1.0    Status: Effective    Effective Date: 20 Nov 2025    Page 30 of 106
+PN: 8012420  / INT-034 - 100 L Seed Bioreactor (GPF-N, 500L, Process 1)
+Check this is the latest version of the document before use.
+Printed by Bradley Scanlon on 18 Dec 2025 20:04 GMT+00:00
+
+===== PAGE 31 =====
+ 
+   
+ 
+Step Description 
+Performed 
+By/Date 
+Witnessed 
+By/Date 
+11.28  • Progress to the Stabilization phase in the ABEC per SOP-0126420. 
+• Confirm the set points, and recipe below.  
+Growth Stabilize 
+Parameter Set Point Status Allowed Range 
+Vessel Temp SP 36.5 °C Auto 35.0 -38.0 
+pH SP 7.35 Auto CO2 6.85 -7.50 
+pH deadband 0.10 ON  
+DO SP 100% OFF  
+Agitation SP 75 rpm Auto 65 - 85 
+Air Overlay SP 5.0 slpm Auto 1.0 – 10.0 
+Primary Air Sparge SP 0.5 slpm Auto 0.2 – 0.8 
+Secondary Air Sparge SP 0 OFF  
+Primary O2 Sparge SP 0 OFF  
+Secondary O2 Sparge SP 0 OFF  
+ 
+ 
+ 
+ 
+  
+MABR-0027688 v1.0    Status: Effective    Effective Date: 20 Nov 2025    Page 31 of 106
+PN: 8012420  / INT-034 - 100 L Seed Bioreactor (GPF-N, 500L, Process 1)
+Check this is the latest version of the document before use.
+Printed by Bradley Scanlon on 18 Dec 2025 20:04 GMT+00:00
+
+===== PAGE 32 =====
+ 
+   
+ 
+Step Description 
+Performed 
+By/Date 
+Witnessed 
+By/Date 
+11.29  Verify and enable the alarm set points below.  
+Parameter Low High Deviation Alarm Status 
+Vessel Temp (°C) 35.0 38.0 1.0 Enable 
+Vessel Weight (kg) 30 50 5 Enable 
+Agitation (rpm) 65 85  Enable 
+pH 6.85 7.50 0.11 Enable 
+DO (%) 10 110 10 Enable 
+Levitronix 1 Alarms 
+Pump Speed (RPM) 600 3000  Enable 
+Flow rate (l/hr) 2.4 6.4  Enable 
+Temp (°C)    Disable 
+TMP (psi) 0 0.5  Enable 
+P1 (psi) 0 3  Enable 
+P2 (psi) 0 3  Enable 
+P3 (psi) 0 3  Enable 
+ 
+ 
+ 
+  
+MABR-0027688 v1.0    Status: Effective    Effective Date: 20 Nov 2025    Page 32 of 106
+PN: 8012420  / INT-034 - 100 L Seed Bioreactor (GPF-N, 500L, Process 1)
+Check this is the latest version of the document before use.
+Printed by Bradley Scanlon on 18 Dec 2025 20:04 GMT+00:00
+
+===== PAGE 33 =====
+ 
+   
+ 
+ 
+Step Description Performed 
+By/Date 
+Witnessed 
+By/Date 
+11.30   If inoculation is occurring on day of medium charge, proceed to Step 13.1 
+and N/A Step 11.31 below. 
+ If inoculation is NOT occurring on day of medium charge, start medium hold. 
+Start medium hold readings in Step 11.31 the day after medium charge. 
+NOTE: Medium may be held at 36.5 °C for 5 days / 120 hours. Inoculation may 
+occur any day during medium hold. 
+  
+11.31  Record the medium hold readings below.  
+  
+Day 
+Actual 
+Temperature (°C) 
+(Set point = 36.5 °C) 
+Controlling 
+pO2 (%) 
+(≥ 85.0%) 
+Inoculation 
+(Select Yes or No) 
+Medium 
+Hold  
+Day 1 
+  
+ Yes. Proceed to Step 13.1 
+and N/A the rest of this table. 
+ No. Continue medium hold. 
+Medium 
+Hold  
+Day 2 
+  
+ Yes. Proceed to Step 13.1 
+and N/A the rest of this table.   
+ No. Continue medium hold. 
+Medium 
+Hold  
+Day 3 
+  
+ Yes. Proceed to Step 13.1 
+and N/A the rest of this table.   
+ No. Continue medium hold. 
+Medium 
+Hold  
+Day 4 
+  
+ Yes. Proceed to Step 13.1 
+and N/A the rest of this table.   
+ No. Continue medium hold. 
+Medium 
+Hold  
+Day 5 
+   Yes. Proceed to Step 13.1.   
+  
+MABR-0027688 v1.0    Status: Effective    Effective Date: 20 Nov 2025    Page 33 of 106
+PN: 8012420  / INT-034 - 100 L Seed Bioreactor (GPF-N, 500L, Process 1)
+Check this is the latest version of the document before use.
+Printed by Bradley Scanlon on 18 Dec 2025 20:04 GMT+00:00
+
+===== PAGE 34 =====
+ 
+   
+ 
+12 Feedcart Set up  
+Step Description Performed 
+By/Date 
+Witnessed 
+By/Date 
+This Section can be completed at any time prior to Section 18.  
+12.1  • Ensure a pre-use cleaning and weight check have been performed on the 
+scale to be used for the permeate waste vessel per SOP-0080224. 
+• Record the Scale ID and calibration expiry.   
+Permeate Waste Scale ID Calibration Expiry 
+  
+12.2  Obtain the Feed Cart to be used and record the equipment ID below. 
+  
+Feed Cart ID  
+12.3  • Set up the Feed Cart HMI settings per SOP-0126942. 
+• From the Feed Cart HMI, record the Pump ID designated to Feed 5.  
+  
+Feed  Description Pump ID 
+Feed 5 Permeate  
+ 
+  
+MABR-0027688 v1.0    Status: Effective    Effective Date: 20 Nov 2025    Page 34 of 106
+PN: 8012420  / INT-034 - 100 L Seed Bioreactor (GPF-N, 500L, Process 1)
+Check this is the latest version of the document before use.
+Printed by Bradley Scanlon on 18 Dec 2025 20:04 GMT+00:00
+
+===== PAGE 35 =====
+ 
+   
+ 
+13 Inoculation Preparation 
+Step Description Performed 
+By/Date 
+Witnessed 
+By/Date 
+13.1  Verify that the medium in the bioreactor is within the expiry date (Step 11.9).   
+13.2   If a pH measurement / one-point standardization (Step 11.26) has been 
+performed within the same day as the Inoculation process, proceed to Step 13.8 
+and N/A Steps 13.3 –13.7. 
+  Otherwise, proceed to Step 13.3. 
+  
+13.3  • Record the bioreactor temperature and pH. 
+• Prepare sample syringe by flushing 50 mL per SOP-0126420. 
+• Collect approximately 10 mL sample per SOP-0126420. 
+• Perform offline pH check per SOP-0107252. 
+  
+Bioreactor Temperature*: pH AIT-02 pH AIT-04 
+°C (D) (E) 
+Offline pH measurement:   BGA        pH Meter 
+BGA/ pH Meter ID: Sample Temperature*: Sample pH (T): 
+ °C (F) 
+*If BGA is used, Bioreactor Temperature and Sample Temperature are the same.  
+13.4  Calculate the difference between the bioreactor pH and offline pH reading.  
+  
+pH Probe Bioreactor pH  Offline pH  Difference in pH 
+AIT-02 
+__________ (D) 
+– _________ 
+(F) 
+=  
+AIT-04 
+__________ (E) 
+– _________ 
+(F) 
+=  
+• If the pH difference is ≤ -0.10 or ≥ +0.10 pH unit, collect a second pH 
+sample and repeat the BGA Analysis in Steps 13.5 and 13.6. 
+•  If repeat sample is not required, N/A Steps 13.5 and 13.6. 
+  
+MABR-0027688 v1.0    Status: Effective    Effective Date: 20 Nov 2025    Page 35 of 106
+PN: 8012420  / INT-034 - 100 L Seed Bioreactor (GPF-N, 500L, Process 1)
+Check this is the latest version of the document before use.
+Printed by Bradley Scanlon on 18 Dec 2025 20:04 GMT+00:00
+
+===== PAGE 36 =====
+ 
+   
+ 
+Step Description Performed 
+By/Date 
+Witnessed 
+By/Date 
+13.5  • Prepare sample assembly by flushing 50 mL per SOP-0126420. 
+• Collect approximately 10 mL sample per SOP-0126420. 
+• Perform offline pH check per SOP-0107252. 
+  
+Bioreactor Temperature*: pH AIT-02 pH AIT-04 
+°C (D2) (E2) 
+Offline pH measurement:   BGA        pH Meter 
+BGA/ pH Meter ID: Sample Temperature: Sample pH (T): 
+ °C (G) 
+*If BGA is used, Bioreactor Temperature and Sample Temperature are the same. 
+13.6  Calculate the difference between the bioreactor pH and offline pH reading.  
+  
+pH Probe Bioreactor pH  Offline pH  Difference in pH 
+AIT-02 
+__________ (D) 
+– _________ 
+(G) 
+=  
+AIT-04 
+__________ (E) 
+– _________ 
+(G) 
+=  
+If the pH difference is still ≤ -0.10 or ≥ +0.10 pH unit, after repeating the BGA 
+Analysis, contact supervisor/designee for further instructions Record actions 
+taken in Attachment 10: Comments Section. 
+Supervisor/designee contacted: ___________________________ 
+13.7  • Perform a 1-point standardization on the bioreactor transmitters if the 
+difference between the bioreactor pH and offline pH reading is ≤ -0.05 or 
+≥ +0.05 pH unit per SOP-0126420. 
+NOTE:  Probes are standardized as needed independently of each other. 
+• Record the time the one-point standardization was performed.    
+pH probe One-point standardization 
+performed? Time performed: 
+AIT-02   Yes       No  
+AIT-04   Yes       No  
+  
+MABR-0027688 v1.0    Status: Effective    Effective Date: 20 Nov 2025    Page 36 of 106
+PN: 8012420  / INT-034 - 100 L Seed Bioreactor (GPF-N, 500L, Process 1)
+Check this is the latest version of the document before use.
+Printed by Bradley Scanlon on 18 Dec 2025 20:04 GMT+00:00
+
+===== PAGE 37 =====
+ 
+   
+ 
+Step Description Performed 
+By/Date 
+Witnessed 
+By/Date 
+13.8  Seed Medium Sample: 
+• Obtain a Sampling Bag Assembly (250 mL) (6000391). 
+• Record assembly and welder information. 
+• Label this assembly with “INT-034”, 8012420 and batch number, bioreactor ID, 
+“Pre-Inoculation 100 L Seed Medium”, initials, and date. 
+• Weld the assembly to the sample port per SOP-0107187 or SOP-0107297. 
+• Record the sample collection in Attachment 7: Retain Samples. 
+  
+Welder ID  
+Part No.:  
+Batch No.:  
+Exp. Date:  
+ 
+SAP Consumption By/Date   
+13.9  • Dispense approximately 100 mL to be stored as investigational sample at 
+2 - 8 °C. 
+• Seal off assembly for removal and record sealer information.   
+Sealer ID  
+13.10  • Allow pO2 to stabilize.  
+• Record the initial pO2 value from the controlling probe 
+selected in Step 11.27. 
+NOTE: If the initial pO2 recorded is < 85.0%, contact 
+supervisor/designee and record the instructions provided in 
+Attachment 10: Comments Section. 
+Supervisor/designee contacted:  
+_____________________________________ 
+pO2: 
+  
+_________% 
+(≥ 85.0%) 
+ 
+  
+MABR-0027688 v1.0    Status: Effective    Effective Date: 20 Nov 2025    Page 37 of 106
+PN: 8012420  / INT-034 - 100 L Seed Bioreactor (GPF-N, 500L, Process 1)
+Check this is the latest version of the document before use.
+Printed by Bradley Scanlon on 18 Dec 2025 20:04 GMT+00:00
+
+===== PAGE 38 =====
+ 
+   
+ 
+Step Description Performed 
+By/Date 
+Witnessed 
+By/Date 
+13.11  • Initiate the Inoculate/Grow 1 recipe in the ABEC HMI per SOP-0126420. 
+• Verify the setpoints below: 
+Grow 1 (N-2) 
+Parameter Set point Status Allowed Range 
+Vessel Temp SP 36.5 °C Auto 35.0 -38.0 
+pH SP 7.35 Auto CO2 6.85 -7.50 
+pH deadband 0.10   
+DO SP 50%  10% -110% 
+Agitation SP 75 rpm Cascade 60 -150 
+Air Overlay SP 5.0 slpm Auto 1.0 – 10.0 
+Primary Air Sparge 
+SP 0.5 slpm Auto 0.2 – 0.8 
+Secondary Air 
+Sparge SP 0 Off  
+Primary O2 Sparge 
+SP 0 Cascade  
+Secondary O2 
+Sparge SP 0 Off  
+pH Strategy  Auto CO2  
+DO Strategy  Profile  
+ 
+  
+13.12  • Ensure the permeate clamp on TFF 1 is closed. 
+• Verify the Levitronix 1 settings below: 
+Flow Rate Control Selection 
+4.4 lpm Flow 
+ 
+  
+ 
+MABR-0027688 v1.0    Status: Effective    Effective Date: 20 Nov 2025    Page 38 of 106
+PN: 8012420  / INT-034 - 100 L Seed Bioreactor (GPF-N, 500L, Process 1)
+Check this is the latest version of the document before use.
+Printed by Bradley Scanlon on 18 Dec 2025 20:04 GMT+00:00
+
+===== PAGE 39 =====
+ 
+   
+ 
+14 Inoculation 
+Step Description Performed 
+By/Date 
+Witnessed 
+By/Date 
+14.1  • Due to initiating the Grow 1 recipe prior to inoculation, alarms may be 
+triggered. Monitor accordingly between step 14.2 - 14.8. 
+• If parameters exceed their allowable range per Step 13.11, contact 
+supervisor/designee and record actions taken in Attachment 10: Comments 
+Section. 
+  
+14.2  Before inoculating, record the 100 L bioreactor 
+start weight from the Loops screen. 
+NOTE: This weight range does not include the 
+TFF Loop. If the bioreactor start weight is not 
+within the specification, contact the 
+supervisor/designee and record action taken in 
+Attachment 10: Comments Section. 
+Start Weight: 
+  
+____________kg 
+(35 –45 kg) 
+Supervisor/designee contacted: 
+____________________ 
+14.3  Obtain the following material and record information below.   
+Description Part No. Batch No. Exp. Date 
+1/4” Pump Runner 
+with AQS 6005502   
+SAP Consumption By/Date   
+14.4  • Obtain the “Shake Flask Inoculum/Transfer” Vessel labeled with PN: 8012419. 
+• Record the inoculum culture part and batch number. 
+  
+Inoculum Part No.: Inoculum Batch No.: 
+  
+14.5  • Weld the “Shake Flask Inoculum/Transfer” Vessel to the pump runner per 
+SOP-0080257. 
+• Connect the pump runner to the appropriate inoculation line per SOP-
+0126420. 
+  
+Welder ID:  
+ 
+  
+MABR-0027688 v1.0    Status: Effective    Effective Date: 20 Nov 2025    Page 39 of 106
+PN: 8012420  / INT-034 - 100 L Seed Bioreactor (GPF-N, 500L, Process 1)
+Check this is the latest version of the document before use.
+Printed by Bradley Scanlon on 18 Dec 2025 20:04 GMT+00:00
+
+===== PAGE 40 =====
+ 
+   
+ 
+Step Description Performed 
+By/Date 
+Witnessed 
+By/Date 
+14.6  • Inoculate the 100 L bioreactor by transferring the entire contents of the “Shake 
+Flask Inoculum/Transfer” Vessel per SOP-0126420. 
+• Record the weight of the 100 L bioreactor after the inoculation transfer from 
+the Loops screen. 
+  
+Inoculum Addition  
+Start Time: 
+Inoculum Addition  
+End Time: 
+Bioreactor Weight After 
+Inoculation: 
+  kg 
+SAP Consumption performed by/date   
+14.7  Remove the Inoculum Transfer Vessel from the bioreactor per SOP-0080812 or 
+SOP-0080522.  
+  
+Sealer ID:   
+14.8  Take a VCD sample from the bioreactor record the initial VCD below per SOP-
+0126420. 
+  
+VCD  
+( ≥ 0.2 x 10^6) _________ x 106  cells/mL 
+14.9  On the Recipe Alarms page, change the Interlock alarm per the table below:   
+Bioreactor System Alarm Low Interlock 
+Vessel Weight (kg) 20 
+14.10  • Verify the alarm set points for Inoculate/Grow 1 (N-2) below. 
+• Verify alarms are enabled. 
+Parameter Low High Deviation Alarm Status 
+Vessel Temp (°C) 35.0 38.0 1.0 Enable 
+Vessel Weight (kg) 35 55 5 Enable 
+Agitation (rpm) 60 150  Enable 
+pH 6.85 7.50 0.11 Enable 
+DO (%) 10 110 10 Enable 
+ 
+  
+  
+MABR-0027688 v1.0    Status: Effective    Effective Date: 20 Nov 2025    Page 40 of 106
+PN: 8012420  / INT-034 - 100 L Seed Bioreactor (GPF-N, 500L, Process 1)
+Check this is the latest version of the document before use.
+Printed by Bradley Scanlon on 18 Dec 2025 20:04 GMT+00:00
+
+===== PAGE 41 =====
+ 
+   
+ 
+15 Daily Sampling – N-2 Seed Phase 
+Step Description Performed 
+By/Date 
+Witnessed 
+ By/Date 
+15.1  On a daily basis, including Day 0 or as instructed by supervisor/designee: 
+• Prepare sample assembly by flushing 50 mL per SOP-0126420. 
+• Collect approximately 10 mL sample from the bioreactor per SOP-
+0126420 and perform the following analysis: 
+- Perform offline pH check per SOP-0107252. 
+- Perform a one-point correction of pH probes per SOP-0126420 
+when required. 
+NOTE:  If one-point correction is required, it must be performed 
+prior to any additions. 
+- Perform offline osmolality check per SOP-0080509. 
+- Measure cell density and percent viability per SOP-0115565. 
+NOTE: Use CHO Method 2 for cell count with Vi-CELL BLU. 
+• Perform glucose and lactate analysis. 
+• Record bioreactor conditions in Table 1: Bioreactor Conditions N-2. 
+• If needed, additional sample pages can be found in Attachment 8: 
+Additional Sampling Pages (N-2).  
+  
+ 
+  
+MABR-0027688 v1.0    Status: Effective    Effective Date: 20 Nov 2025    Page 41 of 106
+PN: 8012420  / INT-034 - 100 L Seed Bioreactor (GPF-N, 500L, Process 1)
+Check this is the latest version of the document before use.
+Printed by Bradley Scanlon on 18 Dec 2025 20:04 GMT+00:00
+
+===== PAGE 42 =====
+ 
+   
+ 
+Table 1: Bioreactor Conditions N-2 
+Perform daily sampling of the bioreactor. BGA ID: Measurements Result 
+Day Seed Day 0  pH (T) (X.XX)   
+Time  
+ pCO2 (T) (X.X)  mmHg  
+Select Primary DO Probe  AIT-01    /    AIT-03 
+Bioreactor Temp. (°C) 
+(XX.X)  
+(35.0 - 38.0°C) 
+  pO2 (T) (X.X)  mmHg  
+Pressure (psig) (X.XX) 
+(0 – 0.6 psig)   Bioreactor Glu 
+(X) mg/dL 
+pO2 (%) (X.X) 
+(10.0 - 110.0%)    Lac (mmol/L) (X.X) Lactate Dilution Calculated Lactate (mmol/L) (X.X) 
+Bioreactor pH (X.XX) 
+(6.85 - 7.50)   
+ N/A  N/A 
+Agitation (rpm) (X)  
+(60 – 150 rpm)  
+Adjustment  
+Perform a one-point calibration if pH difference is < -0.05 or > 0.05. 
+Take a 2nd pH sample if pH difference is < -0.10 or > 0.10. 
+Record information from both probes. Only primary probe results will be used for 
+processing decisions. The secondary probe results are for information only (FIO). 
+Overlay Air (slpm) (X.X) 
+(1.0 – 10.0 slpm)  
+Select  
+Primary pH 
+Probe 
+Bioreactor pH 
+(X.XX) 
+- 
+Offline pH (T) (X.XX) 
+= 
+pH Difference 
+Air Sparge (slpm) (X.X) 
+(0.2 - 0.8 slpm)  
+ AIT-02    
+ AIT-04    
+O2 Sparge (slpm) (X.X)  Is one-point calibration required based on 1st pH 
+sample results?   Yes       No 
+CO2 Sparge (slpm) (X.X)  
+Is a 2nd pH sample required? If yes, go to Attachment 
+6: Additional pH Monitoring – pH samples’ 
+information. 
+ Yes       No 
+Bioreactor Weight (kg) (X)  Pipettor ID 
+(if applicable)  Measurements Results  
+Foam Check: 
+Is Antifoam addition Needed? 
+Proceed to Attachment 4 for manual addition.  
+ Vi-Cell Dilution (X)  
+Vi-Cell ID: VCD (X.X)  
+x 106 cells/mL 
+ Yes  No  Viability (X)  %  
+Was any pump tubing shifted?   Yes       N/A Osmometer ID  
+Osmolality (X) 
+ 
+ 
+  
+Has Dilution criteria been met? 
+(VCD ≥ 2.1 x 106 cells/mL)  
+Continue to Section 16 for Medium Dilution and N/A all 
+subsequent sample pages 
+ Yes       No 
+Performed By/Date:   Witness By/Date:    
+  
+MABR-0027688 v1.0    Status: Effective    Effective Date: 20 Nov 2025    Page 42 of 106
+PN: 8012420  / INT-034 - 100 L Seed Bioreactor (GPF-N, 500L, Process 1)
+Check this is the latest version of the document before use.
+Printed by Bradley Scanlon on 18 Dec 2025 20:04 GMT+00:00
+
+===== PAGE 43 =====
+ 
+   
+ 
+Table 1: Bioreactor Conditions N-2 
+Perform daily sampling of the bioreactor. BGA ID: Measurements Result 
+Day Seed Day 1  pH (T) (X.XX)   
+Time  
+ pCO2 (T) (X.X)  mmHg  
+Select Primary DO Probe  AIT-01    /    AIT-03 
+Bioreactor Temp. (°C) 
+(XX.X)  
+(35.0 - 38.0°C) 
+  pO2 (T) (X.X)  mmHg  
+Pressure (psig) (X.XX) 
+(0 – 0.6 psig)   Bioreactor Glu 
+(X) mg/dL 
+pO2 (%) (X.X) 
+(10.0 - 110.0%)    Lac (mmol/L) (X.X) Lactate Dilution Calculated Lactate (mmol/L) (X.X) 
+Bioreactor pH (X.XX) 
+(6.85 - 7.50)   
+ N/A  N/A 
+Agitation (rpm) (X)  
+(60 – 150 rpm)  
+Adjustment  
+Perform a one-point calibration if pH difference is < -0.05 or > 0.05. 
+Take a 2nd pH sample if pH difference is < -0.10 or > 0.10. 
+Record information from both probes. Only primary probe results will be used for 
+processing decisions. The secondary probe results are for information only (FIO). 
+Overlay Air (slpm) (X.X) 
+(1.0 – 10.0 slpm)  
+Select  
+Primary pH 
+Probe 
+Bioreactor pH 
+(X.XX) 
+- 
+Offline pH (T) (X.XX) 
+= 
+pH Difference 
+Air Sparge (slpm) (X.X) 
+(0.2 - 0.8 slpm)  
+ AIT-02    
+ AIT-04    
+O2 Sparge (slpm) (X.X)  Is one-point calibration required based on 1st pH 
+sample results?   Yes       No 
+CO2 Sparge (slpm) (X.X)  
+Is a 2nd pH sample required? If yes, go to Attachment 
+6: Additional pH Monitoring – pH samples’ 
+information. 
+ Yes       No 
+Bioreactor Weight (kg) (X)  Pipettor ID 
+(if applicable)  Measurements Results  
+Foam Check: 
+Is Antifoam addition Needed? 
+Proceed to Attachment 4 for manual addition.  
+ Vi-Cell Dilution (X)  
+Vi-Cell ID: VCD (X.X)  
+x 106 cells/mL 
+ Yes  No  Viability (X)  %  
+Was any pump tubing shifted?   Yes       N/A Osmometer ID  
+Osmolality (X) 
+ 
+ 
+  
+Has Dilution criteria been met? 
+(VCD ≥ 2.1 x 106 cells/mL)  
+Continue to Section 16 for Medium Dilution and N/A all 
+subsequent sample pages 
+ Yes       No 
+Performed By/Date:   Witness By/Date:    
+  
+MABR-0027688 v1.0    Status: Effective    Effective Date: 20 Nov 2025    Page 43 of 106
+PN: 8012420  / INT-034 - 100 L Seed Bioreactor (GPF-N, 500L, Process 1)
+Check this is the latest version of the document before use.
+Printed by Bradley Scanlon on 18 Dec 2025 20:04 GMT+00:00
+
+===== PAGE 44 =====
+ 
+   
+ 
+Table 1: Bioreactor Conditions N-2 
+Perform daily sampling of the bioreactor. BGA ID: Measurements Result 
+Day Seed Day 2  pH (T) (X.XX)   
+Time  
+ pCO2 (T) (X.X)  mmHg  
+Select Primary DO Probe  AIT-01    /    AIT-03 
+Bioreactor Temp. (°C) 
+(XX.X)  
+(35.0 - 38.0°C) 
+  pO2 (T) (X.X)  mmHg  
+Pressure (psig) (X.XX) 
+(0 – 0.6 psig)   Bioreactor Glu 
+(X) mg/dL 
+pO2 (%) (X.X) 
+(10.0 - 110.0%)    Lac (mmol/L) (X.X) Lactate Dilution Calculated Lactate (mmol/L) (X.X) 
+Bioreactor pH (X.XX) 
+(6.85 - 7.50)   
+ N/A  N/A 
+Agitation (rpm) (X)  
+(60 – 150 rpm)  
+Adjustment  
+Perform a one-point calibration if pH difference is < -0.05 or > 0.05. 
+Take a 2nd pH sample if pH difference is < -0.10 or > 0.10. 
+Record information from both probes. Only primary probe results will be used for 
+processing decisions. The secondary probe results are for information only (FIO). 
+Overlay Air (slpm) (X.X) 
+(1.0 – 10.0 slpm)  
+Select  
+Primary pH 
+Probe 
+Bioreactor pH 
+(X.XX) 
+- 
+Offline pH (T) (X.XX) 
+= 
+pH Difference 
+Air Sparge (slpm) (X.X) 
+(0.2 - 0.8 slpm)  
+ AIT-02    
+ AIT-04    
+O2 Sparge (slpm) (X.X)  Is one-point calibration required based on 1st pH 
+sample results?   Yes       No 
+CO2 Sparge (slpm) (X.X)  
+Is a 2nd pH sample required? If yes, go to Attachment 
+6: Additional pH Monitoring – pH samples’ 
+information. 
+ Yes       No 
+Bioreactor Weight (kg) (X)  Pipettor ID 
+(if applicable)  Measurements Results  
+Foam Check: 
+Is Antifoam addition Needed? 
+Proceed to Attachment 4 for manual addition.  
+ Vi-Cell Dilution (X)  
+Vi-Cell ID: VCD (X.X)  
+x 106 cells/mL 
+ Yes  No  Viability (X)  %  
+Was any pump tubing shifted?   Yes       N/A Osmometer ID  
+Osmolality (X) 
+ 
+ 
+  
+Has Dilution criteria been met? 
+(VCD ≥ 2.1 x 106 cells/mL)  
+Continue to Section 16 for Medium Dilution and N/A all 
+subsequent sample pages 
+ Yes       No 
+Performed By/Date:   Witness By/Date:    
+ 
+  
+MABR-0027688 v1.0    Status: Effective    Effective Date: 20 Nov 2025    Page 44 of 106
+PN: 8012420  / INT-034 - 100 L Seed Bioreactor (GPF-N, 500L, Process 1)
+Check this is the latest version of the document before use.
+Printed by Bradley Scanlon on 18 Dec 2025 20:04 GMT+00:00
+
+===== PAGE 45 =====
+ 
+   
+ 
+Table 1: Bioreactor Conditions N-2 
+Perform daily sampling of the bioreactor. BGA ID: Measurements Result 
+Day Seed Day 3  pH (T) (X.XX)   
+Time  
+ pCO2 (T) (X.X)  mmHg  
+Select Primary DO Probe  AIT-01    /    AIT-03 
+Bioreactor Temp. (°C) 
+(XX.X)  
+(35.0 - 38.0°C) 
+  pO2 (T) (X.X)  mmHg  
+Pressure (psig) (X.XX) 
+(0 – 0.6 psig)   Bioreactor Glu 
+(X) mg/dL 
+pO2 (%) (X.X) 
+(10.0 - 110.0%)    Lac (mmol/L) (X.X) Lactate Dilution Calculated Lactate (mmol/L) (X.X) 
+Bioreactor pH (X.XX) 
+(6.85 - 7.50)   
+ N/A  N/A 
+Agitation (rpm) (X)  
+(60 – 150 rpm)  
+Adjustment  
+Perform a one-point calibration if pH difference is < -0.05 or > 0.05. 
+Take a 2nd pH sample if pH difference is < -0.10 or > 0.10. 
+Record information from both probes. Only primary probe results will be used for 
+processing decisions. The secondary probe results are for information only (FIO). 
+Overlay Air (slpm) (X.X) 
+(1.0 – 10.0 slpm)  
+Select  
+Primary pH 
+Probe 
+Bioreactor pH 
+(X.XX) 
+- 
+Offline pH (T) (X.XX) 
+= 
+pH Difference 
+Air Sparge (slpm) (X.X) 
+(0.2 - 0.8 slpm)  
+ AIT-02    
+ AIT-04    
+O2 Sparge (slpm) (X.X)  Is one-point calibration required based on 1st pH 
+sample results?   Yes       No 
+CO2 Sparge (slpm) (X.X)  
+Is a 2nd pH sample required? If yes, go to Attachment 
+6: Additional pH Monitoring – pH samples’ 
+information. 
+ Yes       No 
+Bioreactor Weight (kg) (X)  Pipettor ID 
+(if applicable)  Measurements Results  
+Foam Check: 
+Is Antifoam addition Needed? 
+Proceed to Attachment 4 for manual addition.  
+ Vi-Cell Dilution (X)  
+Vi-Cell ID: VCD (X.X)  
+x 106 cells/mL 
+ Yes  No  Viability (X)  %  
+Was any pump tubing shifted?   Yes       N/A Osmometer ID  
+Osmolality (X) 
+ 
+ 
+  
+Has Dilution criteria been met? 
+(VCD ≥ 2.1 x 106 cells/mL)  
+Continue to Section 16 for Medium Dilution and N/A all 
+subsequent sample pages 
+ Yes       No 
+Performed By/Date:   Witness By/Date:    
+ 
+  
+MABR-0027688 v1.0    Status: Effective    Effective Date: 20 Nov 2025    Page 45 of 106
+PN: 8012420  / INT-034 - 100 L Seed Bioreactor (GPF-N, 500L, Process 1)
+Check this is the latest version of the document before use.
+Printed by Bradley Scanlon on 18 Dec 2025 20:04 GMT+00:00
+
+===== PAGE 46 =====
+ 
+   
+ 
+Table 1: Bioreactor Conditions N-2 
+Perform daily sampling of the bioreactor. BGA ID: Measurements Result 
+Day Seed Day 4  pH (T) (X.XX)   
+Time  
+ pCO2 (T) (X.X)  mmHg  
+Select Primary DO Probe  AIT-01    /    AIT-03 
+Bioreactor Temp. (°C) 
+(XX.X)  
+(35.0 - 38.0°C) 
+  pO2 (T) (X.X)  mmHg  
+Pressure (psig) (X.XX) 
+(0 – 0.6 psig)   Bioreactor Glu 
+(X) mg/dL 
+pO2 (%) (X.X) 
+(10.0 - 110.0%)    Lac (mmol/L) (X.X) Lactate Dilution Calculated Lactate (mmol/L) (X.X) 
+Bioreactor pH (X.XX) 
+(6.85 - 7.50)   
+ N/A  N/A 
+Agitation (rpm) (X)  
+(60 – 150 rpm)  
+Adjustment  
+Perform a one-point calibration if pH difference is < -0.05 or > 0.05. 
+Take a 2nd pH sample if pH difference is < -0.10 or > 0.10. 
+Record information from both probes. Only primary probe results will be used for 
+processing decisions. The secondary probe results are for information only (FIO). 
+Overlay Air (slpm) (X.X) 
+(1.0 – 10.0 slpm)  
+Select  
+Primary pH 
+Probe 
+Bioreactor pH 
+(X.XX) 
+- 
+Offline pH (T) (X.XX) 
+= 
+pH Difference 
+Air Sparge (slpm) (X.X) 
+(0.2 - 0.8 slpm)  
+ AIT-02    
+ AIT-04    
+O2 Sparge (slpm) (X.X)  Is one-point calibration required based on 1st pH 
+sample results?   Yes       No 
+CO2 Sparge (slpm) (X.X)  
+Is a 2nd pH sample required? If yes, go to Attachment 
+6: Additional pH Monitoring – pH samples’ 
+information. 
+ Yes       No 
+Bioreactor Weight (kg) (X)  Pipettor ID 
+(if applicable)  Measurements Results  
+Foam Check: 
+Is Antifoam addition Needed? 
+Proceed to Attachment 4 for manual addition.  
+ Vi-Cell Dilution (X)  
+Vi-Cell ID: VCD (X.X)  
+x 106 cells/mL 
+ Yes  No  Viability (X)  %  
+Was any pump tubing shifted?   Yes       N/A Osmometer ID  
+Osmolality (X) 
+ 
+ 
+  
+Has Dilution criteria been met? 
+(VCD ≥ 2.1 x 106 cells/mL)  
+Continue to Section 16 for Medium Dilution and N/A all 
+subsequent sample pages 
+ Yes       No 
+Performed By/Date:   Witness By/Date:    
+  
+MABR-0027688 v1.0    Status: Effective    Effective Date: 20 Nov 2025    Page 46 of 106
+PN: 8012420  / INT-034 - 100 L Seed Bioreactor (GPF-N, 500L, Process 1)
+Check this is the latest version of the document before use.
+Printed by Bradley Scanlon on 18 Dec 2025 20:04 GMT+00:00
+
+===== PAGE 47 =====
+ 
+   
+ 
+16 Medium Dilution 
+Step Description Performed 
+By/Date 
+Witnessed 
+By/Date 
+16.1  When the viable cell density is ≥ 2.1 x 106 cells/mL, prepare to add medium. 
+NOTE: Use the CHO Method 2 for cell count with Vi-CELL BLU. 
+  
+Seed Day: Viable Cell Density (VCD): Viability: 
+ _____________ x 106 cells/mL 
+(2.1 – 4.4 x 106 cells/mL) 
+______ % 
+(≥ 90%) 
+Contact Supervisor if:  
+• the viability is less than 90% and proceed with comment. 
+• VCD is not met by Seed Day 4. 
+o Additional samples can be taken under supervisor discretion. Document 
+daily sample results in Attachment 8: Additional Sampling Pages (N-
+2). 
+NOTE: Maximum time allowed in N-2 step is 120 hours.  
+• VCD is greater than 4.4 × 106 cells/mL. 
+Supervisor/designee contacted: ______________________________  
+16.2  Investigational Sample: 
+• Obtain a sampling assembly (6000391). 
+• Record assembly and welder information. 
+• Label this assembly with “INT-034”, 8012420 and batch number, bioreactor 
+ID, “100 L Bioreactor Pre-Medium Dilution”, initials, and date. 
+• Weld the assembly to the sample port per SOP-0107187 or SOP-0107297. 
+• Record retain sample per Attachment 7: Retain Samples. 
+Welder ID  
+Part No.:  
+Batch No.:  
+Exp. Date:  
+ 
+  
+SAP Consumption By/Date   
+  
+MABR-0027688 v1.0    Status: Effective    Effective Date: 20 Nov 2025    Page 47 of 106
+PN: 8012420  / INT-034 - 100 L Seed Bioreactor (GPF-N, 500L, Process 1)
+Check this is the latest version of the document before use.
+Printed by Bradley Scanlon on 18 Dec 2025 20:04 GMT+00:00
+
+===== PAGE 48 =====
+ 
+   
+ 
+Step Description Performed 
+By/Date 
+Witnessed 
+By/Date 
+16.3  • Dispense approximately 50 mL to be stored as investigational sample. 
+• Seal off assembly for removal and record sealer information.   
+Sealer ID  
+16.4  Obtain the following materials and record the information below. 
+  
+Description Part No. Batch No. Expiry Date 
+Male Purefit to 
+AQS 6005484*   
+*If PN 6005484 is not available, weld the CCMB1 Medium in Step 16.5. 
+SAP Consumption Performed By/Date   
+16.5  • Obtain CCMB1 Medium (M-030-V38) (PN: 8010764). 
+• Connect medium (PN: 8010764) to the DC charge line per SOP-
+0162420. 
+  
+Part Number  
+Batch Number  
+Exp. Date  
+Welder ID, if applicable  
+  
+MABR-0027688 v1.0    Status: Effective    Effective Date: 20 Nov 2025    Page 48 of 106
+PN: 8012420  / INT-034 - 100 L Seed Bioreactor (GPF-N, 500L, Process 1)
+Check this is the latest version of the document before use.
+Printed by Bradley Scanlon on 18 Dec 2025 20:04 GMT+00:00
+
+===== PAGE 49 =====
+ 
+   
+ 
+Step Description Performed 
+By/Date 
+Witnessed 
+By/Date 
+16.6  Dilution Medium Sample: 
+• Obtain a sampling assembly (6000391). 
+• Record the assembly and welder information. 
+• Label this assembly with “INT-034”, 8012420 and batch number, bioreactor 
+ID, “100 L Dilution Medium”, initials, and date. 
+• Weld the assembly to the Medium bag per SOP-0107187 or SOP-
+0107297.  
+Welder ID  
+Part No.:  
+Batch No.:  
+Exp. Date:  
+ 
+  
+SAP Consumption Performed By/Date   
+16.7  • Dispense approximately 50 mL of medium into the sample bag to be stored 
+as investigational sample at 2 - 8 °C. 
+• Record retain sample per Attachment 7: Retain Samples. 
+• Seal off assembly for removal and record sealer information. 
+  
+Sealer ID  
+  
+MABR-0027688 v1.0    Status: Effective    Effective Date: 20 Nov 2025    Page 49 of 106
+PN: 8012420  / INT-034 - 100 L Seed Bioreactor (GPF-N, 500L, Process 1)
+Check this is the latest version of the document before use.
+Printed by Bradley Scanlon on 18 Dec 2025 20:04 GMT+00:00
+
+===== PAGE 50 =====
+ 
+   
+ 
+Step Description Performed 
+By/Date 
+Witnessed 
+By/Date 
+16.8  • Initiate the Grow 2 recipe in the ABEC HMI per SOP-0126420. 
+• Verify the setpoints below: 
+Grow 2 (N-1) 
+Parameter Set point Status Allowed Range 
+Vessel Temp SP 36.5 °C Auto 35.0 -38.0 
+pH SP 7.10 Auto CO2 6.70 -7.50 
+pH deadband 0.20   
+DO SP 50%  10% -110% 
+Agitation SP 75 rpm Cascade 60 -150 
+Air Overlay SP 5.0 slpm Auto 1.0 – 10.0 
+Primary Air Sparge 
+SP 0.5 slpm Auto 0.5 – 5.0 
+Secondary Air 
+Sparge SP 0 Off  
+Primary O2 Sparge 
+SP 0 Cascade  
+Secondary O2 
+Sparge SP 0 Off  
+pH Strategy  Auto CO2  
+DO Strategy  Profile  
+ 
+  
+16.9  • Ensure the permeate clamp on TFF 1 is closed. 
+• Verify the Levitronix 1 settings below: 
+Flow Rate Control Selection 
+4.4 lpm Flow 
+ 
+  
+  
+MABR-0027688 v1.0    Status: Effective    Effective Date: 20 Nov 2025    Page 50 of 106
+PN: 8012420  / INT-034 - 100 L Seed Bioreactor (GPF-N, 500L, Process 1)
+Check this is the latest version of the document before use.
+Printed by Bradley Scanlon on 18 Dec 2025 20:04 GMT+00:00
+
+===== PAGE 51 =====
+ 
+   
+ 
+Step Description Performed 
+By/Date 
+Witnessed 
+By/Date 
+16.10  • Prime the medium addition line and record the weight of the bioreactor 
+before medium transfer. 
+• Calculate the target weight of the bioreactor after medium dilution. 
+  
+Current Bioreactor 
+Weight from HMI 
++ 
+Target Weight of 
+Medium to Add 
+= 
+Target Bioreactor 
+Weight After Medium 
+Dilution 
+______________ kg 55 kg _____________ kg 
+16.11  Slowly transfer 55 ± 2.75 kg of medium into the 
+bioreactor per SOP-0126420 until the target weight is 
+achieved.  
+Bioreactor Weight After 
+Medium Dilution 
+  
+_____________ kg 
+16.12  Record the end of media dilution time below. 
+  
+End Time of Media Dilution   
+16.13  Calculate the actual amount of medium transferred to the bioreactor: 
+NOTE: Ensure that the amount transferred to the bioreactor is within the 
+specified range. 
+  Bioreactor Weight After 
+Medium Dilution  Bioreactor Weight Before 
+Medium Dilution  Amount of Medium 
+Transferred 
+___________ kg - ____________ kg = ____________ kg 
+(52.25 – 57.75 kg) 
+SAP Consumption Performed By/Date   
+16.14  Calculate the TCCV after media dilution. 
+  
+Bioreactor Weight 
+After Medium Dilution 
+(Step 16.11) + 
+TFF 1 Hold up Volume 
+(Step 11.14) = 
+TCCV (Working 
+Volume) 
+   
+16.15  On the Recipe Alarms page, change the Interlock alarm per the table below:   
+Bioreactor System Alarm Low Interlock 
+Vessel Weight (kg) 65 
+  
+MABR-0027688 v1.0    Status: Effective    Effective Date: 20 Nov 2025    Page 51 of 106
+PN: 8012420  / INT-034 - 100 L Seed Bioreactor (GPF-N, 500L, Process 1)
+Check this is the latest version of the document before use.
+Printed by Bradley Scanlon on 18 Dec 2025 20:04 GMT+00:00
+
+===== PAGE 52 =====
+ 
+   
+ 
+Step Description Performed 
+By/Date 
+Witnessed 
+By/Date 
+16.16  • Verify the alarm set points for Grow 2 (N-1) below. 
+• Verify alarms are enabled. 
+Parameter Low High Deviation Alarm Status 
+Vessel Temp (°C) 35.0 38.0 1.0 Enable 
+Vessel Weight (kg) 85 115 10 Enable 
+Agitation (rpm) 60 150  Enable 
+pH 6.70 7.50 0.22 Enable 
+DO (%) 10 110 10 Enable 
+ 
+  
+16.17  Proceed to Section 17 to begin N-1 Seed Phase Sampling on day of medium 
+dilution.   
+  
+MABR-0027688 v1.0    Status: Effective    Effective Date: 20 Nov 2025    Page 52 of 106
+PN: 8012420  / INT-034 - 100 L Seed Bioreactor (GPF-N, 500L, Process 1)
+Check this is the latest version of the document before use.
+Printed by Bradley Scanlon on 18 Dec 2025 20:04 GMT+00:00
+
+===== PAGE 53 =====
+ 
+   
+ 
+17 Daily Sampling – N-1 Seed Phase 
+Step Description Performed 
+By/Date 
+Witnessed 
+ By/Date 
+17.1  On a daily basis, including Day 0 or as instructed by supervisor/designee: 
+• Prepare sample assembly by flushing 50 mL per SOP-0126420. 
+• Collect approximately 10 mL sample from the bioreactor per SOP-
+0126420 and perform the following analysis: 
+- Perform offline pH check per SOP-0107252. 
+- Perform a one-point correction of pH probes per SOP-0126420 
+when required. 
+NOTE:  If one-point correction is required, it must be performed 
+prior to any additions. 
+- Perform offline osmolality check per SOP-0080509. 
+- Measure cell density and percent viability per SOP-0115565. 
+NOTE: Use CHO Method 2 for cell count with Vi-CELL BLU. 
+• Perform glucose and lactate analysis. 
+• Record bioreactor conditions in Table 2: Bioreactor Conditions N-1. 
+• If needed, additional sample pages can be found in Attachment 9: 
+Additional Sampling Pages (N-1).  
+  
+MABR-0027688 v1.0    Status: Effective    Effective Date: 20 Nov 2025    Page 53 of 106
+PN: 8012420  / INT-034 - 100 L Seed Bioreactor (GPF-N, 500L, Process 1)
+Check this is the latest version of the document before use.
+Printed by Bradley Scanlon on 18 Dec 2025 20:04 GMT+00:00
+
+===== PAGE 54 =====
+ 
+   
+ 
+Table 2: Bioreactor Conditions N-1 
+Perform daily sampling of the bioreactor. BGA ID: Measurements Result 
+Day Seed Day ________  pH (T) (X.XX)   
+Time  
+ pCO2 (T) (X.X)  mmHg  
+Select Primary DO Probe  AIT-01    /    AIT-03 
+Bioreactor Temp. (°C) 
+(XX.X)  
+(35.0 -  38.0°C) 
+  pO2 (T) (X.X)  mmHg  
+Pressure (psig) (X.XX) 
+(0 – 0.6 psig)   Bioreactor Glu 
+(X) mg/dL 
+pO2 (%) (X.X) 
+(10.0 - 110.0%)    Lac (mmol/L) (X.X) Lactate Dilution Calculated Lactate (mmol/L) (X.X) 
+Bioreactor pH (X.XX) 
+(6.70 - 7.50)   
+ N/A  N/A 
+Agitation (rpm) (X)  
+(60 – 150 rpm)  
+Adjustment  
+Perform a one-point calibration if pH difference is < -0.05 or > 0.05. 
+Take a 2nd pH sample if pH difference is < -0.10 or > 0.10. 
+Record information from both probes. Only primary probe results will be used for 
+processing decisions. The secondary probe results are for information only (FIO). 
+Overlay Air (slpm) (X.X) 
+(1.0 – 10.0 slpm)  
+Select  
+Primary pH 
+Probe 
+Bioreactor pH 
+(X.XX) 
+- 
+Offline pH (T) (X.XX) 
+= 
+pH Difference 
+Air Sparge (slpm) (X.X) 
+(0.5 - 5.0 slpm)  
+ AIT-02    
+ AIT-04    
+O2 Sparge (slpm) (X.X)  Is one-point calibration required based on 1st pH 
+sample results?   Yes       No 
+CO2 Sparge (slpm) (X.X)  
+Is a 2nd pH sample required? If yes, go to Attachment 
+6: Additional pH Monitoring – pH samples’ 
+information. 
+ Yes       No 
+Bioreactor Weight (kg) (X)  Pipettor ID 
+(if applicable)  Measurements Results  
+Foam Check: 
+Is Antifoam addition Needed? 
+Proceed to Attachment 4 for manual addition.  
+ Vi-Cell Dilution (X)  
+Vi-Cell ID: VCD (X.X)  
+x 106 cells/mL 
+ Yes  No  Viability (X)  %  
+Was any pump tubing shifted?   Yes       N/A Osmometer ID  
+Osmolality (X) 
+ 
+ 
+  
+Has Perfusion criteria been met? 
+(VCD ≥ 1.8 x 106 cells/mL AND 48 ± 6 hours post Medium 
+Dilution)  
+Continue to Section 18 for Perfusion Initiation. 
+ Yes       No 
+Performed By/Date:   Witness By/Date:    
+ 
+  
+MABR-0027688 v1.0    Status: Effective    Effective Date: 20 Nov 2025    Page 54 of 106
+PN: 8012420  / INT-034 - 100 L Seed Bioreactor (GPF-N, 500L, Process 1)
+Check this is the latest version of the document before use.
+Printed by Bradley Scanlon on 18 Dec 2025 20:04 GMT+00:00
+
+===== PAGE 55 =====
+ 
+   
+ 
+Table 2: Bioreactor Conditions N-1 
+Perform daily sampling of the bioreactor. BGA ID: Measurements Result 
+Day Seed Day ________  pH (T) (X.XX)   
+Time  
+ pCO2 (T) (X.X)  mmHg  
+Select Primary DO Probe  AIT-01    /    AIT-03 
+Bioreactor Temp. (°C) 
+(XX.X)  
+(35.0 - 38.0°C) 
+  pO2 (T) (X.X)  mmHg  
+Pressure (psig) (X.XX) 
+(0 – 0.6 psig)   Bioreactor Glu 
+(X) mg/dL 
+pO2 (%) (X.X) 
+(10.0 - 110.0%)    Lac (mmol/L) (X.X) Lactate Dilution Calculated Lactate (mmol/L) (X.X) 
+Bioreactor pH (X.XX) 
+(6.70 - 7.50)   
+ N/A  N/A 
+Agitation (rpm) (X)  
+(60 – 150 rpm)  
+Adjustment  
+Perform a one-point calibration if pH difference is < -0.05 or > 0.05. 
+Take a 2nd pH sample if pH difference is < -0.10 or > 0.10. 
+Record information from both probes. Only primary probe results will be used for 
+processing decisions. The secondary probe results are for information only (FIO). 
+Overlay Air (slpm) (X.X) 
+(1.0 – 10.0 slpm)  
+Select  
+Primary pH 
+Probe 
+Bioreactor pH 
+(X.XX) 
+- 
+Offline pH (T) (X.XX) 
+= 
+pH Difference 
+Air Sparge (slpm) (X.X) 
+(0.5 - 5.0 slpm)  
+ AIT-02    
+ AIT-04    
+O2 Sparge (slpm) (X.X)  Is one-point calibration required based on 1st pH 
+sample results?   Yes       No 
+CO2 Sparge (slpm) (X.X)  
+Is a 2nd pH sample required? If yes, go to Attachment 
+6: Additional pH Monitoring – pH samples’ 
+information. 
+ Yes       No 
+Bioreactor Weight (kg) (X)  Pipettor ID 
+(if applicable)  Measurements Results  
+Foam Check: 
+Is Antifoam addition Needed? 
+Proceed to Attachment 4 for manual addition.  
+ Vi-Cell Dilution (X)  
+Vi-Cell ID: VCD (X.X)  
+x 106 cells/mL 
+ Yes  No  Viability (X)  %  
+Was any pump tubing shifted?   Yes       N/A Osmometer ID  
+Osmolality (X) 
+ 
+ 
+  
+Has Perfusion criteria been met? 
+(VCD ≥ 1.8 x 106 cells/mL AND 48 ± 6 hours post Medium 
+Dilution)  
+Continue to Section 18 for Perfusion Initiation. 
+ Yes       No 
+Performed By/Date:   Witness By/Date:    
+MABR-0027688 v1.0    Status: Effective    Effective Date: 20 Nov 2025    Page 55 of 106
+PN: 8012420  / INT-034 - 100 L Seed Bioreactor (GPF-N, 500L, Process 1)
+Check this is the latest version of the document before use.
+Printed by Bradley Scanlon on 18 Dec 2025 20:04 GMT+00:00
+
+===== PAGE 56 =====
+ 
+   
+ 
+Table 2: Bioreactor Conditions N-1 
+Perform daily sampling of the bioreactor. BGA ID: Measurements Result 
+Day Seed Day ________  pH (T) (X.XX)   
+Time  
+ pCO2 (T) (X.X)  mmHg  
+Select Primary DO Probe  AIT-01    /    AIT-03 
+Bioreactor Temp. (°C) 
+(XX.X)  
+(35.0 - 38.0°C) 
+  pO2 (T) (X.X)  mmHg  
+Pressure (psig) (X.XX) 
+(0 – 0.6 psig)   Bioreactor Glu 
+(X) mg/dL 
+pO2 (%) (X.X) 
+(10.0 - 110.0%)    Lac (mmol/L) (X.X) Lactate Dilution Calculated Lactate (mmol/L) (X.X) 
+Bioreactor pH (X.XX) 
+(6.70 - 7.50)   
+ N/A  N/A 
+Agitation (rpm) (X)  
+(60 – 150 rpm)  
+Adjustment  
+Perform a one-point calibration if pH difference is < -0.05 or > 0.05. 
+Take a 2nd pH sample if pH difference is < -0.10 or > 0.10. 
+Record information from both probes. Only primary probe results will be used for 
+processing decisions. The secondary probe results are for information only (FIO). 
+Overlay Air (slpm) (X.X) 
+(1.0 – 10.0 slpm)  
+Select  
+Primary pH 
+Probe 
+Bioreactor pH 
+(X.XX) 
+- 
+Offline pH (T) (X.XX) 
+= 
+pH Difference 
+Air Sparge (slpm) (X.X) 
+(0.5 - 5.0 slpm)  
+ AIT-02    
+ AIT-04    
+O2 Sparge (slpm) (X.X)  Is one-point calibration required based on 1st pH 
+sample results?   Yes       No 
+CO2 Sparge (slpm) (X.X)  
+Is a 2nd pH sample required? If yes, go to Attachment 
+6: Additional pH Monitoring – pH samples’ 
+information. 
+ Yes       No 
+Bioreactor Weight (kg) (X)  Pipettor ID 
+(if applicable)  Measurements Results  
+Foam Check: 
+Is Antifoam addition Needed? 
+Proceed to Attachment 4 for manual addition.  
+ Vi-Cell Dilution (X)  
+Vi-Cell ID: VCD (X.X)  
+x 106 cells/mL 
+ Yes  No  Viability (X)  %  
+Was any pump tubing shifted?   Yes       N/A Osmometer ID  
+Osmolality (X) 
+ 
+ 
+  
+Has Perfusion criteria been met? 
+(VCD ≥ 1.8 x 106 cells/mL AND 48 ± 6 hours post Medium 
+Dilution)  
+Continue to Section 18 for Perfusion Initiation. 
+ Yes       No 
+Performed By/Date:   Witness By/Date:    
+ 
+MABR-0027688 v1.0    Status: Effective    Effective Date: 20 Nov 2025    Page 56 of 106
+PN: 8012420  / INT-034 - 100 L Seed Bioreactor (GPF-N, 500L, Process 1)
+Check this is the latest version of the document before use.
+Printed by Bradley Scanlon on 18 Dec 2025 20:04 GMT+00:00
+
+===== PAGE 57 =====
+ 
+   
+ 
+18 Seed Perfusion Initiation 
+Step Description Performed 
+By/Date 
+Witnessed 
+By/Date 
+18.1  Ensure Steps 10.8 - 10.12 have been completed before proceeding.   
+18.2  Investigational Sample: 
+• Obtain a sampling assembly (6000391). 
+• Record the assembly and welder information. 
+• Label the assembly with “INT-034”, 8012420 and batch number, bioreactor 
+ID, “100 L Bioreactor Pre-Perfusion Initiation”, initials, and date. 
+• Weld the assembly to the sample port per SOP-0107187 or SOP-0107297. 
+• Record retain sample per Attachment 7: Retain Samples. 
+Welder ID  
+Part No.:  
+Batch No.:  
+Exp. Date:  
+ 
+  
+SAP Consumption By/Date   
+18.3  • Dispense approximately 50 mL to be stored as investigation sample. 
+• Seal off assembly for removal and record sealer information. 
+  
+Sealer ID   
+18.4  Verify the process trend for BRXFEED-4003 is activated.   
+  
+MABR-0027688 v1.0    Status: Effective    Effective Date: 20 Nov 2025    Page 57 of 106
+PN: 8012420  / INT-034 - 100 L Seed Bioreactor (GPF-N, 500L, Process 1)
+Check this is the latest version of the document before use.
+Printed by Bradley Scanlon on 18 Dec 2025 20:04 GMT+00:00
+
+===== PAGE 58 =====
+ 
+   
+ 
+Step Description Performed 
+By/Date 
+Witnessed 
+By/Date 
+18.5  Calculate the Perfusion Rate. 
+  
+Total Cell 
+Culture Volume 
+(Step 16.14) x 
+Perfusion 
+Rate x 1000 
+g/kg ÷ 24 
+hrs/day = 
+Perfusion 
+Rate  
+(X.XX) 
+kg 0.30 VVD g/hr 
+18.6  Input the following information into the feedcart per SOP-0126942. 
+  
+Input N-1 Feedcart Settings 
+Feed cart ID Step 12.2 
+N-1 Formula IFBN1 PermG 
+N-1 Recipe Feeds 
+Pump State Inactive 
+EM Module None 
+Recipe Inputs 
+TCCV Working 
+Volume Step 16.14 
+Perfusion Rate Step 18.5 
+Feed Cart Pump 
+Settings Gravimetric 
+Input Alarms 
+Alarm Type Limits Delay (ms) 
+Pump Speed 
+Alarm HH 210 RPM 30,000 
+Gravimetric 
+Alarm  
+DevA 50 g/hr 300,000 
+Input N-1 Recipe Density Check 
+Perfusion Feeds Density (kg/L) 
+Permeate 1 
+  
+MABR-0027688 v1.0    Status: Effective    Effective Date: 20 Nov 2025    Page 58 of 106
+PN: 8012420  / INT-034 - 100 L Seed Bioreactor (GPF-N, 500L, Process 1)
+Check this is the latest version of the document before use.
+Printed by Bradley Scanlon on 18 Dec 2025 20:04 GMT+00:00
+
+===== PAGE 59 =====
+ 
+   
+ 
+Step Description Performed 
+By/Date 
+Witnessed 
+By/Date 
+18.7  Ensure the following Perfusion Start Criteria has been met.   
+VCD (≥ 1.8 x 106 cells/mL) ____________ x 106 cells/mL 
+Hours Post Dilution (Step 16.12) _____________ 
+(48 ± 6 hours) 
+18.8  • Unclamp the Permeate Line to the Permeate Waste Vessel. 
+• Ensure the TFF 1 Permeate Line is open. 
+• Ensure the TFF 1 Permeate Line is primed per SOP-0126942. 
+  
+18.9  Load the batch recipe “FEEDS” and Feed cart formula “IFBN1 PermG” per SOP-
+0126942. 
+  
+18.10  • Record the Perfusion Medium (PN: 8012342) pump below. 
+• Prime the Perfusion Medium addition line per SOP-0126420. 
+• Input the following level control volume in the ABEC.  
+  
+Addition Pump N-1 Level Control Max 
+Weight CP Select Status 
+___________ Bioreactor Weight After 
+Dilution (Step 16.11) Level Control 
+18.11  Ensure the following Levitronix 1 alarms are enabled. 
+Levitronix 1 Alarms 
+ Low High Alarm Status 
+Pump Speed (RPM) 600 3000 Enable 
+Flow rate (l/hr) 2.4 6.4 Enable 
+Temp (°C)   Disable 
+TMP (psi) 0 0.5 Enabled 
+P1 (psi) 0 3 Enable 
+P2 (psi) 0 3 Enable 
+P3 (psi) 0 3 Enable 
+ 
+  
+18.12  Record time and date of Perfusion Initiation.   
+Time/Date of Perfusion Initiation  
+18.13  N-1 Perfusion Phase Sampling will begin day after Perfusion Initiation.   
+ 
+MABR-0027688 v1.0    Status: Effective    Effective Date: 20 Nov 2025    Page 59 of 106
+PN: 8012420  / INT-034 - 100 L Seed Bioreactor (GPF-N, 500L, Process 1)
+Check this is the latest version of the document before use.
+Printed by Bradley Scanlon on 18 Dec 2025 20:04 GMT+00:00
+
+===== PAGE 60 =====
+ 
+   
+ 
+19 Daily Sampling – Perfusion Phase 
+Step Description Performed 
+By/Date 
+Witnessed 
+By/Date 
+19.1  On a daily basis, including Day 0 or as instructed by supervisor/designee: 
+• Prepare sample assembly by flushing 50 mL per SOP-0126420 
+• Collect approximately 10 mL sample from the bioreactor per SOP-0126420 
+and perform the following analysis: 
+- Perform offline pH check per SOP-0107252. 
+- Perform a one point correction of pH probes per SOP-0107196 when 
+required. 
+NOTE:  If one point correction is required, it must be performed prior to any 
+additions. 
+- Perform offline osmolality check per SOP-0080509. 
+- Measure cell density and percent viability per SOP-0115565. 
+NOTE: Use CHO Method 2 cell type for cell count with Vi-CELL blu. 
+• Perform glucose and lactate analysis 
+• Record bioreactor conditions in Table 3: Perfusion Bioreactor Conditions 
+N-1.  
+• If the permeate bag needs to be replaced utilize Attachment 2: 
+Permeate Bag Replacement to document the actions taken. 
+• If needed, additional sample pages can be found in Attachment 9: 
+Additional Sampling Pages (N-1).   
+  
+ 
+  
+MABR-0027688 v1.0    Status: Effective    Effective Date: 20 Nov 2025    Page 60 of 106
+PN: 8012420  / INT-034 - 100 L Seed Bioreactor (GPF-N, 500L, Process 1)
+Check this is the latest version of the document before use.
+Printed by Bradley Scanlon on 18 Dec 2025 20:04 GMT+00:00
+
+===== PAGE 61 =====
+ 
+   
+ 
+Table 3: Perfusion Bioreactor Conditions N-1 
+Perform daily sampling of the bioreactor. BGA ID: Measurements Result 
+Day Seed Day ________  pH (T) (X.XX)   
+Time   pCO2 (T) (X.X)  mmHg  
+Choose the primary DO 
+probe  AIT-01    /    AIT-03  pO2 (T) (X.X)  mmHg  
+Bioreactor Temp. (°C) 
+(XX.X)  
+(35.0 - 38.0°C) 
+  Bioreactor Glu 
+(X) mg/dL 
+Pressure (psig) (X.XX) 
+(0 – 0.6 psig)  Lac (mmol/L) (X.X) Lactate Dilution Calculated Lactate (mmol/L) (X.X) 
+pO2 (%) (X.X) 
+(10 - 110%)     N/A  N/A 
+Bioreactor pH (X.XX) 
+( 6.70 - 7.50)  
+Adjustment  
+Perform a one-point calibration if pH difference is < -0.05 or > 0.05. 
+Take a 2nd pH sample if pH difference is < -0.10 or > 0.10. 
+Record information from both probes. Only primary probe results will be used for 
+processing decisions. The secondary probe results are for information only (FIO). 
+Agitation (rpm) (X)  
+(60 - 150 rpm)  Select  
+Primary Probe 
+Bioreactor pH 
+(X.XX) 
+- 
+Offline pH (T) (X.XX) 
+= 
+pH Difference 
+Overlay Air (slpm) (X.X) 
+(1 - 10 slpm)  
+AIT-02    
+AIT-04    
+Air Sparge (slpm) (X.X) 
+(0.5 - 5.0 slpm)  Is one-point calibration required based on 1st pH 
+sample results?   Yes       No 
+O2 Sparge (slpm) (X.X)  
+Is a 2nd pH sample required? If yes, go to Attachment 
+6: Additional pH Monitoring – pH samples’ 
+information. 
+ Yes       No 
+CO2 Sparge (slpm) (X.X)  Pipettor ID 
+(if applicable)  Measurements Results  
+Bioreactor Weight (kg) 
+(X)  
+ Vi-Cell Dilution (X)  
+Vi-Cell ID: VCD (X.X)  
+x 106 cells/mL 
+Foam Check: 
+Is Antifoam addition Needed?  
+Proceed to Attachment 4 for manual 
+additions. 
+ No        Yes  Viability (X) 
+%  
+P1 P2 P3 Osmometer ID  
+Osmolality (X) 
+ 
+psi psi psi   
+TMP ( ≤ 1.0 psi) psi Is Perfusion Rate Change Required? 
+(72 ± 6 hours post Medium Dilution)  
+Continue to Section 20. 
+ Yes       No 
+Was any pump tubing shifted?   Yes       N/A 
+Performed By/Date:   Witness By/Date:    
+  
+MABR-0027688 v1.0    Status: Effective    Effective Date: 20 Nov 2025    Page 61 of 106
+PN: 8012420  / INT-034 - 100 L Seed Bioreactor (GPF-N, 500L, Process 1)
+Check this is the latest version of the document before use.
+Printed by Bradley Scanlon on 18 Dec 2025 20:04 GMT+00:00
+
+===== PAGE 62 =====
+ 
+   
+ 
+Table 3: Perfusion Bioreactor Conditions N-1 
+Perform daily sampling of the bioreactor. BGA ID: Measurements Result 
+Day Seed Day ________  pH (T) (X.XX)   
+Time   pCO2 (T) (X.X)  mmHg  
+Choose the primary DO 
+probe  AIT-01    /    AIT-03  pO2 (T) (X.X)  mmHg  
+Bioreactor Temp. (°C) 
+(XX.X)  
+(35.0 - 38.0°C) 
+  Bioreactor Glu 
+(X) mg/dL 
+Pressure (psig) (X.XX) 
+(0 – 0.6 psig)  Lac (mmol/L) (X.X) Lactate Dilution Calculated Lactate (mmol/L) (X.X) 
+pO2 (%) (X.X) 
+(10 - 110%)     N/A  N/A 
+Bioreactor pH (X.XX) 
+( 6.70 - 7.50)  
+Adjustment  
+Perform a one-point calibration if pH difference is < -0.05 or > 0.05. 
+Take a 2nd pH sample if pH difference is < -0.10 or > 0.10. 
+Record information from both probes. Only primary probe results will be used for 
+processing decisions. The secondary probe results are for information only (FIO). 
+Agitation (rpm) (X)  
+(60 - 150 rpm)  Select  
+Primary Probe 
+Bioreactor pH 
+(X.XX) 
+- 
+Offline pH (T) (X.XX) 
+= 
+pH Difference 
+Overlay Air (slpm) (X.X) 
+(1 - 10 slpm)  
+AIT-02    
+AIT-04    
+Air Sparge (slpm) (X.X) 
+(0.5 - 5.0 slpm)  Is one-point calibration required based on 1st pH 
+sample results?   Yes       No 
+O2 Sparge (slpm) (X.X)  
+Is a 2nd pH sample required? If yes, go to Attachment 
+6: Additional pH Monitoring – pH samples’ 
+information. 
+ Yes       No 
+CO2 Sparge (slpm) (X.X)  Pipettor ID 
+(if applicable)  Measurements Results  
+Bioreactor Weight (kg) 
+(X)  
+ Vi-Cell Dilution (X)  
+Vi-Cell ID: VCD (X.X)  
+x 106 cells/mL 
+Foam Check: 
+Is Antifoam addition Needed?  
+Proceed to Attachment 4 for manual 
+additions. 
+ No        Yes  Viability (X) 
+%  
+P1 P2 P3 Osmometer ID  
+Osmolality (X) 
+ 
+psi psi psi   
+TMP ( ≤ 1.0 psi) psi Is Perfusion Rate Change Required? 
+(96 ± 6 hours post Medium Dilution)  
+Continue to Section 20. 
+ Yes       No 
+Was any pump tubing shifted?   Yes       N/A 
+Performed By/Date:   Witness By/Date:    
+  
+MABR-0027688 v1.0    Status: Effective    Effective Date: 20 Nov 2025    Page 62 of 106
+PN: 8012420  / INT-034 - 100 L Seed Bioreactor (GPF-N, 500L, Process 1)
+Check this is the latest version of the document before use.
+Printed by Bradley Scanlon on 18 Dec 2025 20:04 GMT+00:00
+
+===== PAGE 63 =====
+ 
+   
+ 
+Table 3: Perfusion Bioreactor Conditions N-1 
+Perform daily sampling of the bioreactor. BGA ID: Measurements Result 
+Day Seed Day ________  pH (T) (X.XX)   
+Time   pCO2 (T) (X.X)  mmHg  
+Choose the primary DO 
+probe  AIT-01    /    AIT-03  pO2 (T) (X.X)  mmHg  
+Bioreactor Temp. (°C) 
+(XX.X)  
+(35.0 - 38.0°C) 
+  Bioreactor Glu 
+(X) mg/dL 
+Pressure (psig) (X.XX) 
+(0 – 0.6 psig)  Lac (mmol/L) (X.X) Lactate Dilution Calculated Lactate (mmol/L) (X.X) 
+pO2 (%) (X.X) 
+(10 - 110%)     N/A  N/A 
+Bioreactor pH (X.XX) 
+( 6.70 - 7.50)  
+Adjustment  
+Perform a one-point calibration if pH difference is < -0.05 or > 0.05. 
+Take a 2nd pH sample if pH difference is < -0.10 or > 0.10. 
+Record information from both probes. Only primary probe results will be used for 
+processing decisions. The secondary probe results are for information only (FIO). 
+Agitation (rpm) (X)  
+(60 - 150 rpm)  Select  
+Primary Probe 
+Bioreactor pH 
+(X.XX) 
+- 
+Offline pH (T) (X.XX) 
+= 
+pH Difference 
+Overlay Air (slpm) (X.X) 
+(1 - 10 slpm)  
+AIT-02    
+AIT-04    
+Air Sparge (slpm) (X.X) 
+(0.5 - 5.0 slpm)  Is one-point calibration required based on 1st pH 
+sample results?   Yes       No 
+O2 Sparge (slpm) (X.X)  
+Is a 2nd pH sample required? If yes, go to Attachment 
+6: Additional pH Monitoring – pH samples’ 
+information. 
+ Yes       No 
+CO2 Sparge (slpm) (X.X)  Pipettor ID 
+(if applicable)  Measurements Results  
+Bioreactor Weight (kg) 
+(X)  
+ Vi-Cell Dilution (X)  
+Vi-Cell ID: VCD (X.X)  
+x 106 cells/mL 
+Foam Check: 
+Is Antifoam addition Needed?  
+Proceed to Attachment 4 for manual 
+additions. 
+ No        Yes  Viability (X) 
+%  
+P1 P2 P3 Osmometer ID  
+Osmolality (X) 
+ 
+psi psi psi   
+TMP ( ≤ 1.0 psi) psi 
+Has Transfer Criteria been met? 
+(VCD ≥ 26.0 x 106 cells/mL)  
+Continue to Section 21. 
+ Yes       No 
+Is Perfusion Rate Change Required?* 
+(120 ± 6 hours post Medium Dilution)  
+Continue to Section 20.  Yes       No 
+Was any pump tubing shifted?   Yes       N/A *If Transfer Criteria has been met, Perfusion Rate Change is not 
+required. Proceed to Section 21. 
+Performed By/Date:   Witness By/Date:    
+MABR-0027688 v1.0    Status: Effective    Effective Date: 20 Nov 2025    Page 63 of 106
+PN: 8012420  / INT-034 - 100 L Seed Bioreactor (GPF-N, 500L, Process 1)
+Check this is the latest version of the document before use.
+Printed by Bradley Scanlon on 18 Dec 2025 20:04 GMT+00:00
+
+===== PAGE 64 =====
+ 
+   
+ 
+Table 3: Perfusion Bioreactor Conditions N-1 
+Perform daily sampling of the bioreactor. BGA ID: Measurements Result 
+Day Seed Day ________  pH (T) (X.XX)   
+Time   pCO2 (T) (X.X)  mmHg  
+Choose the primary DO 
+probe  AIT-01    /    AIT-03  pO2 (T) (X.X)  mmHg  
+Bioreactor Temp. (°C) 
+(XX.X)  
+(35.0 - 38.0°C) 
+  Bioreactor Glu 
+(X) mg/dL 
+Pressure (psig) (X.XX) 
+(0 – 0.6 psig)  Lac (mmol/L) (X.X) Lactate Dilution Calculated Lactate (mmol/L) (X.X) 
+pO2 (%) (X.X) 
+(10 - 110%)     N/A  N/A 
+Bioreactor pH (X.XX) 
+( 6.70 - 7.50)  
+Adjustment  
+Perform a one-point calibration if pH difference is < -0.05 or > 0.05. 
+Take a 2nd pH sample if pH difference is < -0.10 or > 0.10. 
+Record information from both probes. Only primary probe results will be used for 
+processing decisions. The secondary probe results are for information only (FIO). 
+Agitation (rpm) (X)  
+(60 - 150 rpm)  Select  
+Primary Probe 
+Bioreactor pH 
+(X.XX) 
+- 
+Offline pH (T) (X.XX) 
+= 
+pH Difference 
+Overlay Air (slpm) (X.X) 
+(1 - 10 slpm)  
+AIT-02    
+AIT-04    
+Air Sparge (slpm) (X.X) 
+(0.5 - 5.0 slpm)  Is one-point calibration required based on 1st pH 
+sample results?   Yes       No 
+O2 Sparge (slpm) (X.X)  
+Is a 2nd pH sample required? If yes, go to Attachment 
+6: Additional pH Monitoring – pH samples’ 
+information. 
+ Yes       No 
+CO2 Sparge (slpm) (X.X)  Pipettor ID 
+(if applicable)  Measurements Results  
+Bioreactor Weight (kg) 
+(X)  
+ Vi-Cell Dilution (X)  
+Vi-Cell ID: VCD (X.X)  
+x 106 cells/mL 
+Foam Check: 
+Is Antifoam addition Needed?  
+Proceed to Attachment 4 for manual 
+additions. 
+ No        Yes  Viability (X) 
+%  
+P1 P2 P3 Osmometer ID  
+Osmolality (X) 
+ 
+psi psi psi   
+TMP ( ≤ 1.0 psi) psi Has Transfer Criteria been met? 
+(VCD ≥ 26.0 x 106 cells/mL)  
+Continue to Section 21. 
+ Yes       No 
+Was any pump tubing shifted?   Yes       N/A 
+Performed By/Date:   Witness By/Date:    
+MABR-0027688 v1.0    Status: Effective    Effective Date: 20 Nov 2025    Page 64 of 106
+PN: 8012420  / INT-034 - 100 L Seed Bioreactor (GPF-N, 500L, Process 1)
+Check this is the latest version of the document before use.
+Printed by Bradley Scanlon on 18 Dec 2025 20:04 GMT+00:00
+
+===== PAGE 65 =====
+ 
+   
+ 
+Table 3: Perfusion Bioreactor Conditions N-1 
+Perform daily sampling of the bioreactor. BGA ID: Measurements Result 
+Day Seed Day ________  pH (T) (X.XX)   
+Time   pCO2 (T) (X.X)  mmHg  
+Choose the primary DO 
+probe  AIT-01    /    AIT-03  pO2 (T) (X.X)  mmHg  
+Bioreactor Temp. (°C) 
+(XX.X)  
+(35.0 - 38.0°C) 
+  Bioreactor Glu 
+(X) mg/dL 
+Pressure (psig) (X.XX) 
+(0 – 0.6 psig)  Lac (mg/dL) (X.X) Lactate Dilution Calculated Lactate (mg/dL) (X.X) 
+pO2 (%) (X.X) 
+(10 - 110%)     N/A  N/A 
+Bioreactor pH (X.XX) 
+( 6.70 - 7.50)  
+Adjustment  
+Perform a one-point calibration if pH difference is < -0.05 or > 0.05. 
+Take a 2nd pH sample if pH difference is < -0.10 or > 0.10. 
+Record information from both probes. Only primary probe results will be used for 
+processing decisions. The secondary probe results are for information only (FIO). 
+Agitation (rpm) (X)  
+(60 - 150 rpm)  Select  
+Primary Probe 
+Bioreactor pH 
+(X.XX) 
+- 
+Offline pH (T) (X.XX) 
+= 
+pH Difference 
+Overlay Air (slpm) (X.X) 
+(1 - 10 slpm)  
+AIT-02    
+AIT-04    
+Air Sparge (slpm) (X.X) 
+(0.5 - 5.0 slpm)  Is one-point calibration required based on 1st pH 
+sample results?   Yes       No 
+O2 Sparge (slpm) (X.X)  
+Is a 2nd pH sample required? If yes, go to Attachment 
+6: Additional pH Monitoring – pH samples’ 
+information. 
+ Yes       No 
+CO2 Sparge (slpm) (X.X)  Pipettor ID 
+(if applicable)  Measurements Results  
+Bioreactor Weight (kg) 
+(X)  
+ Vi-Cell Dilution (X)  
+Vi-Cell ID: VCD (X.X)  
+x 106 cells/mL 
+Foam Check: 
+Is Antifoam addition Needed?  
+Proceed to Attachment 4 for manual 
+additions. 
+ No        Yes  Viability (X) 
+%  
+P1 P2 P3 Osmometer ID  
+Osmolality (X) 
+ 
+psi psi psi   
+TMP ( ≤ 1.0 psi) psi Has Transfer Criteria been met? 
+(VCD ≥ 26.0 x 106 cells/mL)  
+Continue to Section 21. 
+ Yes       No 
+Was any pump tubing shifted?   Yes       N/A 
+Performed By/Date:   Witness By/Date:    
+ 
+  
+MABR-0027688 v1.0    Status: Effective    Effective Date: 20 Nov 2025    Page 65 of 106
+PN: 8012420  / INT-034 - 100 L Seed Bioreactor (GPF-N, 500L, Process 1)
+Check this is the latest version of the document before use.
+Printed by Bradley Scanlon on 18 Dec 2025 20:04 GMT+00:00
+
+===== PAGE 66 =====
+ 
+   
+ 
+Table 3: Perfusion Bioreactor Conditions N-1 
+Perform daily sampling of the bioreactor. BGA ID: Measurements Result 
+Day Seed Day ________  pH (T) (X.XX)   
+Time   pCO2 (T) (X.X)  mmHg  
+Choose the primary DO 
+probe  AIT-01    /    AIT-03  pO2 (T) (X.X)  mmHg  
+Bioreactor Temp. (°C) 
+(XX.X)  
+(35.0 - 38.0°C) 
+  Bioreactor Glu 
+(X) mg/dL 
+Pressure (psig) (X.XX) 
+(0 – 0.6 psig)  Lac (mg/dL) (X.X) Lactate Dilution Calculated Lactate (mg/dL) (X.X) 
+pO2 (%) (X.X) 
+(10 - 110%)     N/A  N/A 
+Bioreactor pH (X.XX) 
+( 6.70 - 7.50)  
+Adjustment  
+Perform a one-point calibration if pH difference is < -0.05 or > 0.05. 
+Take a 2nd pH sample if pH difference is < -0.10 or > 0.10. 
+Record information from both probes. Only primary probe results will be used for 
+processing decisions. The secondary probe results are for information only (FIO). 
+Agitation (rpm) (X)  
+(60 - 150 rpm)  Select  
+Primary Probe 
+Bioreactor pH 
+(X.XX) 
+- 
+Offline pH (T) (X.XX) 
+= 
+pH Difference 
+Overlay Air (slpm) (X.X) 
+(1 - 10 slpm)  
+AIT-02    
+AIT-04    
+Air Sparge (slpm) (X.X) 
+(0.5 - 5.0 slpm)  Is one-point calibration required based on 1st pH 
+sample results?   Yes       No 
+O2 Sparge (slpm) (X.X)  
+Is a 2nd pH sample required? If yes, go to Attachment 
+6: Additional pH Monitoring – pH samples’ 
+information. 
+ Yes       No 
+CO2 Sparge (slpm) (X.X)  Pipettor ID 
+(if applicable)  Measurements Results  
+Bioreactor Weight (kg) 
+(X)  
+ Vi-Cell Dilution (X)  
+Vi-Cell ID: VCD (X.X)  
+x 106 cells/mL 
+Foam Check: 
+Is Antifoam addition Needed?  
+Proceed to Attachment 4 for manual 
+additions. 
+ No        Yes  Viability (X) 
+%  
+P1 P2 P3 Osmometer ID  
+Osmolality (X) 
+ 
+psi psi psi   
+TMP ( ≤ 1.0 psi) psi Has Transfer Criteria been met? 
+(VCD ≥ 26.0 x 106 cells/mL)  
+Continue to Section 21. 
+ Yes       No 
+Was any pump tubing shifted?   Yes       N/A 
+Performed By/Date:   Witness By/Date:    
+ 
+  
+MABR-0027688 v1.0    Status: Effective    Effective Date: 20 Nov 2025    Page 66 of 106
+PN: 8012420  / INT-034 - 100 L Seed Bioreactor (GPF-N, 500L, Process 1)
+Check this is the latest version of the document before use.
+Printed by Bradley Scanlon on 18 Dec 2025 20:04 GMT+00:00
+
+===== PAGE 67 =====
+ 
+   
+ 
+20 Perfusion Rate Change 
+Step Description Performed 
+By/Date 
+Witnessed 
+By/Date 
+20.1  • When the hours post Dilution (Step 16.12) is equal to 72 ± 6 hours, change the 
+perfusion rate. 
+• Calculate the new Perfusion Rate. 
+  Total Cell 
+Culture Volume 
+(Step 16.14) x 
+Perfusion 
+Rate x 1000 
+g/kg ÷ 24 
+hrs/day = 
+Perfusion 
+Rate  
+(X.XX) 
+kg 0.70 VVD g/hr 
+20.2  Input the Perfusion Rate into the feedcart per SOP-0126942. 
+  
+Hours Since Dilution End __________________ 
+(72 ± 6 hours) 
+Perfusion Rate __________________ 
+(Step 20.1) 
+  
+20.3  • When the hours post Dilution (Step 16.12) is equal to 96 ± 6 hours, change the 
+perfusion rate. 
+• Calculate the new Perfusion Rate. 
+  Total Cell 
+Culture Volume 
+(Step 16.14) x 
+Perfusion 
+Rate x 1000 
+g/kg ÷ 24 
+hrs/day = 
+Perfusion 
+Rate  
+(X.XX) 
+kg 1.50 VVD g/hr 
+20.4  Input the Perfusion Rate into the feedcart per SOP-0126942. 
+  
+Hours Since Dilution End __________________ 
+(96 ± 6 hours) 
+Perfusion Rate __________________ 
+(Step 20.3) 
+  
+  
+MABR-0027688 v1.0    Status: Effective    Effective Date: 20 Nov 2025    Page 67 of 106
+PN: 8012420  / INT-034 - 100 L Seed Bioreactor (GPF-N, 500L, Process 1)
+Check this is the latest version of the document before use.
+Printed by Bradley Scanlon on 18 Dec 2025 20:04 GMT+00:00
+
+===== PAGE 68 =====
+ 
+   
+ 
+Step Description Performed 
+By/Date 
+Witnessed 
+By/Date 
+20.5  • When the hours post Dilution (Step 16.12) is equal to 120 ± 6 hours, change 
+the perfusion rate. 
+• Calculate the new Perfusion Rate. 
+  Total Cell 
+Culture Volume 
+(Step 16.14) x 
+Perfusion 
+Rate x 1000 
+g/kg ÷ 24 
+hrs/day = 
+Perfusion 
+Rate  
+(X.XX) 
+kg 2.00 VVD g/hr 
+20.6  Input the Perfusion Rate into the feedcart per SOP-0126942. 
+  
+Hours Since Dilution End __________________ 
+(120 ± 6 hours) 
+Perfusion Rate __________________ 
+(Step 20.5) 
+  
+  
+MABR-0027688 v1.0    Status: Effective    Effective Date: 20 Nov 2025    Page 68 of 106
+PN: 8012420  / INT-034 - 100 L Seed Bioreactor (GPF-N, 500L, Process 1)
+Check this is the latest version of the document before use.
+Printed by Bradley Scanlon on 18 Dec 2025 20:04 GMT+00:00
+
+===== PAGE 69 =====
+ 
+   
+ 
+ 
+21 Transfer to 500 L STR 
+Step Description Performed 
+By/Date 
+Witnessed 
+By/Date 
+21.1  When the viable cell density is ≥ 26.0 x 106 cells/mL, prepare to transfer to 500 L 
+Production STR. 
+NOTE: Use the CHO Method 2 for cell count with Vi-CELL BLU. 
+  
+Seed Day: Viable Cell Density (VCD): Viability: 
+ _____________ x 106 cells/mL 
+(≥ 26.0x 106 cells/mL) 
+______ % 
+(90%) 
+Contact Supervisor if:  
+• the viability is less than 90% and proceed with comment. 
+• VCD is not met by Perfusion Day 5: 
+o Additional samples can be taken under supervisor direction. Document 
+daily sample results in Attachment 9: Additional Sampling Pages 
+(N-1). 
+NOTE: Maximum time allowed in Perfusion step is 7 days. 
+• VCD is greater than 33.3 × 106 cells/mL. 
+Supervisor/designee contacted: ______________________________  
+21.2  Pre-Transfer Investigational Sample: 
+• Obtain a sampling assembly (6000391). 
+• Record the assembly and welder information. 
+• Label the assembly with “INT-034”, 8012420 and batch number, bioreactor ID, 
+“100 L Bioreactor Pre - 500L Transfer”, initials, and date. 
+• Weld the assembly to the sample port per SOP-0080596.   
+Welder ID  
+Part No.:  
+Batch No.:  
+Exp. Date:  
+SAP Consumption By/date   
+  
+MABR-0027688 v1.0    Status: Effective    Effective Date: 20 Nov 2025    Page 69 of 106
+PN: 8012420  / INT-034 - 100 L Seed Bioreactor (GPF-N, 500L, Process 1)
+Check this is the latest version of the document before use.
+Printed by Bradley Scanlon on 18 Dec 2025 20:04 GMT+00:00
+
+===== PAGE 70 =====
+ 
+   
+ 
+Step Description Performed 
+By/Date 
+Witnessed 
+By/Date 
+21.3  • Dispense approximately 50 mL to be stored as investigation sample. 
+• Record the sealer information below. 
+• Record retain sample per Attachment 7: Retain Samples. 
+  
+Sealer ID  
+21.4  • End the N-1 Feedcart Recipe batch per SOP-0126942. 
+• Record the Time the recipe was stopped and permeate waste bag weight. 
+Time the Feedcart 
+Recipe was Stopped 
+Gross Weight of 
+Permeate Waste 
+Net Weight of Permeate 
+Waste* 
+ kg kg 
+*Net Weight of Permeate Waste = Gross Weight of Permeate Waste (above) – 
+Tare Weight of Permeate Vessel (Step 10.4 or Attachment 2) 
+NOTE: Use Tare Weight of Permeate Vessel from Attachment 2 if permeate 
+bag was replaced during run. 
+ 
+  
+21.5  • Stop the Perfusion Medium pump per SOP-0126420. 
+• Close the permeate line. 
+• Remove the Perfusion Medium from the ABEC per SOP-0080522.   
+Sealer ID  
+21.6  • Obtain the gross weight of the Perfusion Medium after use. 
+• Calculate the net weight of PN: 8012342 used during the run. 
+  
+Scale ID  
+Calibration Due Date   
+Gross Weight of CCM-FR-2 
+Perfusion Medium (M-051-V4) (PN: 
+8012342) after use 
+ 
+Net Weight of CCM-FR-2 Perfusion 
+Medium (M-051-V4) (PN: 8012342) 
+used* 
+ 
+*Net Weight of 8012342 used = Gross Weight of 8012342 before use (Step 10.9) – 
+Gross Weight of 8012342 after use (above) 
+SAP Consumption By/Date   
+  
+MABR-0027688 v1.0    Status: Effective    Effective Date: 20 Nov 2025    Page 70 of 106
+PN: 8012420  / INT-034 - 100 L Seed Bioreactor (GPF-N, 500L, Process 1)
+Check this is the latest version of the document before use.
+Printed by Bradley Scanlon on 18 Dec 2025 20:04 GMT+00:00
+
+===== PAGE 71 =====
+ 
+   
+ 
+Step Description Performed 
+By/Date 
+Witnessed 
+By/Date 
+21.7  • Record the weight of the antifoam bag. 
+• Calculate the total amount of antifoam added during the run. 
+NOTE: Ensure the antifoam bag tubing is in the same configuration as when the 
+initial weight was taken in Step 10.7. 
+  Antifoam Bag Weight After 
+Priming - 
+Antifoam Bag Final 
+Weight = 
+Weight of 
+Antifoam Added 
+(X) 
+g g g 
+NOTE: The maximum antifoam amount allowed is 330 g for PN: 4102603/4102604 or 
+165 g for PN: 4102057.  
+21.8  
+Is the Weight of Antifoam Added 
+(Step ) > 
+165 g for PN: 4102057 
+OR 
+330 g for PN: 4102063 or 
+4102604?   
+ Yes Proceed to the next step 
+ No N/A Steps 21.9 through 21.12 and continue to Step 21.13. 
+21.9  Record the concentration of simethicone in the antifoam from the manufacturer’s 
+Certificate of Analysis below: 
+  
+Concentration of Simethicone _____________ % 
+21.10  Calculate the total amount of simethicone added.  
+  
+Weight of Antifoam 
+Added  
+(Step  21.7) x 
+Concentration of 
+Simethicone 
+(Step 21.9) ÷ 100 = 
+Total Amount of 
+Simethicone Added 
+(X) 
+g % g 
+21.11  Calculate the concentration of simethicone in the pre-harvest product. 
+  
+Total Amount of 
+Simethicone 
+Added  
+(Step 21.10) ÷ 
+TCCV 
+(Step 16.14) x 1,000 = 
+Concentration of Simethicone 
+at the end of N-1 (X) 
+g kg ppm 
+21.12  If concentration of simethicone at the end of N-1 in Step 21.11 exceeds 50 ppm, 
+contact Area Manager and QA. Record decision(s) in Attachment 10: Comments 
+Section. 
+Area Manager/Designee contacted: __________________________ 
+  
+  
+MABR-0027688 v1.0    Status: Effective    Effective Date: 20 Nov 2025    Page 71 of 106
+PN: 8012420  / INT-034 - 100 L Seed Bioreactor (GPF-N, 500L, Process 1)
+Check this is the latest version of the document before use.
+Printed by Bradley Scanlon on 18 Dec 2025 20:04 GMT+00:00
+
+===== PAGE 72 =====
+ 
+   
+ 
+Step Description Performed 
+By/Date 
+Witnessed 
+By/Date 
+21.13  Prior to transfer, disable the alarms below.  
+Parameter Low High Deviation Alarm Status 
+Vessel Temp (°C) 35.0 38.0 1.0 Disable 
+Vessel Weight (kg) 85 50 115 Disable 
+Agitation (rpm) 60 150  Disable 
+pH 6.70 7.50 0.22 Disable 
+DO (%) 10 110 10 Disable 
+Levitronix 1 Alarms 
+Pump Speed (RPM) 600 3000  Disable 
+Flow rate (l/hr) 2.4 6.4  Disable 
+Temp (°C)    Disable 
+TMP (psi) 0 0.5  Disable 
+P1 (psi) 0 3  Disable 
+P2 (psi) 0 3  Disable 
+P3 (psi) 0 3  Disable 
+ 
+ 
+ 
+21.14  On the Recipe Alarms page, change the Interlock alarm per the table below:   
+Bioreactor System Alarm Low Interlock 
+Vessel Weight (kg) 0 
+  
+MABR-0027688 v1.0    Status: Effective    Effective Date: 20 Nov 2025    Page 72 of 106
+PN: 8012420  / INT-034 - 100 L Seed Bioreactor (GPF-N, 500L, Process 1)
+Check this is the latest version of the document before use.
+Printed by Bradley Scanlon on 18 Dec 2025 20:04 GMT+00:00
+
+===== PAGE 73 =====
+ 
+   
+ 
+Step Description Performed 
+By/Date 
+Witnessed 
+By/Date 
+21.15  On the Loops screen, set the parameters below prior to transfer. 
+Loop Setpoint Status 
+Vessel Temp SP N/A OFF 
+pH SP N/A OFF 
+pH deadband N/A OFF 
+DO SP 50% Cascade 
+Agitation SP 75 rpm Cascade 
+Air Overlay SP 5.0 slpm AUTO 
+Primary Air Sparge SP 0.5 slpm AUTO 
+Secondary Air Sparge SP 0 OFF 
+Primary O2 Sparge SP 0 OFF 
+Secondary O2 Sparge SP 0 OFF 
+pH Strategy  OFF 
+DO Strategy  Profile 
+ 
+  
+21.16  Proceed to PN 8012421 / INT-034 - 500 L Production Bioreactor (GPF-North, 
+500 L, Process 1)   
+21.17  • Monitor the liquid level in the bioreactor throughout transfer to the 500 L 
+STR. 
+• End Grow 2 Recipe once liquid level reaches the probe belt. 
+  
+21.18  Stop TFF recirculation once liquid level reaches the DC supply line and flow 
+from return line has stopped.   
+ 
+ 
+   
+MABR-0027688 v1.0    Status: Effective    Effective Date: 20 Nov 2025    Page 73 of 106
+PN: 8012420  / INT-034 - 100 L Seed Bioreactor (GPF-N, 500L, Process 1)
+Check this is the latest version of the document before use.
+Printed by Bradley Scanlon on 18 Dec 2025 20:04 GMT+00:00
+
+===== PAGE 74 =====
+ 
+   
+ 
+22 Post-Process Procedures 
+Step Description Performed 
+by/Date 
+Witnessed 
+by/Date 
+22.1  Ensure the TFF is stopped and broken down per SOP-0126879 and SOP-
+0126420.   
+22.2  Ensure bioreactor breakdown is performed per SOP-0126420.   
+MABR-0027688 v1.0    Status: Effective    Effective Date: 20 Nov 2025    Page 74 of 106
+PN: 8012420  / INT-034 - 100 L Seed Bioreactor (GPF-N, 500L, Process 1)
+Check this is the latest version of the document before use.
+Printed by Bradley Scanlon on 18 Dec 2025 20:04 GMT+00:00
+
+===== PAGE 75 =====
+ 
+   
+ 
+23 Batch Record Review 
+Step Description Initials/Date 
+23.1  Verify that all the following data is attached to this batch record:  
+• Sample Assembly Attachment and Sampling (Attachment 1) 
+• Permeate Bag Replacement (Attachment 2) 
+• Additional Exhaust Filter Assembly (Attachment 3) 
+• Antifoam Addition (Attachment 4) 
+• Non-Routine Sampling Record (Attachment 5) 
+• Additional pH Monitoring – pH Samples’ Information (Attachment 6) 
+• Retain Samples (Attachment 7) 
+• Additional Sampling Pages (N-2) (Attachment 8) 
+• Additional Sampling Pages (N-1) (Attachment 9) 
+• Comments Section (Attachment 10) 
+23.2  Verify that the Seed Bioreactor product net weight (Step 16.14) is correctly input 
+into SAP.  
+23.3  Review the Master Production Record for completeness, and accuracy sign the 
+front page, and submit for review.  
+ 
+MABR-0027688 v1.0    Status: Effective    Effective Date: 20 Nov 2025    Page 75 of 106
+PN: 8012420  / INT-034 - 100 L Seed Bioreactor (GPF-N, 500L, Process 1)
+Check this is the latest version of the document before use.
+Printed by Bradley Scanlon on 18 Dec 2025 20:04 GMT+00:00
+
+===== PAGE 76 =====
+ 
+   
+ 
+Attachment 1:  Sample Assembly Attachment and Sampling 
+Sampling Device 
+Part No.:     
+Batch No.:     
+Expiration Date:     
+Welder ID:     
+Performed By/Date:     
+Witnessed By/Date:     
+Sampling Information 
+Working Day or Process:     
+Time:     
+Approximate Volume:     
+Sealer ID:     
+Performed By/Date:     
+Witnessed By/Date:     
+SAP Consumption 
+Performed by/Date:     
+ 
+Sampling Device 
+Part No.:     
+Batch No.:     
+Expiration Date:     
+Welder ID:     
+Performed By/Date:     
+Witnessed By/Date:     
+Sampling Information 
+Working Day or Process:     
+Time:     
+Approximate Volume:     
+Sealer ID:     
+Performed By/Date:     
+Witnessed By/Date:     
+SAP Consumption 
+Performed by/Date:     
+MABR-0027688 v1.0    Status: Effective    Effective Date: 20 Nov 2025    Page 76 of 106
+PN: 8012420  / INT-034 - 100 L Seed Bioreactor (GPF-N, 500L, Process 1)
+Check this is the latest version of the document before use.
+Printed by Bradley Scanlon on 18 Dec 2025 20:04 GMT+00:00
+
+===== PAGE 77 =====
+ 
+   
+ 
+Attachment 1:  Sample Assembly Attachment and Sampling (continued) 
+Sampling Device 
+Part No.:     
+Batch No.:     
+Expiration Date:     
+Welder ID:     
+Performed By/Date:     
+Witnessed By/Date:     
+Sampling Information 
+Working Day or Process:     
+Time:     
+Approximate Volume:     
+Sealer ID:     
+Performed By/Date:     
+Witnessed By/Date:     
+SAP Consumption 
+Performed by/Date:     
+ 
+Sampling Device 
+Part No.:     
+Batch No.:     
+Expiration Date:     
+Welder ID:     
+Performed By/Date:     
+Witnessed By/Date:     
+Sampling Information 
+Working Day or Process:     
+Time:     
+Approximate Volume:     
+Sealer ID:     
+Performed By/Date:     
+Witnessed By/Date:     
+SAP Consumption 
+Performed by/Date:     
+MABR-0027688 v1.0    Status: Effective    Effective Date: 20 Nov 2025    Page 77 of 106
+PN: 8012420  / INT-034 - 100 L Seed Bioreactor (GPF-N, 500L, Process 1)
+Check this is the latest version of the document before use.
+Printed by Bradley Scanlon on 18 Dec 2025 20:04 GMT+00:00
+
+===== PAGE 78 =====
+ 
+   
+ 
+Attachment 2: Permeate Bag Replacement 
+Permeate Bag Day of Replacement Information 
+Working Day or Process:     
+Time:     
+Gross Weight of Permeate Waste 
+Vessel before removal:     
+Net Weight of Permeate Waste 
+Vessel before removal*:     
+Sealer ID:     
+Performed By/Date:     
+Witnessed By/Date:     
+Permeate Bag Information 
+Part No.:     
+Batch No.:     
+Expiration Date:     
+Welder ID:     
+Tare Weight of Permeate Vessel 
+after attaching to DC**:     
+Performed By/Date:     
+Witnessed By/Date:     
+SAP Consumption Performed 
+by/Date:     
+* Net Weight of Permeate Waste Vessel before removal = Gross Weight of Permeate Waste Vessel before removal – Tare Weight of Permeate Vessel after attaching to DC (Step 
+10.4 or Attachment 2). 
+**Ensure the same permeate scale from Step 12.1 is used for the new permeate vessel.  
+MABR-0027688 v1.0    Status: Effective    Effective Date: 20 Nov 2025    Page 78 of 106
+PN: 8012420  / INT-034 - 100 L Seed Bioreactor (GPF-N, 500L, Process 1)
+Check this is the latest version of the document before use.
+Printed by Bradley Scanlon on 18 Dec 2025 20:04 GMT+00:00
+
+===== PAGE 79 =====
+ 
+   
+ 
+Attachment 3: Additional Exhaust Filter Assembly 
+Exhaust Filter Assembly Information 
+Exhaust Filter Assembly  
+Part No.:     
+Exhaust Filter Assembly 
+Batch No.:     
+Exhaust Filter Assembly 
+Expiration Date:     
+Tubing Assembly Part 
+No.* :     
+Tubing Assembly Batch 
+No. * :     
+Tubing Assembly 
+Expiration Date * :      
+Welder ID:     
+Performed By/Date:     
+Witnessed By/Date:     
+SAP Consumption 
+Performed by:      
+Date Filter Clamp is 
+opened:     
+Performed By/Date:     
+Witnessed By/Date:     
+* N/A if additional tubing assembly was not used to connect Exhaust Filter to the DC. 
+  
+MABR-0027688 v1.0    Status: Effective    Effective Date: 20 Nov 2025    Page 79 of 106
+PN: 8012420  / INT-034 - 100 L Seed Bioreactor (GPF-N, 500L, Process 1)
+Check this is the latest version of the document before use.
+Printed by Bradley Scanlon on 18 Dec 2025 20:04 GMT+00:00
+
+===== PAGE 80 =====
+ 
+   
+ 
+ 
+Attachment 4:  Antifoam Addition 
+Table 1: Manual Additions 
+N-2 Phase 
+Time of Addition Balance ID(a) 
+Required Antifoam 
+Amount 
+(g) 
+Amount Added (g)  
+(X): 
+Performed 
+By/Date 
+Witnessed 
+By/Date 
+ 
+ 
+ 25 g ± 2 (4102057) 
+ 75 g ± 4 (4102603 
+or 4102604) 
+   Calibration Due Date: 
+ 
+ 
+   Calibration Due Date: 
+ 
+ 
+   Calibration Due Date: 
+ 
+ 
+   Calibration Due Date: 
+N-1 Phase Pre-Perfusion Initiation 
+Time of Addition Balance ID(a) 
+Required Antifoam 
+Amount 
+(g) 
+Amount Added (g)  
+(X): 
+Performed 
+By/Date 
+Witnessed 
+By/Date 
+ 
+ 
+ 25 g ± 2 (4102057) 
+ 75 g ± 4 (4102603  
+                 or 4102604) 
+   Calibration Due Date: 
+ 
+ 
+   Calibration Due Date: 
+ 
+ 
+   Calibration Due Date: 
+ 
+ 
+   Calibration Due Date: 
+(a) Ensure a balance weight check was performed within the last 7 days per SOP-0080224 or SOP-0080249. 
+ 
+ 
+ 
+MABR-0027688 v1.0    Status: Effective    Effective Date: 20 Nov 2025    Page 80 of 106
+PN: 8012420  / INT-034 - 100 L Seed Bioreactor (GPF-N, 500L, Process 1)
+Check this is the latest version of the document before use.
+Printed by Bradley Scanlon on 18 Dec 2025 20:04 GMT+00:00
+
+===== PAGE 81 =====
+ 
+   
+ 
+ 
+ 
+ 
+Attachment 4: Antifoam Addition (continued) 
+Table 1: Manual Additions 
+N-1 Phase Perfusion 
+Time of Addition Balance ID(a) 
+Required Antifoam 
+Amount 
+(g) 
+Amount Added (g)  
+(X): 
+Performed 
+By/Date 
+Witnessed 
+By/Date 
+ 
+ 
+ 25 g ± 2 (4102057) 
+ 75 g ± 4 (4102603 
+or 4102604) 
+   Calibration Due Date: 
+ 
+ 
+   Calibration Due Date: 
+ 
+ 
+   Calibration Due Date: 
+ 
+ 
+   Calibration Due Date: 
+ 
+ 
+   Calibration Due Date: 
+ 
+ 
+   Calibration Due Date: 
+ 
+ 
+   Calibration Due Date: 
+(a) Ensure a balance weight check was performed within the last 7 days per SOP-0080224 or SOP-0080249. 
+MABR-0027688 v1.0    Status: Effective    Effective Date: 20 Nov 2025    Page 81 of 106
+PN: 8012420  / INT-034 - 100 L Seed Bioreactor (GPF-N, 500L, Process 1)
+Check this is the latest version of the document before use.
+Printed by Bradley Scanlon on 18 Dec 2025 20:04 GMT+00:00
+
+===== PAGE 82 =====
+ 
+   
+ 
+ 
+Attachment 5: Non-Routine Sampling Record 
+Process 
+Section No. Contents Container 
+Type Quantity Designation Performed 
+By/Date 
+Witnessed 
+By/Date 
+     
+  
+     
+  
+     
+  
+     
+  
+     
+  
+     
+  
+     
+  
+ 
+MABR-0027688 v1.0    Status: Effective    Effective Date: 20 Nov 2025    Page 82 of 106
+PN: 8012420  / INT-034 - 100 L Seed Bioreactor (GPF-N, 500L, Process 1)
+Check this is the latest version of the document before use.
+Printed by Bradley Scanlon on 18 Dec 2025 20:04 GMT+00:00
+
+===== PAGE 83 =====
+ 
+   
+ 
+Attachment 5: Non-Routine Sampling Record (continued) 
+Process 
+Section No. Contents Container 
+Type Quantity Designation Performed 
+By/Date 
+Witnessed 
+By/Date 
+     
+  
+     
+  
+     
+  
+     
+  
+     
+  
+     
+  
+     
+  
+ 
+  
+MABR-0027688 v1.0    Status: Effective    Effective Date: 20 Nov 2025    Page 83 of 106
+PN: 8012420  / INT-034 - 100 L Seed Bioreactor (GPF-N, 500L, Process 1)
+Check this is the latest version of the document before use.
+Printed by Bradley Scanlon on 18 Dec 2025 20:04 GMT+00:00
+
+===== PAGE 84 =====
+ 
+   
+ 
+Attachment 6:  Additional pH Monitoring - pH samples’ information 
+Date Sample 
+Time 
+pH 
+probe 
+Bioreactor 
+pH (X.XX) 
+Bioreactor 
+Temp.  
+(°C) (XX.X) 
+BGA /pH 
+Meter ID 
+Offline pH 
+(X.XX) 
+pH 
+Difference 
+(BRX pH – 
+offline pH) 
+Correction 
+(Select type of correction) 
+Calibration  
+New Value 
+(X.XX) 
+Time 
+performed 
+Performed  
+By/Date 
+Witnessed 
+By/Date 
+  
+AIT-02  
+   
+  No  full(1)  ½ (2)  
+   
+AIT-04    No  full(1)  ½ (2)  
+  
+AIT-02    
+ 
+  No  full(1)  ½ (2)  
+   
+AIT-04    No  full(1)  ½ (2)  
+  
+AIT-02    
+ 
+  No  full(1)  ½ (2)  
+   
+AIT-04    No  full(1)  ½ (2)  
+  
+AIT-02    
+ 
+  No  full(1)  ½ (2)  
+   
+AIT-04    No  full(1)  ½ (2)  
+  
+AIT-02    
+ 
+  No  full(1)  ½ (2)  
+   
+AIT-04    No  full(1)  ½ (2)  
+Instructions: Probes are standardized as needed independently of each other. 
+If pH difference after the 2nd sample is: 
+(1) > ± 0.05 and ≤ ± 0.10, perform a full correction.  
+(2) Still > ± 0.10, perform a ½ correction on the bioreactor transmitter per footnote (a) and notify supervisor/designee. 
+(a) Calculate ½ Correction value using the formula: ½ Correction value = (Offline pH + Online pH) ÷ 2 
+(b) If a ½ correction is made, complete any required additions to the bioreactor. Once all additions are completed, collect a 3rd pH sample between 30 minutes and 4 
+hours after the additions were completed. If pH difference is 
+• < ± 0.05, no correction is required. 
+• ≥ ± 0.05 and ≤ ± 0.10, correct bioreactor pH to match the offline pH value.  
+• > ± 0.10, contact supervisor and record action taken in Attachment 16.          
+  
+MABR-0027688 v1.0    Status: Effective    Effective Date: 20 Nov 2025    Page 84 of 106
+PN: 8012420  / INT-034 - 100 L Seed Bioreactor (GPF-N, 500L, Process 1)
+Check this is the latest version of the document before use.
+Printed by Bradley Scanlon on 18 Dec 2025 20:04 GMT+00:00
+
+===== PAGE 85 =====
+ 
+   
+ 
+Attachment 6: Additional pH Monitoring – pH samples’ information (continued) 
+Date Sample 
+Time 
+pH 
+probe 
+Bioreactor 
+pH (X.XX) 
+Bioreactor 
+Temp.  
+(°C) (XX.X) 
+BGA /pH 
+Meter ID 
+Offline pH 
+(X.XX) 
+pH 
+Difference 
+(BRX pH – 
+offline pH) 
+Correction 
+(Select type of correction) 
+Calibration  
+New Value 
+(X.XX) 
+Time 
+performed 
+Performed  
+By/Date 
+Witnessed 
+By/Date 
+  
+AIT-02  
+   
+  No  full(1)  ½ (2)  
+   
+AIT-04    No  full(1)  ½ (2)  
+  
+AIT-02    
+ 
+  No  full(1)  ½ (2)  
+   
+AIT-04    No  full(1)  ½ (2)  
+  
+AIT-02    
+ 
+  No  full(1)  ½ (2)  
+   
+AIT-04    No  full(1)  ½ (2)  
+  
+AIT-02    
+ 
+  No  full(1)  ½ (2)  
+   
+AIT-04    No  full(1)  ½ (2)  
+  
+AIT-02    
+ 
+  No  full(1)  ½ (2)  
+   
+AIT-04    No  full(1)  ½ (2)  
+Instructions: Probes are standardized as needed independently of each other. 
+If pH difference after the 2nd sample is: 
+(1) > ± 0.05 and ≤ ± 0.10, perform a full correction.  
+(2) Still > ± 0.10, perform a ½ correction on the bioreactor transmitter per footnote (a) and notify supervisor/designee. 
+(a) Calculate ½ Correction value using the formula: ½ Correction value = (Offline pH + Online pH) ÷ 2 
+(b) If a ½ correction is made, complete any required additions to the bioreactor. Once all additions are completed, collect a 3rd pH sample between 30 minutes and 4 
+hours after the additions were completed. If pH difference is 
+• < ± 0.05, no correction is required. 
+• ≥ ± 0.05 and ≤ ± 0.10, correct bioreactor pH to match the offline pH value.  
+• > ± 0.10, contact supervisor and record action taken in Attachment 16.               
+MABR-0027688 v1.0    Status: Effective    Effective Date: 20 Nov 2025    Page 85 of 106
+PN: 8012420  / INT-034 - 100 L Seed Bioreactor (GPF-N, 500L, Process 1)
+Check this is the latest version of the document before use.
+Printed by Bradley Scanlon on 18 Dec 2025 20:04 GMT+00:00
+
+===== PAGE 86 =====
+ 
+ 
+ 
+Attachment 7: Retain Samples 
+Process 
+Step Solution Volume 
+Storage 
+Temp. 
+°C 
+Description Notes Sample 
+collected? 
+Performed 
+by/Date 
+Witnessed 
+by/Date 
+SETUP 
+Seed Medium before 
+charge 
+(Step 11.5) 
+50 mL 2-8 Bioburden Sample from bag prior 
+to adding to ABEC   Yes   
+Perfusion media  
+(Step 10.11) 50 mL 2-8 Bioburden Sample from bag prior 
+to priming line 
+ Yes   
+N-2 Medium sample before 
+inoculation (Step 13.8) 50 mL 2-8 Bioburden 
+Sample from the 
+ABEC prior to 
+inoculation 
+ Yes   
+N-1 
+Top off media before 
+Dilution (Step 16.6) 50 mL 2-8 Bioburden Sample from bag prior 
+to adding to ABEC  Yes   
+Culture before Dilution 
+(Step 16.2) 50 mL 2-8 
+Cell 
+containing 
+Bioburden 
+Sample from the 
+ABEC prior to dilution 
+ Yes   
+Culture before N-1 
+perfusion initiation  
+(Step 18.2) 
+50 mL 2-8 
+Cell 
+containing 
+Bioburden 
+Sample from the 
+ABEC prior to initiating 
+N-1 perfusion 
+ Yes   
+Culture before transfer 
+to 500 L STR  
+(Step 21.2) 
+50 mL 2-8 
+Cell 
+containing 
+Bioburden 
+Sample from the 
+ABEC prior to 
+transferring to 500 L 
+STR 
+ Yes   
+ 
+ 
+ 
+ 
+MABR-0027688 v1.0    Status: Effective    Effective Date: 20 Nov 2025    Page 86 of 106
+PN: 8012420  / INT-034 - 100 L Seed Bioreactor (GPF-N, 500L, Process 1)
+Check this is the latest version of the document before use.
+Printed by Bradley Scanlon on 18 Dec 2025 20:04 GMT+00:00
+
+===== PAGE 87 =====
+ 
+ 
+ 
+Attachment 8: Additional Sampling Pages (N-2) 
+Perform daily sampling of the bioreactor. BGA ID: Measurements Result 
+Day Seed Day _______  pH (T) (X.XX)   
+Time  
+ pCO2 (T) (X.X)  mmHg  
+Select Primary DO Probe  AIT-01    /    AIT-03 
+Bioreactor Temp. (°C) 
+(XX.X)  
+(35.0 - 38.0°C) 
+  pO2 (T) (X.X)  mmHg  
+Pressure (psig) (X.XX) 
+(0 – 0.6 psig)   Bioreactor Glu 
+(X) mg/dL 
+pO2 (%) (X.X) 
+(10.0 - 110.0%)    Lac (mmol/L) (X.X) Lactate Dilution Calculated Lactate (mmol/L) (X.X) 
+Bioreactor pH (X.XX) 
+(6.85 - 7.50)   
+ N/A  N/A 
+Agitation (rpm) (X)  
+(60 – 150 rpm)  
+Adjustment  
+Perform a one-point calibration if pH difference is < -0.05 or > 0.05. 
+Take a 2nd pH sample if pH difference is < -0.10 or > 0.10. 
+Record information from both probes. Only primary probe results will be used for 
+processing decisions. The secondary probe results are for information only (FIO). 
+Overlay Air (slpm) (X.X) 
+(1.0 – 10.0 slpm)  
+Select  
+Primary pH 
+Probe 
+Bioreactor pH 
+(X.XX) 
+- 
+Offline pH (T) (X.XX) 
+= 
+pH Difference 
+Air Sparge (slpm) (X.X) 
+(0.2 - 0.8 slpm)  
+ AIT-02    
+ AIT-04    
+O2 Sparge (slpm) (X.X)  Is one-point calibration required based on 1st pH 
+sample results?   Yes       No 
+CO2 Sparge (slpm) (X.X)  
+Is a 2nd pH sample required? If yes, go to Attachment 
+6: Additional pH Monitoring – pH samples’ 
+information. 
+ Yes       No 
+Bioreactor Weight (kg) (X)  Pipettor ID 
+(if applicable)  Measurements Results  
+Foam Check: 
+Is Antifoam addition Needed? 
+Proceed to Attachment 4 for manual addition.  
+ Vi-Cell Dilution (X)  
+Vi-Cell ID: VCD (X.X)  
+x 106 cells/mL 
+ Yes  No  Viability (X)  %  
+Was any pump tubing shifted?   Yes       N/A Osmometer ID  
+Osmolality (X) 
+ 
+ 
+  
+Has Dilution criteria been met? 
+(VCD ≥ 2.1 x 106 cells/mL)  
+Continue to Section 16 for Medium Dilution and N/A all 
+subsequent sample pages 
+ Yes       No 
+Performed By/Date:   Witness By/Date:    
+ 
+  
+MABR-0027688 v1.0    Status: Effective    Effective Date: 20 Nov 2025    Page 87 of 106
+PN: 8012420  / INT-034 - 100 L Seed Bioreactor (GPF-N, 500L, Process 1)
+Check this is the latest version of the document before use.
+Printed by Bradley Scanlon on 18 Dec 2025 20:04 GMT+00:00
+
+===== PAGE 88 =====
+ 
+ 
+ 
+Attachment 8: Additional Sampling Pages (N-2) 
+Perform daily sampling of the bioreactor. BGA ID: Measurements Result 
+Day Seed Day _______  pH (T) (X.XX)   
+Time  
+ pCO2 (T) (X.X)  mmHg  
+Select Primary DO Probe  AIT-01    /    AIT-03 
+Bioreactor Temp. (°C) 
+(XX.X)  
+(35.0 - 38.0°C) 
+  pO2 (T) (X.X)  mmHg  
+Pressure (psig) (X.XX) 
+(0 – 0.6 psig)   Bioreactor Glu 
+(X) mg/dL 
+pO2 (%) (X.X) 
+(10.0 - 110.0%)    Lac (mmol/L) (X.X) Lactate Dilution Calculated Lactate (mmol/L) (X.X) 
+Bioreactor pH (X.XX) 
+(6.85 - 7.50)   
+ N/A  N/A 
+Agitation (rpm) (X)  
+(60 – 150 rpm)  
+Adjustment  
+Perform a one-point calibration if pH difference is < -0.05 or > 0.05. 
+Take a 2nd pH sample if pH difference is < -0.10 or > 0.10. 
+Record information from both probes. Only primary probe results will be used for 
+processing decisions. The secondary probe results are for information only (FIO). 
+Overlay Air (slpm) (X.X) 
+(1.0 – 10.0 slpm)  
+Select  
+Primary pH 
+Probe 
+Bioreactor pH 
+(X.XX) 
+- 
+Offline pH (T) (X.XX) 
+= 
+pH Difference 
+Air Sparge (slpm) (X.X) 
+(0.2 - 0.8 slpm)  
+ AIT-02    
+ AIT-04    
+O2 Sparge (slpm) (X.X)  Is one-point calibration required based on 1st pH 
+sample results?   Yes       No 
+CO2 Sparge (slpm) (X.X)  
+Is a 2nd pH sample required? If yes, go to Attachment 
+6: Additional pH Monitoring – pH samples’ 
+information. 
+ Yes       No 
+Bioreactor Weight (kg) (X)  Pipettor ID 
+(if applicable)  Measurements Results  
+Foam Check: 
+Is Antifoam addition Needed? 
+Proceed to Attachment 4 for manual addition.  
+ Vi-Cell Dilution (X)  
+Vi-Cell ID: VCD (X.X)  
+x 106 cells/mL 
+ Yes  No  Viability (X)  %  
+Was any pump tubing shifted?   Yes       N/A Osmometer ID  
+Osmolality (X) 
+ 
+ 
+  
+Has Dilution criteria been met? 
+(VCD ≥ 2.1 x 106 cells/mL)  
+Continue to Section 16 for Medium Dilution and N/A all 
+subsequent sample pages 
+ Yes       No 
+Performed By/Date:   Witness By/Date:    
+ 
+  
+MABR-0027688 v1.0    Status: Effective    Effective Date: 20 Nov 2025    Page 88 of 106
+PN: 8012420  / INT-034 - 100 L Seed Bioreactor (GPF-N, 500L, Process 1)
+Check this is the latest version of the document before use.
+Printed by Bradley Scanlon on 18 Dec 2025 20:04 GMT+00:00
+
+===== PAGE 89 =====
+ 
+ 
+ 
+Attachment 8: Additional Sampling Pages (N-2) 
+Perform daily sampling of the bioreactor. BGA ID: Measurements Result 
+Day Seed Day _______  pH (T) (X.XX)   
+Time  
+ pCO2 (T) (X.X)  mmHg  
+Select Primary DO Probe  AIT-01    /    AIT-03 
+Bioreactor Temp. (°C) 
+(XX.X)  
+(35.0 - 38.0°C) 
+  pO2 (T) (X.X)  mmHg  
+Pressure (psig) (X.XX) 
+(0 – 0.6 psig)   Bioreactor Glu 
+(X) mg/dL 
+pO2 (%) (X.X) 
+(10.0 - 110.0%)    Lac (mmol/L) (X.X) Lactate Dilution Calculated Lactate (mmol/L) (X.X) 
+Bioreactor pH (X.XX) 
+(6.85 - 7.50)   
+ N/A  N/A 
+Agitation (rpm) (X)  
+(60 – 150 rpm)  
+Adjustment  
+Perform a one-point calibration if pH difference is < -0.05 or > 0.05. 
+Take a 2nd pH sample if pH difference is < -0.10 or > 0.10. 
+Record information from both probes. Only primary probe results will be used for 
+processing decisions. The secondary probe results are for information only (FIO). 
+Overlay Air (slpm) (X.X) 
+(1.0 – 10.0 slpm)  
+Select  
+Primary pH 
+Probe 
+Bioreactor pH 
+(X.XX) 
+- 
+Offline pH (T) (X.XX) 
+= 
+pH Difference 
+Air Sparge (slpm) (X.X) 
+(0.2 - 0.8 slpm)  
+ AIT-02    
+ AIT-04    
+O2 Sparge (slpm) (X.X)  Is one-point calibration required based on 1st pH 
+sample results?   Yes       No 
+CO2 Sparge (slpm) (X.X)  
+Is a 2nd pH sample required? If yes, go to Attachment 
+6: Additional pH Monitoring – pH samples’ 
+information. 
+ Yes       No 
+Bioreactor Weight (kg) (X)  Pipettor ID 
+(if applicable)  Measurements Results  
+Foam Check: 
+Is Antifoam addition Needed? 
+Proceed to Attachment 4 for manual addition.  
+ Vi-Cell Dilution (X)  
+Vi-Cell ID: VCD (X.X)  
+x 106 cells/mL 
+ Yes  No  Viability (X)  %  
+Was any pump tubing shifted?   Yes       N/A Osmometer ID  
+Osmolality (X) 
+ 
+ 
+  
+Has Dilution criteria been met? 
+(VCD ≥ 2.1 x 106 cells/mL)  
+Continue to Section 16 for Medium Dilution and N/A all 
+subsequent sample pages 
+ Yes       No 
+Performed By/Date:   Witness By/Date:    
+MABR-0027688 v1.0    Status: Effective    Effective Date: 20 Nov 2025    Page 89 of 106
+PN: 8012420  / INT-034 - 100 L Seed Bioreactor (GPF-N, 500L, Process 1)
+Check this is the latest version of the document before use.
+Printed by Bradley Scanlon on 18 Dec 2025 20:04 GMT+00:00
+
+===== PAGE 90 =====
+ 
+ 
+ 
+Attachment 9: Additional Sampling Pages (N-1) 
+Perform daily sampling of the bioreactor. BGA ID: Measurements Result 
+Day Seed Day ________  pH (T) (X.XX)   
+Time   pCO2 (T) (X.X)  mmHg  
+Choose the primary DO 
+probe  AIT-01    /    AIT-03  pO2 (T) (X.X)  mmHg  
+Bioreactor Temp. (°C) 
+(XX.X)  
+(35.0 - 38.0°C) 
+  Bioreactor Glu 
+(X) mg/dL 
+Pressure (psig) (X.XX) 
+(0 – 0.6 psig)  Lac (mmol/L) (X.X) Lactate Dilution Calculated Lactate (mmol/L) (X.X) 
+pO2 (%) (X.X) 
+(10 - 110%)     N/A  N/A 
+Bioreactor pH (X.XX) 
+( 6.70 - 7.50)  
+Adjustment  
+Perform a one-point calibration if pH difference is < -0.05 or > 0.05. 
+Take a 2nd pH sample if pH difference is < -0.10 or > 0.10. 
+Record information from both probes. Only primary probe results will be used for 
+processing decisions. The secondary probe results are for information only (FIO). 
+Agitation (rpm) (X)  
+(60 - 150 rpm)  Select  
+Primary Probe 
+Bioreactor pH 
+(X.XX) 
+- 
+Offline pH (T) (X.XX) 
+= 
+pH Difference 
+Overlay Air (slpm) (X.X) 
+(1 - 10 slpm)  
+AIT-02    
+AIT-04    
+Air Sparge (slpm) (X.X) 
+(0.5 - 5.0 slpm)  Is one-point calibration required based on 1st pH 
+sample results?   Yes       No 
+O2 Sparge (slpm) (X.X)  
+Is a 2nd pH sample required? If yes, go to Attachment 
+6: Additional pH Monitoring – pH samples’ 
+information. 
+ Yes       No 
+CO2 Sparge (slpm) (X.X)  Pipettor ID 
+(if applicable)  Measurements Results  
+Bioreactor Weight (kg) 
+(X)  
+ Vi-Cell Dilution (X)  
+Vi-Cell ID: VCD (X.X)  
+x 106 cells/mL 
+Foam Check: 
+Is Antifoam addition Needed?  
+Proceed to Attachment 4 for manual 
+additions. 
+ No        Yes  Viability (X) 
+%  
+P1 P2 P3 Osmometer ID  
+Osmolality (X) 
+ 
+psi psi psi   
+TMP ( ≤ 1.0 psi) psi Is Perfusion Rate Change Required? 
+Continue to Section 20.  Yes       No 
+Was any pump tubing shifted?   Yes       N/A 
+Has Transfer Criteria been met? 
+(VCD ≥ 26.0 x 106 cells/mL)  
+Continue to Section 21. 
+ Yes       No 
+Performed By/Date:   Witness By/Date:    
+  
+MABR-0027688 v1.0    Status: Effective    Effective Date: 20 Nov 2025    Page 90 of 106
+PN: 8012420  / INT-034 - 100 L Seed Bioreactor (GPF-N, 500L, Process 1)
+Check this is the latest version of the document before use.
+Printed by Bradley Scanlon on 18 Dec 2025 20:04 GMT+00:00
+
+===== PAGE 91 =====
+ 
+ 
+ 
+Attachment 9: Additional Sampling Pages (N-1) 
+Perform daily sampling of the bioreactor. BGA ID: Measurements Result 
+Day Seed Day ________  pH (T) (X.XX)   
+Time   pCO2 (T) (X.X)  mmHg  
+Choose the primary DO 
+probe  AIT-01    /    AIT-03  pO2 (T) (X.X)  mmHg  
+Bioreactor Temp. (°C) 
+(XX.X)  
+(35.0 - 38.0°C) 
+  Bioreactor Glu 
+(X) mg/dL 
+Pressure (psig) (X.XX) 
+(0 – 0.6 psig)  Lac (mmol/L) (X.X) Lactate Dilution Calculated Lactate (mmol/L) (X.X) 
+pO2 (%) (X.X) 
+(10 - 110%)     N/A  N/A 
+Bioreactor pH (X.XX) 
+( 6.70 - 7.50)  
+Adjustment  
+Perform a one-point calibration if pH difference is < -0.05 or > 0.05. 
+Take a 2nd pH sample if pH difference is < -0.10 or > 0.10. 
+Record information from both probes. Only primary probe results will be used for 
+processing decisions. The secondary probe results are for information only (FIO). 
+Agitation (rpm) (X)  
+(60 - 150 rpm)  Select  
+Primary Probe 
+Bioreactor pH 
+(X.XX) 
+- 
+Offline pH (T) (X.XX) 
+= 
+pH Difference 
+Overlay Air (slpm) (X.X) 
+(1 - 10 slpm)  
+AIT-02    
+AIT-04    
+Air Sparge (slpm) (X.X) 
+(0.5 - 5.0 slpm)  Is one-point calibration required based on 1st pH 
+sample results?   Yes       No 
+O2 Sparge (slpm) (X.X)  
+Is a 2nd pH sample required? If yes, go to Attachment 
+6: Additional pH Monitoring – pH samples’ 
+information. 
+ Yes       No 
+CO2 Sparge (slpm) (X.X)  Pipettor ID 
+(if applicable)  Measurements Results  
+Bioreactor Weight (kg) 
+(X)  
+ Vi-Cell Dilution (X)  
+Vi-Cell ID: VCD (X.X)  
+x 106 cells/mL 
+Foam Check: 
+Is Antifoam addition Needed?  
+Proceed to Attachment 4 for manual 
+additions. 
+ No        Yes  Viability (X) 
+%  
+P1 P2 P3 Osmometer ID  
+Osmolality (X) 
+ 
+psi psi psi   
+TMP ( ≤ 1.0 psi) psi Is Perfusion Rate Change Required? 
+Continue to Section 20.  Yes       No 
+Was any pump tubing shifted?   Yes       N/A 
+Has Transfer Criteria been met? 
+(VCD ≥ 26.0 x 106 cells/mL)  
+Continue to Section 21. 
+ Yes       No 
+Performed By/Date:   Witness By/Date:    
+  
+MABR-0027688 v1.0    Status: Effective    Effective Date: 20 Nov 2025    Page 91 of 106
+PN: 8012420  / INT-034 - 100 L Seed Bioreactor (GPF-N, 500L, Process 1)
+Check this is the latest version of the document before use.
+Printed by Bradley Scanlon on 18 Dec 2025 20:04 GMT+00:00
+
+===== PAGE 92 =====
+ 
+ 
+ 
+Attachment 9: Additional Sampling Pages (N-1) 
+Perform daily sampling of the bioreactor. BGA ID: Measurements Result 
+Day Seed Day ________  pH (T) (X.XX)   
+Time   pCO2 (T) (X.X)  mmHg  
+Choose the primary DO 
+probe  AIT-01    /    AIT-03  pO2 (T) (X.X)  mmHg  
+Bioreactor Temp. (°C) 
+(XX.X)  
+(35.0 - 38.0°C) 
+  Bioreactor Glu 
+(X) mg/dL 
+Pressure (psig) (X.XX) 
+(0 – 0.6 psig)  Lac (mmol/L) (X.X) Lactate Dilution Calculated Lactate (mmol/L) (X.X) 
+pO2 (%) (X.X) 
+(10 - 110%)     N/A  N/A 
+Bioreactor pH (X.XX) 
+( 6.70 - 7.50)  
+Adjustment  
+Perform a one-point calibration if pH difference is < -0.05 or > 0.05. 
+Take a 2nd pH sample if pH difference is < -0.10 or > 0.10. 
+Record information from both probes. Only primary probe results will be used for 
+processing decisions. The secondary probe results are for information only (FIO). 
+Agitation (rpm) (X)  
+(60 - 150 rpm)  Select  
+Primary Probe 
+Bioreactor pH 
+(X.XX) 
+- 
+Offline pH (T) (X.XX) 
+= 
+pH Difference 
+Overlay Air (slpm) (X.X) 
+(1 - 10 slpm)  
+AIT-02    
+AIT-04    
+Air Sparge (slpm) (X.X) 
+(0.5 - 5.0 slpm)  Is one-point calibration required based on 1st pH 
+sample results?   Yes       No 
+O2 Sparge (slpm) (X.X)  
+Is a 2nd pH sample required? If yes, go to Attachment 
+6: Additional pH Monitoring – pH samples’ 
+information. 
+ Yes       No 
+CO2 Sparge (slpm) (X.X)  Pipettor ID 
+(if applicable)  Measurements Results  
+Bioreactor Weight (kg) 
+(X)  
+ Vi-Cell Dilution (X)  
+Vi-Cell ID: VCD (X.X)  
+x 106 cells/mL 
+Foam Check: 
+Is Antifoam addition Needed?  
+Proceed to Attachment 4 for manual 
+additions. 
+ No        Yes  Viability (X) 
+%  
+P1 P2 P3 Osmometer ID  
+Osmolality (X) 
+ 
+psi psi psi   
+TMP ( ≤ 1.0 psi) psi Is Perfusion Rate Change Required? 
+Continue to Section 20.  Yes       No 
+Was any pump tubing shifted?   Yes       N/A 
+Has Transfer Criteria been met? 
+(VCD ≥ 26.0 x 106 cells/mL)  
+Continue to Section 21. 
+ Yes       No 
+Performed By/Date:   Witness By/Date:    
+MABR-0027688 v1.0    Status: Effective    Effective Date: 20 Nov 2025    Page 92 of 106
+PN: 8012420  / INT-034 - 100 L Seed Bioreactor (GPF-N, 500L, Process 1)
+Check this is the latest version of the document before use.
+Printed by Bradley Scanlon on 18 Dec 2025 20:04 GMT+00:00
+
+===== PAGE 93 =====
+ 
+ 
+ 
+Attachment 10: Comments Section 
+Step No. 
+Comments 
+Provide step number(s) when applicable. Initial and date each entry. 
+Initials/Date 
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+MABR-0027688 v1.0    Status: Effective    Effective Date: 20 Nov 2025    Page 93 of 106
+PN: 8012420  / INT-034 - 100 L Seed Bioreactor (GPF-N, 500L, Process 1)
+Check this is the latest version of the document before use.
+Printed by Bradley Scanlon on 18 Dec 2025 20:04 GMT+00:00
+
+===== PAGE 94 =====
+ 
+ 
+ 
+Attachment 10:  Comments Section (continued) 
+Step No. 
+Comments 
+Provide step number(s) when applicable. Initial and date each entry. 
+Initials/Date 
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+MABR-0027688 v1.0    Status: Effective    Effective Date: 20 Nov 2025    Page 94 of 106
+PN: 8012420  / INT-034 - 100 L Seed Bioreactor (GPF-N, 500L, Process 1)
+Check this is the latest version of the document before use.
+Printed by Bradley Scanlon on 18 Dec 2025 20:04 GMT+00:00
+
+===== PAGE 95 =====
+ 
+ 
+ 
+Attachment 10:  Comments Section (continued) 
+Step No. 
+Comments 
+Provide step number(s) when applicable. Initial and date each entry. 
+Initials/Date 
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+ 
+  
+MABR-0027688 v1.0    Status: Effective    Effective Date: 20 Nov 2025    Page 95 of 106
+PN: 8012420  / INT-034 - 100 L Seed Bioreactor (GPF-N, 500L, Process 1)
+Check this is the latest version of the document before use.
+Printed by Bradley Scanlon on 18 Dec 2025 20:04 GMT+00:00
+
+===== PAGE 96 =====
+ 
+ 
+ 
+Attachment 10:  Comments Section (continued) 
+Step No. 
+Comments 
+Provide step number(s) when applicable. Initial and date each entry. 
+Initials/Date 
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+MABR-0027688 v1.0    Status: Effective    Effective Date: 20 Nov 2025    Page 96 of 106
+PN: 8012420  / INT-034 - 100 L Seed Bioreactor (GPF-N, 500L, Process 1)
+Check this is the latest version of the document before use.
+Printed by Bradley Scanlon on 18 Dec 2025 20:04 GMT+00:00
+
+===== PAGE 97 =====
+ 
+ 
+ 
+Attachment 10:  Comments Section (continued) 
+Step No. 
+Comments 
+Provide step number(s) when applicable. Initial and date each entry. 
+Initials/Date 
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+ 
+  
+MABR-0027688 v1.0    Status: Effective    Effective Date: 20 Nov 2025    Page 97 of 106
+PN: 8012420  / INT-034 - 100 L Seed Bioreactor (GPF-N, 500L, Process 1)
+Check this is the latest version of the document before use.
+Printed by Bradley Scanlon on 18 Dec 2025 20:04 GMT+00:00
+
+===== PAGE 98 =====
+ 
+ 
+ 
+Attachment 10:  Comments Section (continued) 
+Step No. 
+Comments 
+Provide step number(s) when applicable. Initial and date each entry. 
+Initials/Date 
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+MABR-0027688 v1.0    Status: Effective    Effective Date: 20 Nov 2025    Page 98 of 106
+PN: 8012420  / INT-034 - 100 L Seed Bioreactor (GPF-N, 500L, Process 1)
+Check this is the latest version of the document before use.
+Printed by Bradley Scanlon on 18 Dec 2025 20:04 GMT+00:00
+
+===== PAGE 99 =====
+ 
+ 
+ 
+Attachment 10:  Comments Section (continued) 
+Step No. 
+Comments 
+Provide step number(s) when applicable. Initial and date each entry. 
+Initials/Date 
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+MABR-0027688 v1.0    Status: Effective    Effective Date: 20 Nov 2025    Page 99 of 106
+PN: 8012420  / INT-034 - 100 L Seed Bioreactor (GPF-N, 500L, Process 1)
+Check this is the latest version of the document before use.
+Printed by Bradley Scanlon on 18 Dec 2025 20:04 GMT+00:00
+
+===== PAGE 100 =====
+ 
+ 
+ 
+Attachment 10:  Comments Section (continued) 
+Step No. 
+Comments 
+Provide step number(s) when applicable. Initial and date each entry. 
+Initials/Date 
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+MABR-0027688 v1.0    Status: Effective    Effective Date: 20 Nov 2025    Page 100 of 106
+PN: 8012420  / INT-034 - 100 L Seed Bioreactor (GPF-N, 500L, Process 1)
+Check this is the latest version of the document before use.
+Printed by Bradley Scanlon on 18 Dec 2025 20:04 GMT+00:00
+
+===== PAGE 101 =====
+ 
+ 
+ 
+Attachment 10:  Comments Section (continued) 
+Step No. 
+Comments 
+Provide step number(s) when applicable. Initial and date each entry. 
+Initials/Date 
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+MABR-0027688 v1.0    Status: Effective    Effective Date: 20 Nov 2025    Page 101 of 106
+PN: 8012420  / INT-034 - 100 L Seed Bioreactor (GPF-N, 500L, Process 1)
+Check this is the latest version of the document before use.
+Printed by Bradley Scanlon on 18 Dec 2025 20:04 GMT+00:00
+
+===== PAGE 102 =====
+ 
+ 
+ 
+Attachment 10:  Comments Section (continued) 
+Step No. 
+Comments 
+Provide step number(s) when applicable. Initial and date each entry. 
+Initials/Date 
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+MABR-0027688 v1.0    Status: Effective    Effective Date: 20 Nov 2025    Page 102 of 106
+PN: 8012420  / INT-034 - 100 L Seed Bioreactor (GPF-N, 500L, Process 1)
+Check this is the latest version of the document before use.
+Printed by Bradley Scanlon on 18 Dec 2025 20:04 GMT+00:00
+
+===== PAGE 103 =====
+ 
+ 
+ 
+Attachment 10:  Comments Section (continued) 
+Step No. 
+Comments 
+Provide step number(s) when applicable. Initial and date each entry. 
+Initials/Date 
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+MABR-0027688 v1.0    Status: Effective    Effective Date: 20 Nov 2025    Page 103 of 106
+PN: 8012420  / INT-034 - 100 L Seed Bioreactor (GPF-N, 500L, Process 1)
+Check this is the latest version of the document before use.
+Printed by Bradley Scanlon on 18 Dec 2025 20:04 GMT+00:00
+
+===== PAGE 104 =====
+ 
+ 
+ 
+Attachment 10:  Comments Section (continued) 
+Step No. 
+Comments 
+Provide step number(s) when applicable. Initial and date each entry. 
+Initials/Date 
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+ 
+MABR-0027688 v1.0    Status: Effective    Effective Date: 20 Nov 2025    Page 104 of 106
+PN: 8012420  / INT-034 - 100 L Seed Bioreactor (GPF-N, 500L, Process 1)
+Check this is the latest version of the document before use.
+Printed by Bradley Scanlon on 18 Dec 2025 20:04 GMT+00:00
+
+===== PAGE 105 =====
+ 
+ 
+ 
+MASTER PRODUCTION RECORD - REVISION HISTORY 
+The following is included for reference only and is not part of the executable record. 
+Version Changes Reasons 
+1.0 1. This is a new Master Production Record for the 100 L Seed 
+Bioreactor INT-034 Process 1. 
+1. The information contained in this document is derived from technical 
+report PRO-0222276. 
+ 
+ 
+MABR-0027688 v1.0    Status: Effective    Effective Date: 20 Nov 2025    Page 105 of 106
+PN: 8012420  / INT-034 - 100 L Seed Bioreactor (GPF-N, 500L, Process 1)
+Check this is the latest version of the document before use.
+Printed by Bradley Scanlon on 18 Dec 2025 20:04 GMT+00:00
+
+===== PAGE 106 =====
+Document Approvals
+Quality Approval Jo Pierre
+josha.pierre@astrazeneca.com
+13-Nov-2025 20:58:47 GMT+0000
+Business Approval Thomas Halligan
+thomas.halligan@astrazeneca.com
+17-Nov-2025 16:59:47 GMT+0000
+Business Approval Eugene Jones III
+eugene.jones@astrazeneca.com
+17-Nov-2025 20:50:18 GMT+0000
+Quality Approval Zachary Chapman
+Zachary.Chapman@astrazeneca.com
+20-Nov-2025 20:13:58 GMT+0000
+Quality Approval Jo Pierre
+josha.pierre@astrazeneca.com
+20-Nov-2025 20:23:40 GMT+0000
+MABR-0027688 v1.0    Status: Effective    Effective Date: 20 Nov 2025    Page 106 of 106
+PN: 8012420  / INT-034 - 100 L Seed Bioreactor (GPF-N, 500L, Process 1)
+Check this is the latest version of the document before use.
+Printed by Bradley Scanlon on 18 Dec 2025 20:04 GMT+00:00

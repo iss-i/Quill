@@ -1,0 +1,1442 @@
+
+===== PAGE 1 =====
+Page 1 of 23 
+PROPRIETARY 
+ 
+USDA License No. XXX BP MFG US 2000L SUB.xx 
+Batch # _  
+ 
+USDA Code: XXXX.XX PO #     
+BLDG/RM #   /   
+ 
+Production Records for Sample Virus in 2000L Single Use Bioreactor (SUB) For 
+U.S. Use 
+ 
+Procedure Data Entries 
+I. Virus Seed Identification 
+Master Seed Identification:                                           Last 
+Testing Date:    /    /     
+Max Passage of seed is X+6 
+Working Seed Identification: 
+ 
+Passage: X+  
+ 
+Batch #1:   
+ 
+Volume:  mL 
+ 
+Titer:   
+ 
+Batch #2:   
+ 
+Volume:  mL 
+ 
+Titer:   
+ 
+Batch #3:   
+ 
+Volume:  mL 
+ 
+Titer:   
+II. Cell Identification: 
+ 
+Master Cell Stock Batch#     -        
+Last Testing date    /    /       
+Max passage of cells must not exceed X+30 
+Production Stock Cell 
+Identification #:   
+Batch #:   
+Batch Date:    
+Cell Bioreactor #:     
+By:    
+Check By:   
+III. Production Vessel Preparation 
+ 
+(Refer to SOP XX-XXX-X to calibrate probes) 
+ 
+Date:   
+
+===== PAGE 2 =====
+Page 2 of 23 
+PROPRIETARY 
+ 
+ 
+Procedure Data Entries 
+A. Electrochemical pH probes calibration.  
+Date:   
+ 
+By:   
+Attach probes sterilization sticker on MD  
+By:   
+Follow SOP XX-XXX-X to install the single use bag in 
+the SUB. 
+ 
+NOTE: Close 2 of the 4 SUB exhaust filters to 
+ensure that the bag does not accumulate 
+pressure. SUB is not designed for any 
+pressure load. 
+ 
+Also verify that the vent filters are not 
+kinked. 
+ 
+By:   
+B. Vessel Identification 
+ 
+Vessel Number: __________ 
+ 
+Vessel Type: 2000L SUB 
+ 
+Single Use Bag Lot #:      
+Expiration Date:    
+By:     
+Check By:   
+C. Probe Identification 
+DO Probe No.:   
+Sleeve Serial No.:     
+DO Probe No.:   
+Sleeve Serial No.:     
+TruFluor DO Probe No.:    
+Sleeve Serial No.:     
+pH Probe No.:     
+Sleeve Serial No.:     
+TruFluor pH Probe No.:    
+Sleeve Serial No.:     
+
+===== PAGE 3 =====
+Page 3 of 23 
+PROPRIETARY 
+ 
+USDA License No. XXXX BP MFG US 2000L SUB 
+Batch # _  
+ 
+Procedure Data Entries 
+D. Clamp off all lines to bag except for exhaust, 
+overlay, the hollow spargers and probe lines. 
+ 
+By:   
+ 
+Check By:   
+E. Connect overlay (Air Flow-1) and pressure 
+sensor to the controller. 
+ 
+By:   
+ 
+Check By:   
+F. Connect sparger 1 from the controller to the 
+hollow sparger at bottom of the bag. 
+ 
+By:   
+ 
+Check By:   
+G. Insert DO and pH probes into bag and connect 
+their respective cables. 
+ 
+By:   
+ 
+Check By:   
+H. Insert temperature probe into bag.  
+By:   
+ 
+Check By:   
+IV. Procedures for Media Preparation 
+NOTE: Refer to SOP XX-XXX-X to 
+operate the controller. 
+ 
+A. From the controller’s main screen, verify that 
+the gases are flowing into the right port: Air 
+Flow-1 to overlay and Air Flow-2, N2, CO2, O2 
+Flow-1, O2 Flow-2 to the hollow sparger. 
+ 
+By:   
+ 
+Check By:   
+B. Visually inspect the bottom of the bag for 
+wrinkles. Open the media fill line before 
+transferring growth media to reactor and record 
+the amount in the Component Table. 
+By:   
+ 
+Check By:   
+
+===== PAGE 4 =====
+Page 4 of 23 
+PROPRIETARY 
+ 
+ 
+Procedure Data Entries 
+C. Calculate volume to fill reactor to before seed 
+addition. 
+Planned final Volume:     Kg 
+Seed Volume: -  Kg 
+Fil Volume:  =  Kg 
+Calculations By:      
+Check By:   
+Note: Growth Media may be transferred before 
+inoculation day; however, all the other 
+components must be added the day of infection. 
+ 
+Standard Volume: 2000L 
+ 
+Inoculation Component Table: 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+*Amounts calculated per planned final volume. 
+D. Turn on the TCU connected to the SUB and set 
+the following Setpoints on the controller 
+according to SOP XX-XXX-X. 
+Temperature: 2x°C 
+Agitator: 5x RPM 
+Vent Heater 1& 2: 3x°C 
+ 
+Date:   
+ 
+Time:  AM / PM 
+ 
+By:   
+ 
+Check By:   
+ 
+Components 
+ 
+Manufacturer 
+ 
+Amount 
+ 
+Batch 
+Number 
+ 
+Exp 
+Date 
+Amount 
+Added in 
+L 
+ 
+By 
+ 
+Check 
+By 
+ 
+SAP 
+Excell In House QS to 
+2000L 
+  
+L 
+   
+Insect Cell 
+Suspension 
+In House 1.0x106 
+Cells/mL 
+  
+N/A  
+L 
+   
+200 mM L- 
+Glutamine* 
+In House 20mL/L    
+L 
+   
+Gentamycin* In House 0.1mL/L    
+L 
+   
+ 
+Antifoam* 
+In House  
+<0.2 
+mL/L 
+   
+L 
+   
+ 
+         
+         
+         
+         
+         
+         
+         
+ 
+
+===== PAGE 5 =====
+Page 5 of 23 
+PROPRIETARY 
+ 
+USDA License No. XXXX BP MFG US 2000L SUB 
+Batch # _  
+ 
+Procedure Data Entries 
+E. Calibrate the electro-chemical DO probes. 
+ 
+Once the vessel has reached the temperature 
+set point, set the 0% and the 100% calibration 
+points. 
+ 
+(Both probes must be calibrated) 
+ 
+Refer to SOP XX-XXX-X to calibrate DO probes 
+and enter the calibration values. 
+ 
+DO Probe #1 Zero/:    nA 
+Slope (span):  nA 
+DO Probe #2 Zero/:   nA 
+Slope (span):  nA 
+By:   
+1. Set the DO control to xx% and put it on 
+“Auto”. Reduce stirrer back to xx RPM. 
+2. Zero O2 totalizer. 
+ 
+Date:   
+ 
+Time:   AM / PM 
+ 
+By:   
+ 
+Check By:   
+F.  LAF Sanitization 
+Disinfectant used: X% H2O2 
+ 
+Room #:   
+ 
+LAF #:   
+ 
+Batch #:   
+ 
+Exp. Date:   
+ 
+By:   
+1. Aseptically, in a sterile vessel, add the 
+appropriate amount of xxxmM L-Glutamine, 
+Gentamycin, and antifoam according to the 
+component table. 
+ 
+By:   
+ 
+Check By:   
+G. Calibrate pH probe. 
+ 
+Calibrate a bench-top pH meter per 
+SOP XX-XXX. Adjust Bioreactor pH probes 
+offset so they match the offline reading. Verify 
+that the pH controller is in manual mode, no 
+need to monitor pH for this process. 
+ 
+By:   
+ 
+Check By:     
+Final pH at Plant:    
+
+===== PAGE 6 =====
+Page 6 of 23 
+PROPRIETARY 
+ 
+ 
+Procedure Data Entries 
+V. Procedures for Plant / Infection  
+A. Receive cells from the cell prep lab. 
+Date Cells Received:     
+Time Cells Received:   AM / PM 
+By:     
+B. Attach cell prep information to this MD.  
+By:   
+C. Ensure the media is at 2x°C before transferring 
+cells to the reactor. If using a tank, up to 10 
+pounds of air pressure may be applied to it to 
+transfer cells into the reactor. 
+ 
+Cell Tank #:     
+Sterilization Exp. Date:    
+Time:  AM / PM 
+By:   
+ 
+Check By:   
+D. Upon reaching Fill Volume (from step IV.C.), let 
+the cells mix for approximately 5 minutes in the 
+SUB, then collect a sample and fill out the Daily 
+Observations table. When the SUB has 
+reached a cell density of approximately 1.0x106 
+cells/mL, aseptically add thawed seed. 
+Cell Count:   x106cells/mL 
+Start Time:      AM / PM 
+Finish Time:    AM / PM 
+By:     
+E. If multiple batches of seed are used, calculate a 
+weighted average with the following chart. 
+ 
+Refer to Step I. 
+Seed Batch #1: 
+ 
+Inv Log of Titer:     
+Seed Volume: X   mL 
+Weighted Log:   =     
+Seed Batch #2: 
+Inv Log of Titer:     
+Seed Volume: X   mL 
+Weighted Log:    =      
+
+===== PAGE 7 =====
+Page 7 of 23 
+PROPRIETARY 
+ 
+USDA License No. XXXX BP MFG US 2000L SUB 
+Batch # _  
+ 
+Procedure Data Entries 
+ Seed Batch #3: 
+Inv Log of Titer:   
+Seed Volume: X  mL 
+Weighted Log: =    
+Total Weighted Log:      
+Total Volume  ÷   mL 
+Final Inv. Log of Titer   =    
+F. Calculate amount of virus seed needed using 
+planned conditions for infection: 
+ 
+Reactor Fill Volume = reactor volume before seed added 
+(from step IV.C.) 
+Cell Density = 1.0x106 cells/mL (standard cell density for 
+infection) 
+0.2x = standard MOI for infection in bioreactor 
+Inv. Log Titer = log-1 of seed titer (from step V.F. if multiple 
+batches used) 
+Reactor Fill Volume:  mL 
+Cell Density: X 1.0x106 cells/mL 
+MOI: X   0.2x 
+Inv. Log Titer: ÷    
+Amount Seed Needed =  mL 
+Calculations By:     
+Check By:   
+G. Thaw the amount of virus seed required in a 
+bath of disinfectant. The bath should be no 
+warmer than 2x°C. 
+Add the thawed seed to Bioreactor. 
+By:   
+ 
+Check By:   
+H. Calculate Actual MOI as follows: 
+Actual amount of seed = volume of seed added to reactor 
+Inv. Log Titer = log-1 of seed titer (from step V.F. if multiple 
+batches used) 
+ 
+Cell Density = cell count at time of infection (from step V.E.) 
+ 
+Reactor Fill Volume = reactor volume before seed added 
+(from step IV.C.) 
+Actual Amount Seed Used   mL 
+Inv. Log Titer: X    
+Cell Density:  ÷    
+Reactor Fill Volume   ÷  mL 
+Actual Plant MOI =    
+Calculations By:   
+ 
+Check By:   
+
+===== PAGE 8 =====
+Page 8 of 23 
+PROPRIETARY 
+ 
+ 
+Procedure Data Entries 
+I. Clipster off the lines used to transfer 
+components, cells, and seed to the reactor. 
+ 
+By:   
+ 
+Check By:   
+J. On the configuration screen of the controller go 
+to “Vessel settings management” from the scroll 
+down menu, select and load the 
+“XXX_Alarms_File” file. Label the file using this 
+format: Batch #_Alarms_ON. 
+ 
+By:   
+ 
+Check By:   
+K.  Record Inoculation finish time and label the 
+SUB as follows: 
+ 
+Virus code / serial # / date. 
+ 
+Time:  AM / PM 
+ 
+By:   
+ 
+Check By:   
+L.  Any remaining cells and seed must be killed 
+with Hypochlor (as per VSM 800.56) at 
+100mL/L and discarded. A minimum of 10 
+minutes of disinfectant contact time is required 
+before discard. 
+ 
+Volume of Seed Discarded:   mL 
+Volume of Cells Discarded:  mL 
+Disinfectant Batch #:      
+Exp. Date:    
+Start Time:  AM / PM 
+ 
+End Time:   AM / PM 
+By:     
+Check By:   
+M.  The reactor is sampled daily and results are 
+recorded in the daily observations table. 
+ 
+NOTE: When sampling, ensure the following 
+parameters are in range. If out of range, 
+contact Supervisor and comment on any 
+corrective action taken. 
+ 
+Temperature: 2x°C Dissolved oxygen: xx% 
+ 
+
+===== PAGE 9 =====
+Page 9 of 23 
+PROPRIETARY 
+ 
+USDA License No. XXXX BP MFG US 2000L SUB 
+Batch # _  
+ 
+Procedure Data Entries 
+DAILY OBSERVATIONS 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Note: DO% may rise above 100% close to harvest time. 
+VI. Harvest of Antigen 
+Note: Unifuge must be connected to the harvest port of the 
+SUB bag. 
+ 
+Note: See SOP (XX-XXX-X) Operation of the Unifuge 
+Centrifuge when setting up for harvest. 
+ 
+Note: Discard waste stream will include a sterile carboy 
+with station connected aseptically to the Unifuge 
+Supernatant line. The sterile carboy will then be 
+connected to a discard vessel. Follow the same 
+procedures for both Unifuge if using two. 
+Date:   
+ 
+Unifuge 1 #:   
+ 
+Unifuge 2 #:     
+Module 1 Lot / S/N #:     
+Module 2 Lot / S/N #:     
+Harvest Tank #:     
+Sterilization Exp. Date    
+By:    
+Check By:   
+TEMP C (25-
+29ºC) 
+C C C C C C 
+RPM (55) rpm rpm rpm rpm rpm rpm 
+pH / Control 
+Probe # 
+/ # / # /# /# /# /# 
+External pH       
+DO% / Control 
+Probe (20- 
+100%) 
+/# /# /# /# /# /# 
+O2 Consumption L L L L L L 
+Visual 
+(Microscopic) 
+CPE% 
+      
+Cell count Live= 
+Dead= 
+Live= 
+Dead= 
+Live= 
+Dead= 
+Live= 
+Dead= 
+Live= 
+Dead= 
+Live= 
+Dead= 
+Time AM / PM AM / PM AM / PM AM / PM AM / PM AM / PM 
+Date       
+By       
+ 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+ 
+
+===== PAGE 10 =====
+Page 10 of 23 
+PROPRIETARY 
+ 
+ 
+Procedure Data Entries 
+A. Before harvest, go to the configuration screen, 
+load the “Vessel_Process_Alarms_Off”. 
+ 
+By: 
+ 
+Check By: 
+ 
+   
+ 
+   
+B. Begin harvest at ~XXX hr after time of infection. SUB Volume at Start 
+of Harvest: 
+ 
+By: 
+ 
+ L 
+ 
+   
+C. As described in SOP XX-XXX-X, verify that the 
+feed tube is welded to the harvest line of the 
+SUB, supernatant tube to discard vessel, cell 
+concentrate tube to harvest tank, and rinse tube 
+to PBS. 
+ 
+D. Tare the harvest tank on the floor scale before 
+harvesting. 
+ 
+Time Transfer Start: 
+By: 
+Check By: 
+ 
+ AM/PM 
+ 
+   
+ 
+   
+E. Harvest the antigen by passing 100% of the 
+bioreactor volume through Unifuge. Centrifuge 
+at a target rate of 3 liters per minute at 
+3000G’s. 
+ 
+F. After harvesting approximately 60% of the SUB 
+volume (~1200L for a 2000L batch), turn off 
+vent heaters, agitator, DO, and temperature 
+control. 
+By: 
+ 
+Check By: 
+   
+ 
+   
+G. Record the PBS amount used during harvest.  
+PBS Batch #: 
+Amount Added: 
+SAP Write off 
+Exp. Date: 
+By: 
+ 
+Check By: 
+ 
+   
+ 
+ L 
+ 
+ L 
+ 
+   
+ 
+   
+ 
+   
+
+===== PAGE 11 =====
+Page 11 of 23 
+PROPRIETARY 
+ 
+USDA License No. XXXX BP MFG US 2000L SUB 
+Batch # _  
+ 
+Procedure Data Entries 
+H. Continue the harvest until 100% of the 
+bioreactor volume has passed through Unifuge. 
+ 
+• Harvest tank will be filled to ~10% of 
+bioreactor volume (ex. 2000kg bioreactor 
+volume will yield 200kg harvest) 
+• Record the weight of the Harvest tank 
+after harvest has finished. 
+ 
+Harvest Tank Weight:    kg 
+Time:   AM / PM 
+By:   
+ 
+Check By:   
+I. Air pressure or peristaltic pump may be used to 
+transfer antigen from the harvest tank into 
+carboys. If using air pressure, properly vent the 
+air filters from the carboy stations to avoid 
+pressure build-up in the carboys once in the 
+freezer. 
+ 
+Before aseptically disconnecting the carboy 
+filters, verify that the pressure gauge on the 
+harvest tank is reading 0 psi. 
+ 
+By:   
+ 
+Check By:   
+J. LAF Sanitization 
+Disinfectant used:X% H2O2 
+ 
+Room #:   
+ 
+LAF #:   
+ 
+Batch #:   
+ 
+Exp. Date:   
+ 
+By:   
+K. Mix for 5 minutes then pull the following 
+samples during transfer of antigen into carboys. 
+Label each carboy with Batch #, date, and 
+volume. 
+Retention = 4x3mL- freeze in lab (-70oC) 
+Bacteria = 1x3mL- store in cooler (4C) until delivered 
+to QC 
+ 
+By:   
+ 
+Check By:   
+
+===== PAGE 12 =====
+Page 12 of 23 
+PROPRIETARY 
+ 
+ 
+Procedure Data Entries 
+L.  Seal carboys with white tape around lid and 
+transfer them to the freezer (refer to SOP 
+XX-XXX-X). 
+ 
+First at ≤-20ºC then at ≤-40°C. 
+ 
+Freezer #:   
+ 
+Temp:  ºC 
+ 
+Date:   
+ 
+Time:  AM / PM 
+ 
+By:   
+ 
+Check By:   
+ 
+Freezer #:   
+ 
+Temp:  ºC 
+ 
+Date:   
+ 
+Time:  AM / PM 
+ 
+By:   
+ 
+Check By:   
+VII. SUB Filter Decontamination and Integrity 
+Testing 
+ 
+A. Decontamination 
+Date:   
+Autoclave #   
+ 
+Cycle #   
+ 
+By:   
+B. Filter Integrity Testing 
+Refer to SOP XX-XXX-X – Operation of the 
+Millipore Integritest 5 Automatic Filter Integrity 
+Test Instrument. 
+ 
+Date:   
+ 
+By:   
+C. Refer to GEN XXX for testing procedure. 
+Attach Integrity Test Results to this 
+manufacturing direction for each filter tested. 
+ 
+By:   
+VIII. Pre-Inactivation  
+
+===== PAGE 13 =====
+Page 13 of 23 
+PROPRIETARY 
+ 
+USDA License No. XXXX BP MFG US 2000L SUB 
+Batch # _  
+ 
+Procedure Data Entries 
+A. Harvest carboys should be pulled from freezer 
+with ample time to thaw and warm to 3x°C. 
+ 
+Date:   
+ 
+Time:  AM / PM 
+ 
+By:   
+B. Pre-warm Sterile WFI for BEA/BEI cyclization to 
+3xºC the night before inactivation. 
+ 
+Date:   
+ 
+Time:  AM / PM 
+ 
+By:   
+IX. Cyclization of BEA to BEI (Binary ethylamine) 
+ 
+NOTE: BEI is a potential mutagen, extreme caution 
+should be taken during the preparation of BEI 
+solution to avoid inhalation or skin contact. 
+The whole procedure should be conducted in a 
+ventilation hood and/or using PAPR. 
+ 
+A. Calculate Volume of BEI needed 
+ 
+Use this table to calculate and record the 
+components used. 
+Antigen Volume  mL 
+(Step VI.H.) 
+(Convert to mL) 
+÷ 9 
+Volume of BEI =   mL 
+Actual Vol. Formulated =  mL 
+ 
+ 
+Component 
+Manufacturer 
+/ Batch # 
+ 
+Exp. Date 
+Amount/ 
+mL 
+Volume to 
+Add 
+ 
+By 
+Check 
+By 
+SAP 
+ 
+ 
+BEA 
+   
+ 
+0.0205g 
+ 
+ 
+g 
+   
+ 
+NaOH 
+Pellets 
+   
+ 
+0.007g 
+ 
+ 
+g 
+   
+ 
+ 
+Sterile WFI 
+In House   
+ 
+1mL 
+ 
+ 
+L 
+   
+ 
+        
+        
+        
+        
+ 
+
+===== PAGE 14 =====
+Page 14 of 23 
+PROPRIETARY 
+ 
+ 
+Procedure Data Entries 
+B. Measure components as determined by table. 
+Add NaOH pellets to 3L of WFI and allow to 
+completely dissolve and warm to 
+3x°C (± 1° C). 
+ 
+C. Combine BEA powder with approximately xx% 
+of total WFI, and then add NaOH solution. 
+Adjust to final formulation volume with WFI. 
+ 
+Cyclization 
+Start Time: 
+ 
+ 
+ AM / PM 
+ Temp:  ºC 
+ Date:    
+ By:    
+ Check By:    
+D. Stir solution at 3x°C (± 1°C) for 1 hour to 
+complete cyclization. 
+Cyclization 
+Stop Time: 
+ 
+ AM / PM 
+ Temp:  ºC 
+ By:    
+ Check By:    
+E. Record pH of solution after cyclization and 
+adjust pH to 7.x – 7.x. 
+ 
+Post-Cyclization pH: 
+ 
+   
+NOTE:  If pH has not dropped to ≤ 8.x, the 
+solution should be neutralized with 
+sodium thiosulfate and discarded. 
+Final pH: 
+ 
+HCl Batch #: 
+   
+ 
+   
+ Expiration Date:    
+NOTE: Use BEI solution within x hours of 
+cyclization stop time. Amount Added:  mL 
+ NaOH Batch #:    
+ Expiration Date:    
+ Amount Added:  mL 
+ By:    
+ Check By:    
+
+===== PAGE 15 =====
+Page 15 of 23 
+PROPRIETARY 
+ 
+USDA License No. XXXX BP MFG US 2000L SUB 
+Batch # _  
+ 
+Procedure Data Entries 
+X. Inactivation 
+ 
+A. Follow SOP XX-XXX-X to install the SUM 
+bag inside the reservoir tank. 
+ 
+Verify that the Bag is not wrinkled at the bottom 
+before inserting the RTD sensor. 
+ 
+Alternatively, a sterilized tank can be used for 
+inactivation. 
+ 
+Date:   
+ 
+SUM #:   
+ 
+Bag Serial #:   
+OR 
+Tank #:    
+Sterilization Exp. Date:    
+By:     
+Check By:   
+B. Make connections to the inactivation bag/tank 
+and ensure that swing jaws are off and the 
+appropriate lines are open. 
+ 
+C. Verify SUM scale is reading Zero before transferring 
+the virus fluid. 
+Alternatively, a sterilized tank can be placed on a floor 
+scale to determine weight. Floor scale should be 
+calibrated and zero’d prior to use. 
+ 
+By:   
+Check By:   
+D. Transfer virus fluids pre-warmed to 3x°C from the 
+carboys to the inactivation bag/tank. 
+Record the final volume of the transferred antigen. 
+ 
+Volume of Virus Fluid =  mL 
+By:     
+Check By:   
+E. Follow SOP XX-XXX-X, if applicable, to sign in to 
+the SUM controller. Install the mixer, set the 
+following parameters: 
+ 
+Temperature = XXºC 
+Agitator = XXX rpm 
+ 
+Alternatively, the sterilized tank with antigen can be 
+stored in an available incubator at XXºC. 
+Ensure that tank is mixing. 
+ 
+Date:   
+ 
+By:   
+Check By:   
+
+===== PAGE 16 =====
+Page 16 of 23 
+PROPRIETARY 
+ 
+ 
+Procedure Data Entries 
+F. Record pH of virus fluids and adjust to 7.x ± 0.3 if 
+necessary. 
+ 
+Initial pH:   
+Final pH:   
+ 
+HCl Batch #:   
+ 
+Expiration Date:   
+ 
+Amount Added:  mL 
+ 
+NaOH Batch #:   
+Expiration Date:   
+ 
+Amount Added:  mL 
+ 
+By:   
+ 
+Check By:   
+G. Add BEI solution to viral fluids, filtering it 
+through a 0.xxμm filter. Ensure SUM bag/tank 
+is mixing properly during transfer. 
+ 
+Volume of BEI 
+Added:  mL 
+ 
+New Antigen Volume:  mL 
+(scale value) 
+ 
+By:   
+ 
+Check By:   
+H. Immediately transfer virus fluids from the 
+inactivation bag to another SUM bag/tank. 
+Follow the procedure described in step X – E to 
+set parameters, limits, and enable these 
+alarms. 
+ 
+Temperature = 3xºC 
+Agitator = 1xx rpm 
+Hi Hi alarm = 3xºC 
+Lo Lo alarm  = 3xºC 
+Hi Hi alarm = 1xx rpm 
+Lo Lo alarm = 9x rpm 
+ 
+If using a tank, place tank with antigen/BEI solution 
+in an incubator at 3xº C. Ensure that tank is mixing. 
+ 
+Date:   
+ 
+SUM #:   
+ 
+Bag Serial #:   
+OR 
+Tank #:    
+Sterilization Exp.Date:     
+By:     
+Check By:   
+
+===== PAGE 17 =====
+Page 17 of 23 
+PROPRIETARY 
+ 
+USDA License No. XXXX BP MFG US 2000L SUB 
+Batch # _  
+ 
+Procedure Data Entries 
+I. Virus fluid should be mixed slowly at 3xºC ± 
+2°C for ~xx hr. 
+Inactivation 
+Start Time:  AM / PM 
+ 
+Temp:  ºC 
+Date:    
+Verify Mixing By:   
+Check By:   
+Inactivation 
+Stop Time:  AM / PM 
+ 
+Temp:  ºC 
+Date:    
+Verify Mixing By:     
+Check By:     
+J. Neutralized the remaining BEI using 
+3M NaThiosulfate. 
+ 
+Run 3M NaThiosulfate into the first SUM 
+bag/tank through the drain tube before placing 
+the bag in a yellow barrel and label it as 
+Hazardous waste, if applicable. 
+3M NaThiosulfate Batch #:     
+Exp. Date:     
+Volume of BEI Formulated:    mL 
+Volume of BEI Added:      mL 
+Volume of BEI Discarded:    mL 
+Vol. of 3M NaThio added:   mL 
+By: 
+XI. Neutralization  
+Date: 
+
+===== PAGE 18 =====
+Page 18 of 23 
+PROPRIETARY 
+ 
+ 
+Procedure Data Entries 
+Neutralization Component Table 
+A. At the end of inactivation, add 1mL of 3M 
+Sodium Thiosulfate per XXXmL of 
+inactivated virus fluids to yield a final 
+concentration of 30mM. Record appropriate 
+information in Neutralization Component 
+Table. 
+ 
+Antigen Volume from Step X.G. (Scale Value) 
+Antigen Volume:   
+ 
+÷  100 
+Vol. of 3M NaThio:  =     
+Antigen Vol.:    
+Vol. of 3M NaThio:  +     
+New Antigen Vol:   =     
+B. Allow Antigen to neutralize for 1 to 4 hours 
+mixing slowly at XXXrpm. Start Time:      AM / PM 
+Temperature:    ºC 
+Stop Time:    AM / PM 
+Temperature:    ºC 
+C. When Neutralization is complete, turn off the 
+parameters and disable the alarms, then 
+transfer antigen into a dispense tank, if using a 
+SUM bag. If using a tank, the tank can be sent 
+for dispense following neutralization. 
+ 
+After the transfer, place the SUM bag in a yellow 
+barrel and label it as Hazardous waste, if applicable. 
+Dispense Tank #:   
+Sterilization Exp. Date:      
+By:     
+Check By:   
+Components Manufacturer Batch 
+Number 
+Exp. 
+Date 
+By Check 
+By 
+SAP 
+3M NaThio 
+      
+Gentamycin 
+      
+Thimerosal 
+      
+ 
+       
+       
+       
+       
+ 
+
+===== PAGE 19 =====
+Page 19 of 23 
+PROPRIETARY 
+ 
+USDA License No. XXXX BP MFG US 2000L SUB 
+Batch # _  
+ 
+Procedure Data Entries 
+D. Add XXX mg/mL Gentamycin solution for a final 
+concentration of 0.000XmL / mL of neutralized fluid. 
+Record appropriate information in Neutralization 
+Component Table. 
+New Antigen Vol.:  mL 
+ 
+X 0.000X 
+ 
+Gentamycin Vol.: =   mL 
+By:      
+Check By:   
+E. Pull the following post-inactivation samples before 
+continuing. 
+ 
+NOTE: Samples must specify that they do not contain 
+Thimerosal. 
+Retention (before Thimerosal) = 5 x 10mL (store at -70°C) 
+Inactivation = 4 x 10mL (deliver to QC 4°C cooler) 
+ 
+By: 
+F. Add 10% Thimerosal for a final concentration of 
+1:10,000. Record appropriate information in 
+Neutralization Component Table. 
+Final antigen Volume = 
+New antigen vol. + Gent. Vol. – 90mL of sample 
+New Antigen Vol.:  mL 
+Gentamycin Vol.: +  mL 
+ 
+- 90mL samples 
+ 
+Final Antigen Vol.: =  mL 
+ 
+÷ 1000 
+ 
+Thimerosal Vol.: =  mL 
+G. Record pH of antigen and adjust to 
+7.x ± 0.1 if necessary. 
+Initial pH:   
+Final pH:   
+ 
+HCl Batch #:   
+ 
+Amount Added:  mL 
+ 
+NaOH Batch #:   
+ 
+Amount Added:  mL 
+By: 
+Check By: 
+
+===== PAGE 20 =====
+Page 20 of 23 
+PROPRIETARY 
+ 
+Procedure Data Entries 
+H. Pull the following post-inactivation samples 
+before continuing. 
+ 
+NOTE: Samples must specify that they contain 
+thimerosal. 
+ 
+Retention(after Thimerosal) = 5 x 10mL store at -70°C 
+Densitometry = 4 x 10mL – Deliver to QC 4°C cooler. 
+Sterility = 2 x 10mL – Deliver to QC 4°C cooler. 
+ 
+By: 
+ 
+   
+I. Dispense antigen into pools and store at 
+≤ -20°C. Label each pool with material #, 
+batch #, pool #, pool volume, and dispensing 
+date. 
+ 
+By: 
+ 
+Check By: 
+ 
+   
+ 
+   
+Bulk Disposition 
+ 
+Pool Number Volume / 
+Pool Total Volume Freezer # Temp By Check 
+By 
+ 
+ 
+mL mL 
+ 
+-20C 
+  
+ 
+mL mL 
+ 
+-20C 
+  
+ 
+mL mL 
+ 
+-20C 
+  
+Total Volume mL 
+  
+ 
+J. Record the batch number and the amount of 
+bottles used for dispense. 
+ 
+Bottles Batch #: 
+Amount Used: 
+By: 
+Check By: 
+ 
+   
+ 
+ ea 
+ 
+   
+ 
+   
+K. Verify all pools for label accuracy before 
+sending them to -20°C storage freezer. 
+ 
+By: 
+ 
+   
+
+===== PAGE 21 =====
+Page 21 of 23 
+PROPRIETARY 
+ 
+USDA License No. XXXX BP MFG US 2000L SUB 
+Batch # _  
+ 
+Procedure Data Entries 
+L. Submit the appropriate samples to QC for 
+testing. 
+ 
+Date Submitted:   
+ 
+By:   
+M. SAP and Excel transactions.  
+SAP By / Date:    /   
+Excel By / Date:  /  
+
+===== PAGE 22 =====
+Page 22 of 23 
+PROPRIETARY 
+ 
+EQUIPMENT STERILIZATION RECORD 
+Attach all sterilization charts, integrity test verifications, process charts, formulation records etc. that 
+support the documentation of the processes performed within this document. 
+Place stickers from one piece of equipment or glassware from each sterilization run used. 
+Attaching sterilization stickers verifies that all packed sterilized equipment has been checked for 
+integrity and found acceptable for use. 
+ 
+MEDIA PREPARATION Date:   By:   
+ 
+ 
+ 
+ 
+ 
+INOCULATION Date:   By:   
+ 
+ 
+ 
+ 
+ 
+HARVEST: Date:   By:   
+ 
+ 
+ 
+ 
+ 
+ 
+INACTIVATION: Date:   By:   
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+NEUTRALIZATION / DISPENSE Date:   By:   
+
+===== PAGE 23 =====
+Page 23 of 23 
+PROPRIETARY 
+ 
+USDA License No. XXXX BP MFG US 2000L SUB 
+Batch # _  
+ 
+COMMENTS 
+ 
+Comments:   
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Rev (dd mmm yy) BP MFG US 2000L SUB 
+ 
+Reviewed By:   
+ 
+Date:   

@@ -1,0 +1,19 @@
+{
+  "mcpServers": {
+    "sapfractal": {
+      "command": "cmd",
+      "args": [
+        "/c",
+        "npx",
+        "-y",
+        "mcp-remote",
+        "http://172.31.68.95:3140/mcp",
+        "--allow-http",
+        "--header",
+        "Authorization: Bearer tok_dxCzrd8tGMj-372fIpuBu5uR7qoRA4bL",
+        "--header",
+        "X-User-Name: Carlos"
+      ]
+    }
+  }
+}

@@ -1,0 +1,523 @@
+DTLS GuideSecurity SetupV 6.1June 2026
+Table of Contents
+
+### [Heading1] Purpose
+The purpose of this document is to outline the necessary steps/guidelines for creating security roles with the correct authorizations relevant to DTLS. Also, this document will cover creating Fiori groups and catalogs for the purposes of assigning them to DTLS roles. 
+
+### [Heading1] Fiori Configuration
+Fiori configuration consists of creating the necessary Catalogs, Groups, Spaces, and Pages required for providing the end users with the ability to access the Applications (Tiles) in the Fiori Launchpad.
+It’s important to note that, depending on your S/4HANA version, there may be a difference in how the Tiles are organized and presented to the end users.  Spaces and Pages were introduced in S/4HANA 2020 which requires the configuration of Catalogs, Spaces, and Pages.  Prior to S/4HANA 2020 the Fiori Launchpad was configured using Catalogs and Groups.
+There is also a consideration as to which method you are using currently (Catalogs and Groups or Catalogs and Spaces/Pages) which will determine the configuration steps you will follow below.  Please determine the method that you are currently using and follow the necessary steps.
+Prerequisites:
+Fiori Gateway Activated for the system
+Workbench Transport created via transaction SE10
+Custom Package created via transaction SE80 (recommend package: ZDTLS)
+Necessary authorizations defined for Fiori Administration
+End users already have the required Fiori Baseline access
+
+### [Heading2] Custom Catalogs
+To assign the different applications to the end users a custom Catalog needs to be created with the custom Tile configuration for each application.  Note that one or more Catalog’s may need to be created.  
+The Catalog defines the applications that the end users can access in their Fiori Launchpad.  Segregating apps out into different roles requires different Catalogs as an end user will see all the apps that are included in the Catalog(s) assigned to their role.
+
+### [Heading3] Creating a New Catalog
+The Fiori Launchpad Configuration application can be accessed through the SAP GUI using the following transaction: /UI2/FLPD_CONF
+Alternatively, the Fiori Launchpad Configuration can be accessed through this URL: https://<host>.<domain>:<port>/sap/bc/ui5_ui5/sap/arsrvc_upb_admn/main.html?sap-client=<Client>?scope=CONF 
+Steps:
+Launch the Fiori Configuration Application, making sure the top right says ‘Client: ALL’. 
+Click on the Gear Icon to choose a Transport and assign a Package for the creation of the new Catalog(s) and Tile information:
+After a Transport and Package have been chosen then we need to create a new Catalog.  Click on the ‘+’ icon on the bottom left to create a new Catalog:
+Recommended Catalog Name: DTLS Suite 
+Recommended Catalog ID: ZC_DTLS_Suite (Note: follow your corporate naming conventions)
+Now proceed to the next section to create the custom Tiles in this new Catalog.
+
+### [Heading3] Custom Tiles and Target Mapping
+Each application will require a static ‘Tile’ and ‘Target Mapping’ configuration using the Technical Details shown on the next page. 
+  --TABLE--
+   | App Title | Semantic Object | Action | Icon | SAPUI5 Component | HTML5 App Name | Parameters
+   | Process History | dtls_process_builder_v2 | display | sap-icon://wrench | ca.dtls.process_builder_v2 | zdtls_pb_v2 | app-mode=history (Note: This entry does not require a target mapping, only a tile)
+   | Relationship Explorer | relationship_explorer | display | sap-icon://FioriInAppIcons/Parallel Sequence | ca.dtls.relationshipexplorer | zdtls_rel_exp | 
+   | Process Builder | dtls_process_builder_v2 | display | sap-icon://wrench | ca.dtls.process_builder_v2 | zdtls_pb_v2 | 
+   | Handover to Manufacturing | handover_to_maufacturing | display | sap-icon://inventory | ca.dtls.handover-to-manufacturing | zdtlsh2m | 
+   | DTLS Manage Material Master Data | zDTLSMaterialMaster | maintain | sap-icon://Fiori2/F0328 | ca.dtls.dtls-material-master | ZDTLSMATERIALS | 
+   | DTLS Manage Flavour Classes | DTLSGROUP | display | sap-icon://bbyd-active-sales | ca.dtls.group | zdtls_group | 
+   | DTLS Manage Flavour Characteristics | DTLSCharacteristics | display | sap-icon://course-book | ca.dtls.characteristic | zdtls_char | 
+   | DTLS Manage Equipment Classes | dtls_equipment | display | sap-icon://add-equipment | ca.dtls.equipment | zdtls_equip | 
+   | DTLS Manage Process Workflow Rules | dtls_workflow | display | sap-icon://validate | ca.dtls.workflow | zdtlsworkflow | 
+   | DTLS Manage Process Areas | zdtls_processarea | display | sap-icon://Fiori3/F0537 | ca.dtls.process-areas | zdtls_parea | 
+   | DTLS Thread Execution Analyzer | zdtls_tea | display | sap-icon://line-chart | ca.dtls.thread_execution_analyzer | zdtls_tea | 
+   | DTLS Manage Material Classes | dtls_mat_class | display | sap-icon://machine | ca.dtls.material-classes | zdtls_mat_class | 
+   | DTLS Manage Risk Types | dtls_risk | maintain | sap-icon://flag-2 | ca.dtls.risk | zdtls_risk | 
+   | DTLS Manage Step Templates | ZDTLS_STEP_TEM | display | sap-icon://Fiori2/F0006 | ca.dtls.steptemplates | zdtls_step_tem | 
+   | DTLS Site Model | zdtls_site | maintain | sap-icon://building | ca.dtls.site | zdtls_site | 
+   | DTLS Reporting Layers | dtls_layer | maintain | sap-icon://BusinessSuiteInAppSymbols/icon-collected-change-request | ca.dtls.reportinglayers | ZDTLS_LAYER | 
+   | DTLS Product App | dtls_prod | maintain | sap-icon://pharmacy | ca.dtls.product | ZDTLS_PROD | 
+   | DTLS My Tasks | DTLSMyTasks | maintain | sap-icon://Fiori4/F0539 | ca.dtls.mytasks | zdtls_mytasks | 
+   | DTLS Manage Modalities | dtls_prdfm | maintain | sap-icon://BusinessSuiteInAppSymbols/icon-products | ca.dtls.productfamily | ZDTLS_PDFAM | 
+   | DTLS Manage Configuration Rules | dtls_config | maintain | sap-icon://information | ca.dtls.configapp | zdtls_cfg | 
+   | DTLS Operation Templates | ZDTLS_OP_TEM | display | sap-icon://Fiori2/F0006 | ca.dtls.operationtemplates | zdtls_op_tem | 
+   | DTLS Manage Types | dtls_types | maintain | sap-icon://multiselect-none | ca.dtls.manage-types | zdtls_types | 
+   | DTLS Capabilities | dtls_cap | maintain | sap-icon://FioriInAppIcons/Hierarchal Tree | ca.dtls.capabilities | zdtls_cap | 
+   | DTLS Facility Fit | dtls_ffit | display | sap-icon://BusinessSuiteInAppSymbols/icon-class | ca.dtls.facility-fit | zdtls_ffit | 
+  --END TABLE--
+
+### [Heading4] 
+
+### [Heading4] Tile
+Create each custom tile as per the following (using the information from the table above):
+Title = App Title
+Semantic Object = Semantic Object
+Action = Action (action must be in lowercase)
+Keyword = ‘DTLS’
+Icon = Icon 
+Parameters = leave blank
+
+### [Heading4] Target Mapping
+Create each custom Target Mapping as per the following (using the related information from the table above):
+Semantic Object = Semantic Object
+Action = Action
+Application Type = ‘SAPUI5 Fiori App’
+Title = App Title
+URL = /sap/bc/ui5_ui5/sap/<HTML5 App Name>
+ID = SAPUI5 Component
+Information = leave blank
+Device Types = Desktop and Tablet
+Parameters = leave blank
+
+### [Heading2] Custom Groups 
+Determine if you are using Catalogs and Groups or Catalogs and Spaces/Pages.  If you are not using Groups then please refer to the ‘Custom Spaces and Pages’ section below.
+The Groups determine the section under which the individual applications will be displayed in the Fiori Launchpad.
+Use the following table as an example of how individual Groups can be created to display them in the corresponding Groups in the Fiori Launchpad:
+  --TABLE--
+   | Group Name | Lifecycle Management | Configuration | Material Management | Analytics and BI
+   | Group ID | ZG_DTLS_Lifecycle_Mgmt | ZG_DTLS_Configuration | ZG_DTLS_Materials | ZG_DTLS_Analytics
+   | Application |  |  |  | 
+   | Process Builder | X |  |  | 
+   | Process History | X |  |  | 
+   | Relationship Explorer | X |  |  | 
+   | Handover to Manufacturing | X |  |  | 
+   | Facility Fit |  |  |  | 
+   | Manage Equipment Classes |  | X |  | 
+   | Manage Flavour Class (Group) |  | X |  | 
+   | Manage Flavour Characteristic |  | X |  | 
+   | Manage Types |  | X |  | 
+   | Manage Configuration Rules |  | X |  | 
+   | Manage Material Master Data |  |  | X | 
+   | Manage Material Classes |  |  | X | 
+   | Manage Process Areas |  | X |  | 
+   | Manage Risk Types |  | X |  | 
+   | Manage Step Templates |  | X |  | 
+   | Manage Operation Templates |  | X |  | 
+   | Manage Process Workflow Rules |  | X |  | 
+   | My Tasks | X |  |  | 
+   | Thread Execution Analyzer |  |  |  | X
+   | Site Model |  | X |  | 
+   | Manage Reporting Layers |  | X |  | 
+   | Products |  | X |  | 
+   | Manage Modalities |  | X |  | 
+   | Manage Capabilities |  | X |  | 
+  --END TABLE--
+
+### [Heading3] 
+
+### [Heading3] Creating Group
+Enter the Title and ID from the table above for each of the required Groups.
+
+### [Heading3] Assigning Applications
+Assign the required applications for each group by selecting them from the ZC_DTLS_Suite  Catalog created in the previous steps.
+
+### [Heading2] Custom Spaces and Pages
+Determine if you are using Catalogs and Groups or Catalogs and Spaces/Pages.  If you are not using Spaces and Pages then please refer to the ‘Custom Groups’ section above.
+Spaces and Pages provide an additional level of navigation to the Fiori Launchpad.  Spaces will be displayed in the top level navigation in the Fiori Launchpad.  Pages are then displayed under the assigned Spaces and are organized by Page Sections.
+Additional Prerequisites:
+Customizing Transport created via transaction SE10
+Necessary authorizations defined for Fiori Space and Page Administration
+Activation of ICF and OData services for Fiori apps F4834 (Manage Launchpad Spaces) and F4512 (Manage Launchpad Pages)
+For DTLS we suggest creating one Space and one Page with a number of different Page Sections.  
+
+### [Heading3] Create Custom Space
+The Fiori Spaces and Pages Configuration applications can be accessed through the SAP GUI using the following transaction: /UI2/FLP
+Alternatively, the Fiori Launchpad can be accessed through this URL: https://<host>.<domain>:<port>/sap/bc/ui2/flp
+Navigate to the ‘Fiori Launchpad’ space in the Fiori Launchpad. 
+Then choose the ‘Create’ button:
+In the ‘Create Space’ dialog enter the following:
+Space ID: ZS_DTLS_SUITE
+Space Description: DTLS Suite Space
+Space Title: DTLS
+Choose the ‘Also create a page’ checkbox.
+Page ID: ZP_DTLS_PAGE
+Page Description: DTLS Page
+Page Title: DTLS
+And choose your Customizing transport created as a prerequisite for this section.
+
+### [Heading3] Configuring Custom Page
+In this step, we will create the required Page Sections and add the Tiles from our Custom Catalog to the Page.
+Use the following table as an example of how the Page Sections can be created and organized to display the DTLS applications:
+  --TABLE--
+   | Page Section Description | Lifecycle Management | Configuration | Material Management | Analytics and BI
+   | Application | 
+   | Process Builder | X |  |  | 
+   | Process History | X |  |  | 
+   | Relationship Explorer | X |  |  | 
+   | Handover to Manufacturing | X |  |  | 
+   | Facility Fit | X |  |  | 
+   | Manage Equipment Classes |  | X |  | 
+   | Manage Flavour Class (Group) |  | X |  | 
+   | Manage Flavour Characteristic |  | X |  | 
+   | Manage Types |  | X |  | 
+   | Manage Material Master Data |  |  | X | 
+   | Manage Material Classes |  |  | X | 
+   | Manage Process Areas |  | X |  | 
+   | Manage Risk Types |  | X |  | 
+   | Manage Step Templates |  | X |  | 
+   | Manage Operation Templates |  | X |  | 
+   | Manage Process Workflow Rules |  | X |  | 
+   | My Tasks | X |  |  | 
+   | Thread Execution Analyzer |  |  |  | X
+   | Site Model |  | X |  | 
+   | Manage Reporting Layers |  | X |  | 
+   | Products |  | X |  | 
+   | Manage Capabilities |  | X |  | 
+   | Manage Modalities |  | X |  | 
+  --END TABLE--
+Navigate to the ‘Manage Launchpad Pages’ app in the Fiori Launchpad:
+Choose the ZP_DTLS_SUITE Page that was created in the previous step:
+Select the ZC_DTLS_Suite Catalog using the following dropdown/button:
+Create the required sections as per the example table at the beginning of this section (or as per your requirements).  
+Lifecycle Management
+Configuration
+Material Management
+Analytics and BI
+After adding the required Applications to the Page Sections then ‘Save’ the Page.
+NOTE: Space and Page Configuration is client-dependent so you may need to copy the configuration to any other related clients using transaction SCC1.
+
+### [Heading1] Security Role Configuration
+
+### [Heading2] Authorization Object: ZDTLS_S
+The main security auth object that controls access to DTLS applications is ZDTLS_S. This object will provide access to all applications. 
+The ZDTLS_AUTH field allows the customization of access for all DTLS applications. 
+The ACTVT field allows the restriction of activities within each DTLS application .
+The ZDTLS_STGE field is currently not in use.
+The possible values for field ACTVT are as follows. These are selected based on what each assigned role needs to be able to complete. Multiple activities can be selected to customize the access of any given role.
+The possible values for auth field ZDTLS_AUTH are as follows. Each authorization value corresponds to a DTLS application.
+  --TABLE--
+   | App Title | Auth Values
+   | DTLS Assign Material Classes | DTLS_ASMC
+   | DTLS Configuration | DTLS_CFG
+   | DTLS Manage Equipment Classes | DTLS_EQUI
+   | DTLS Sites | DTLS_FCL
+   | DTLS Manage Flavour Characteristic | DTLS_FLCH
+   | DTLS Manage Flavour Class | DTLS_FLV
+   | DTLS Process History | DTLS_HIST
+   | DTLS Hand Over to Manufacturing | DTLS_HOTM
+   | DTLS Handover to Site | DTLS_HOTS
+   | DTLS Layers | DTLS_LY
+   | DTLS Manage Material Classes | DTLS_MATC
+   | DTLS Material Master Data | DTLS_MM
+   | DTLS Manage Process Areas | DTLS_PA
+   | DTLS Process Builder | DTLS_PB
+   | DTLS Comments | DTLS_PBCM
+   | DTLS Manage Types | DTLS_PP
+   | DTLS Product | DTLS_PRD
+   | DTLS Modalities | DTLS_PRF
+   | DTLS Relationship Explorer | DTLS_REL
+   | DTLS Risk Type | DTLS_RSTY
+   | DTLS Step Templates | DTLS_STPT
+   | DTLS Thread Execution Analyzer | DTLS_TEA
+   | DTLS Manage Process Workflow Rules | DTLS_WF
+  --END TABLE--
+This authorization field ZDTLS_STGE is currently not in use, it can be set to ‘*’ for Full Authorizations.
+
+### [Heading2] Creating DTLS Roles
+The below composite and 5 single baseline roles will get users started in the system, however, they can be customized to cater to any system requirements:
+A composite Fiori Baseline role is required to access the DTLS Suite. 
+DTLS Fiori End User Role: this role contains the DTLS suite Fiori Group/Space and Catalog with all DTLS applications. This role should not contain the authorization object ZDTLS_S. This role must be assigned to all DTLS end users. 
+Copy and generate SAP Role SAP_UI2_USER_700 (Baseline Fiori Access)
+Copy and generate SAP Role SAP_UI2_USER_750 (Baseline Fiori Access)
+Maintain Role: this role will allow create and change access within all DTLS applications.
+Display Role: this role will allow display access within all DTLS applications.
+
+### [Heading3] Creating a DTLS Fiori End User Role
+NOTE: After adding the Fiori Catalog additional authorization objects will automatically be included in the role. It’s for this reason that the Fiori content should be created first and then added to the role.  Then these additional authorization objects can be maintained in the following step as well.
+These are the steps to create a new role that has all of the DTLS Catalog, Space, and Groups assigned to it. This role is required for any users that need access to DTLS applications.
+In transaction PFCG, a maintain role is created as shown below (please use role names as per your SAP Security naming conventions):
+In the Menu tab, add the following nodes via the dropdown:
+These are the details of each node as they are outlined in this guide; however, object names will vary as they are customizable and can follow other naming conventions:
+Node Details: Space
+Note: Spaces may or may not be in use at your company so may not be required. 
+Type: Launchpad Space
+Object: ZS_DTLS_SUITE
+Text: DTLS
+Node Details: Group
+Note: If Spaces are being used then adding a Group is not necessary.
+Type: Launchpad Group
+Object: ZG_DTLS_Applications
+Text: Process Builder
+Node Details: Catalog 
+Type: Launchpad Catalog
+Object: ZC_DTLS_Suite
+Text: DTLS Suite
+Once the Fiori Catalog, Space, and Group are added, navigate to the Authorization tab to maintain authorizations for them. 
+A pop up for Organizational Levels might show up, based on business requirements, maintain the correct Org. Level values. 
+For this role, maintain any pulled in authorization objects as ‘03’ display only.
+Manually Adding PDF Printing Authentication Object
+An additional authorization object must be manually inserted in order to facilitate PDF form printing. In the Authorizations tab, click the Change Authorization Data button to add the authorization object “S_BDS_DS”.
+On the next screen, click “Manually” to add the Authorization object required for PDF form printing. Type “S_BDS_DS” in the first field on the pop-up that appears.
+Once added, maintain the values as shown below, then, save and generate the role.
+Once all required maintenance is complete, save and generate the role.
+Manually Adding Required DTLS Services
+
+### [Heading3] The following is a comprehensive list of services that might need to be manually added to the DTLS Fiori End User Role to mitigate any errors within the application.
+The following should be manually added under the “S_SERVICE” Authorization Object as a TADIR Service:
+  --TABLE--
+   | Technical Name | Prog. ID | Obj. Type | Object Name*
+   | D42D2D24B76A3091AA91B9B79822C1 | R3TR | IWSG | ZDTLS_CFG_UI_V2                    0001
+   | D42D2D24B76A3091AA91B9B79822C1 | R3TR | IWSV | ZDTLS_CFG_UI_V2                    0001
+   | 012AD325C605BD87345C275C643E8D | R3TR | IWSG | ZODATA_DIGITAL_SIGNATURE_SRV_0001
+   | 199DB8557A89BEF3B6A046ECC8649F | R3TR | IWSV | ZDTLS_UI_OPTEMPLATES_V2            0001
+   | 258DF9E4269B3F208B41D1E685E238 | R3TR | IWSG | ZDTLS_GET_PROC_PARAMETER_0001
+   | 2C5175F16DE6F52BC2A5C354EB4990 | R3TR | IWSG | ZDTLS_GET_PB_LYR_VERS_STAT_0001
+   | 311BE9891EE1EF640E66F4DDBE0A80 | R3TR | IWSG | ZDTLS_GET_TIMELINE_OBJ_REC_0001
+   | 322C8244E074C69202F8DBAE6362D9 | R3TR | IWSG | ZDTLS_FCL_EQVER_UI_V2_0001
+   | 3277E328F13101054E47559669B136 | R3TR | IWSV | ZDTLS_GET_PB_LYR_CHG_FLDEX         0001
+   | 34EF8E74013A27ECFDD7624E623887 | R3TR | IWSV | ZI_DTLS_WF_LAYER_APPROVERS_CDS     0001
+   | 3AE0F596EBE1843EC6B22737ED90F6 | R3TR | IWSG | ZTASKPROCESSING_0002
+   | 5806EF160D74F2FC8FBBA14EB2B146 | R3TR | IWSV | ZDTLS_GET_TIMELINE_OBJ_REC         0001
+   | 68A3692CF12AB4DD55699FAB73BBAD | R3TR | IWSV | ZDTLS_UI_STEPTEMPLATES_V2          0001
+   | 70640ADBC0D3D0BB067FEABB5B5A67 | R3TR | IWSV | ODATA_DIGITAL_SIGNATURE_SRV        0001
+   | 7C854410203CAF03810248F7774074 | R3TR | IWSV | ZDTLS_GET_WF_STATUS                0001
+   | 833A2B24E533114C791D2EE42BBE86 | R3TR | IWSG | ZDTLS_GET_PB_LYR_CHG_I_UOM_0001
+   | 872AD38A493D8E36C34087B9F3BC3E | R3TR | IWSV | ZDTLS_GET_TIMELN_METADATA          0001
+   | 8F438FF4231AA32CF7413234003EBC | R3TR | IWSV | /IWPGW/TASKPROCESSING              0002
+   | 8FF1664448A31E955947E76B004592 | R3TR | IWSG | ZI_DTLS_WF_LAYER_APPROVERS_CDS_0001
+   | 94E3DF589527A60FDB377977493AEC | R3TR | IWSV | ZDTLS_GET_DIG_SIGNATURE            0001
+   | A33573E28333197E3B9CC90EE1D978 | R3TR | IWSV | ZDTLS_GET_PB_LYR_CHG_I_UOM         0001
+   | A5F58B2BECA104C951D032FD26ED3A | R3TR | IWSG | ZDTLS_UI_STEPTEMPLATES_V2_0001
+   | B04F33294548207B7A127A7A0FA7B9 | R3TR | IWSV | ZDTLS_GET_PB_LYR_VERS_STAT         0001
+   | B909DDD6C420F2AB80711256B4F528 | R3TR | IWSG | ZDTLS_GET_DIG_SIGNATURE_0001
+   | BFC410F7DB0660ECFF61F6878A246B | R3TR | IWSV | ZDTLS_GET_PROC_PARAMETER           0001
+   | C37747678073D12E591C7501619A82 | R3TR | IWSG | ZDTLS_UI_OPTEMPLATES_V2_0001
+   | C515EB2E7AC8CA332F303CD4F02289 | R3TR | IWSG | ZDTLS_GET_WF_STATUS_0001
+   | DA1AE5942569AD8D956884BFE19BBA | R3TR | IWSV | ZDTLS_WF_SRV                       0001
+   | DCCAE84C0E9ECA5CDD8F917B1AD982 | R3TR | IWSG | ZDTLS_WF_SRV_0001
+   | DF382A784BB60891319F9A2CD9401D | R3TR | IWSV | ZDTLS_PB_GW_SRV                    0001
+   | E19E463E0CD30E60843A15DB7311E6 | R3TR | IWSG | ZDTLS_GET_TIMELN_METADATA_0001
+   | E3BAEFAAA0FCADE815F7A001388853 | R3TR | IWSG | ZDTLS_GET_PB_LYR_CHG_FLDEX_0001
+   | A1F7B981CD0DB101FEB1095E86A588 | R3TR | IWSG | ZDTLS_ADD_SRV_0001
+   | 1D8F754AD40DB56AA9A9A5300B4584 | R3TR | IWSV | ZDTLS_ADD_SRV                      0001
+   | B1BC53F12F68CCB0E41C23BFC5C99A | R3TR | IWSG | ZDTLS_FACILITY_FIT_SRV_0001
+   | DBCC7CB8C906D9A7206946BF13EB93 | R3TR | IWSV | ZDTLS_FACILITY_FIT_SRV             0001
+  --END TABLE--
+
+### [Heading3] *The spaces between characters in the “Object Name” column are necessary
+The following should be manually added under the “S_START” Authorization Object as an “SAP Gateway OData V4 Backend Service Group and Assignment”:
+  --TABLE--
+   | Technical Name | Prog. ID | Obj. Type
+   | ZDTLS_UI_CAPABILITIES_V4 | R3TR | G4BA
+   | ZDTLS_SITES_UI_V4 | R3TR | G4BA
+   | ZDTLS_UI_PRODUCT_V4 | R3TR | G4BA
+   | ZDTLS_UI_REPORTLAYERS_V4 | R3TR | G4BA
+   | ZDTLS_UI_STEPTEMPLATES_V4 | R3TR | G4BA
+   | ZUI_DTLS_TPT_STEP_ODATA_V4 | R3TR | G4BA
+   | ZDTLS_UI_OPTEMPLATES_V4 | R3TR | G4BA
+   | ZDTLS_CFG_UI_V4 | R3TR | G4BA
+   | ZDTLS_TW_EQUIPMENT_CLASS_API | R3TR | G4BA
+   | ZDTLS_TW_PROCESS_API | R3TR | G4BA
+   | ZDTLS_TW_PROCESS_AREA_API | R3TR | G4BA
+   | ZDTLS_TW_PRODUCT_API | R3TR | G4BA
+   | ZDTLS_TW_SITE_API | R3TR | G4BA
+   | ZDTLS_TW_STEP_TEMPLATE_API | R3TR | G4BA
+   | ZDTLS_TW_PARAMETER_TYPE_API | R3TR | G4BA
+   | ZDTLS_TW_LAYER_API | R3TR | G4BA
+  --END TABLE--
+Manually Adding Catalog for Notifications
+The following catalog must be maintained in the DTLS Fiori End User role to allow the receiving of notifications within DTLS:
+Manually Adding Authorization for Work Flow
+The following security authorization for authorization object “S_WF_WI” needs to be configured to facilitate Work Flow Item Handling:
+Manually Adding Authorization for Digital Signatures
+The following security authorization for authorization objects “C_SIGN” and “C_SIGN_BGR” needs to be maintained if Digital Signatures are active in the system:
+
+### [Heading3] 
+
+### [Heading3] Creating a DTLS Maintain Role
+These are the steps to create a new role that has create and change privileges throughout the DTLS landscape. 
+*Please note, there is an assumption that end users already have the required Fiori baseline access.
+ In transaction PFCG, a maintain role is created as shown below (please use role names as per your SAP Security naming conventions):
+This role will only contain the authorizations for maintain access to DTLS applications, it will not have any Menu entries as the menu is built from the DTLS Fiori All User role.
+Manually add the DTLS Authorization Object ZDTLS_S.
+The current possible values for the ZDTLS_AUTH field are shown below. They can be customized based on business requirements. 
+Please note, this field should not be maintained with a “*” value, ensure that each application that is desired is selected individually.
+  --TABLE--
+   | App Title | Auth Values
+   | DTLS Assign Material Classes | DTLS_ASMC
+   | DTLS Configuration | DTLS_CFG
+   | DTLS Manage Process Quality Attribute Type | DTLS_CQA
+   | DTLS Manage Equipment Classes | DTLS_EQUI
+   | DTLS Sites | DTLS_FCL
+   | DTLS Manage Flavour Characteristic | DTLS_FLCH
+   | DTLS Manage Flavour Class | DTLS_FLV
+   | DTLS Process History | DTLS_HIST
+   | DTLS Hand Over to Manufacturing | DTLS_HOTM
+   | DTLS Handover to Site | DTLS_HOTS
+   | DTLS Layers | DTLS_LY
+   | DTLS Manage Material Classes | DTLS_MATC
+   | DTLS Material Master Data | DTLS_MM
+   | DTLS Manage Process Areas | DTLS_PA
+   | DTLS Process Builder | DTLS_PB
+   | DTLS Comments | DTLS_PBCM
+   | DTLS Manage Types | DTLS_PP
+   | DTLS Product | DTLS_PRD
+   | DTLS Product Family | DTLS_PRF
+   | DTLS Relationship Explorer | DTLS_REL
+   | DTLS Risk Type | DTLS_RSTY
+   | DTLS Step Templates | DTLS_STPT
+   | DTLS Thread Execution Analyzer | DTLS_TEA
+   | DTLS Manage Process Workflow Rules | DTLS_WF
+  --END TABLE--
+For the Maintain role, the following activities can be maintained:
+Adding S_TABU_NAM Value for Workflow Display/Edit
+The following value is needed in the DTLS Maintain Role in order to facilitate display and edit access for Process Builder Workflow
+**For Future Development**
+The ZDTLS_STGE field values are as follows. They are also all selected for this Maintain role. 
+Note: The stage “None” is also a change and is different from selecting no values for this auth field. A process without a selected stage would be considered “None”, which should be selected as needed.
+
+### [Heading3] Creating a DTLS Display Role
+These are the steps to create a new role that has display privileges throughout the DTLS landscape. 
+*Please note, there is an assumption that end users already have the required Fiori baseline access.
+ In transaction PFCG, a display role is created as shown below (please use role names as per your SAP Security naming conventions):
+This role will only contain the authorizations for display access to DTLS applications, it will not have any Menu entries as the menu is built from the DTLS Fiori All User role.
+Manually add the DTLS Authorization Object ZDTLS_S
+The activities are selected based on what access is required. For the “Display” role being created, the checked activity below can be selected.
+The DTLS Authorization Object values are included and can be customized depending on predetermined conditions. For this “Display” role. All the remaining authorization object values can be selected based on business requirements.
+  --TABLE--
+   | App Title | Auth Values
+   | DTLS Assign Material Classes | DTLS_ASMC
+   | DTLS Configuration | DTLS_CFG
+   | DTLS Manage Process Quality Attribute Type | DTLS_CQA
+   | DTLS Manage Equipment Classes | DTLS_EQUI
+   | DTLS Facilities | DTLS_FCL
+   | DTLS Manage Flavour Characteristic | DTLS_FLCH
+   | DTLS Manage Flavour Class | DTLS_FLV
+   | DTLS Process History | DTLS_HIST
+   | DTLS Hand Over to Manufacturing | DTLS_HOTM
+   | DTLS Handover to Site | DTLS_HOTS
+   | DTLS Hold Times Type | DTLS_HT
+   | DTLS Manage Intermediate Quality Attribute Type | DTLS_IQA
+   | DTLS Layers | DTLS_LY
+   | DTLS Manage Material Classes | DTLS_MATC
+   | DTLS Material Master Data | DTLS_MM
+   | DTLS Manage Process Areas | DTLS_PA
+   | DTLS Process Builder | DTLS_PB
+   | DTLS Comments | DTLS_PBCM
+   | DTLS Manage Process Parameter Type | DTLS_PP
+   | DTLS Product | DTLS_PRD
+   | DTLS Product Family | DTLS_PRF
+   | DTLS Relationship Explorer | DTLS_REL
+   | DTLS Risk Type | DTLS_RSTY
+   | DTLS Sample Plans | DTLS_SP
+   | DTLS Step Templates | DTLS_STPT
+   | DTLS Thread Execution Analyzer | DTLS_TEA
+   | DTLS Manage Process Workflow Rules | DTLS_WF
+  --END TABLE--
+**For Future Development**
+The DTLS Lifecycle Stage object values are as follows. They are also all selected for this “Display” role.
+ Note: The stage “None” is also a change and is different from selecting no values for this auth field. A process without a selected stage would be considered “None”, which should be selected as needed.
+Once everything is assigned, save and generate the role.
+
+### [Heading3] 3.2.3.1Adding Comment Functionality to a Display User
+In order to activate the comment functionality in DTLS for a display user, the following values need to be manually maintained either in a separate role, or in a DTLS display only role.
+Without the DTLS_PBCM value maintained, comments will not be editable  in the system.
+
+### [Heading2] Workflow Functionality
+If Workflow functionality is in scope, the following roles are required.
+
+### [Heading3] Workflow Configuration Role
+The purpose of the Workflow Admin role is to provide access to the DTLS Manage Process Workflow Rules app. This app is used to configure the workflow rules for all DTLS objects. 
+Role Requirements:
+Fiori Catalog assigned that contains the DTLS Manage Process Workflow Rules app
+Fiori Space that contains the DTLS Manage Process Workflow Rules app
+In the auth object ZDTLS_S, populate the ZDTLS_AUTH field with the ZDTLS_WF value and the ACTVT field with 01, 02, and 03
+Please see below sections 3.4.2 and 3.4.3 as the roles defined in those sections are required for workflow configuration.
+
+### [Heading3] Workflow Notification Role
+This role is used in the Workflow Rule configuration and is used to determine the Users who will receive an email notification when a DTLS object is submitted for Approval.
+The role does not require any specific authorizations to be added, it only needs to have the users assigned who should get the Notifications. 
+The technical role name needs to be added during Rule Creation in the ‘DTLS Manage Process Workflow Rules’ application.
+The technical name of the role needs to be provided to the resource that is performing the workflow configuration tasks. Also, this role is to be assigned to end users that should receive workflow notifications.
+
+### [Heading3] Workflow Approver Role
+This role is used in the Workflow Rule configuration and is used to determine the Users who will receive Workflow Approval requests when a DTLS object is submitted for Approval.  These users will receive an email notification and will be able to see their Workflow Tasks in the Fiori My Tasks application. See “DTLS Functional Guide: Workflow Approval” for more information on Workflow and the My Tasks application.1
+The role does not require any specific authorizations to be added, it only needs to have the users assigned who will be required to approve submitted DTLS Object creations or changes.
+The technical role name needs to be provided to the resource that is performing the workflow configuration tasks to be added during Rule Creation in the ‘DTLS Manage Process Workflow Rules’ application.
+If digital signatures are being used, the following authorizations should be added to this role.
+Auth Object: C_SIGN
+ACTVT = 73
+SIGNAPPL = ZDTLSOBJ
+SIGNOBJ = ZDTLSOBJ
+
+### [Heading3] Advanced Configuration
+The following matrix outlines advanced configuration that can be followed if more granular per app security is required. First, an example of how to read the matrix is provided:
+App Name: name of DTLS application 
+Auth Value in ZDTLS_AUTH: authorization value that controls access to specific applications
+In order to use any of the applications listed in the App Name column, the corresponding ACTVT values need to be maintained for each listed Auth Value in ZDTLS_S.
+  --TABLE--
+   |  | Auth Value in ZDTLS_AUTH | 
+   |  | DTLS_HIST | DTLS_REL | DTLS_PB | DTLS_HOTM | DTLS_MM | DTLS_ FLV | DTLS_ FLCH | DTLS_ EQUI | DTLS_WF | DTLS_PA | DTLS_PP | DTLS_ TEA | DTLS_ STPT | DTLS_MATC | DTLS_ASMC | DTLS_ FCL | DTLS_ LY | DTLS_PRD | DTLS_PBCM | DTLS_PRF | DTLS_CFG | DTLS_RSTY
+   | App Name |  | 
+   | DTLS Process History | 03 |  | 03 |  | 03 | 03 | 03 | 03 | 03 | 03 | 03 |  | 03 | 03 | 03 | 03 | 03 | 03 |  | 03 |  | 
+   | DTLS Relationship Explorer |  | 03 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+   | DTLS Process Builder |  |  | 01, 02, 03 |  | 03 | 03 | 03 | 03 | 03 | 03 | 03 |  | 03 | 03 | 03 | 03 | 03 | 03 | 01, 02 | 03 |  | 
+   | DTLS Handover to Manufacturing |  |  | 03 | 01, 02, 03 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+   | DTLS Material Master Data |  |  |  |  | 01, 02, 03 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+   | DTLS Manage Flavour Class |  |  |  |  |  | 01, 02, 03 | 03 |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+   | DTLS Manage Flavour Characteristic |  |  |  |  |  |  | 01, 02, 03 |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+   | DTLS Manage Equipment Classes |  |  |  |  |  |  |  | 01, 02, 03 |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+   | DTLS Manage Process Workflow Rules |  |  |  |  |  |  |  | 03 | 01, 02, 03 | 03 | 03 |  |  |  |  |  |  |  |  |  |  | 
+   | DTLS My Tasks |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+   | DTLS Manage Process Areas |  |  |  |  |  |  |  |  |  | 01, 02, 03 |  |  |  |  |  |  |  |  |  |  |  | 
+   | DTLS Manage Process Quality Attribute Type |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+   | DTLS Manage Intermediate Quality Attribute Type |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+   | DTLS Manage Process Parameter Type |  |  |  |  |  |  |  |  |  |  | 01, 02, 03 |  |  |  |  |  |  |  |  |  |  | 
+   | DTLS Thread Execution Analyzer |  |  |  |  |  |  |  |  |  |  |  | 03 |  |  |  |  |  |  |  |  |  | 
+   | DTLS Step Templates/Operation Templates |  |  |  |  | 03 |  |  | 03 |  |  | 03 |  | 01, 02, 03 | 03 | 03 | 03 | 03 | 03 |  | 03 |  | 
+   | DTLS Manage Material Classes |  |  |  |  |  |  |  |  |  |  |  |  |  | 01, 02, 03 |  |  |  |  |  |  |  | 
+   | DTLS Assign Material Classes |  |  |  |  | 03 |  |  |  |  |  |  |  |  | 03 | 01, 02, 03 |  |  |  |  |  |  | 
+   | DTLS Hold Times Type |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+   | DTLS Sample Plans |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+   | DTLS Site Model |  |  |  |  | 03 |  |  | 03 |  |  | 03 |  | 03 | 03 |  | 01, 02, 03 |  |  |  |  |  | 03
+   | DTLS Manage Reporting Layers |  |  |  |  |  |  |  | 03 | 03 | 03 | 03 |  |  |  |  |  | 01, 02, 03 |  |  |  |  | 
+   | DTLS Manage Products |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 01, 02, 03 |  | 03 |  | 
+   | DTLS Manage Modalities |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 01, 02, 03 |  | 
+   | DTLS Facility Fit |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+   | DTLS Manage Capabilities |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+   | DTLS Manage Configuration Rules |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 01, 03 | 
+   | DTLS Risk Types |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 01, 02, 03
+  --END TABLE--
+
+### [Heading1] Common Issues and Troubleshooting Steps
+
+### [Heading3] 4.1 - PFCG Custom ZDTLS TADIR Service does not show up in PFCG
+Custom DTLS TADIR services are required to be added using PFCG when initially setting up DTLS specific security roles. If there is an instance where one of these services does not show up in PFCG, the following instructions may be able to mitigate the issue:
+Execute transaction SU25, it will show a series of utilities. Select the bottom most option titled 'SU22 Registration of Applications'.
+Select the dropdown for “Type of Application”, then select “18. SAP Gateway: Service Groups Metadata”, untick the option “Exclude local applications”, and type *DTLS* in the object name field, as such:
+*Note: when executing the aforementioned step, run it with “Display Mode for Affected Applications” checked.
+Click the execute button. This will show all missing PFCG values that will be generated.
+After confirming the values that are needed, go back one screen and execute Step #3 again, this time with the “Display Mode for Affected Applications” box unchecked.
+Upon clicking execute once more with the display box unchecked, the utility will run and will register the missing services. There will be a small message indicating that the utility was successful:
+Repeat steps 2-5 once more, this time selecting “19 - SAP Gateway Business Suite Enablement - Service” in the “Type of Application” dropdown
+After executing these steps for both SAP Gateway: Service Groups Metadata and SAP Gateway Business Suite Enablement - Service, all missing authorizations should now be visible in PFCG for assignment to roles.
+
+### [Heading1] Document References
+  --TABLE--
+   | Reference  No. | Document Title
+   | 1 | DTLS Functional Guide: Workflow Approval
+  --END TABLE--
+
+### [Heading1] Revision History
+  --TABLE--
+   | Version No. | Description | Date
+   | 4.1 | Initial document | 2024-04-20
+   | 4.2 | Updated to new package | 2024-06-24
+   | 4.4 | Updated to new package | 2025-01-28
+   | 5.1 | Updated to new package | 2025-05-14
+   | FF | Updated to new package | 2026-01-30
+  --END TABLE--
