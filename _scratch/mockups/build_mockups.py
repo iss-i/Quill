@@ -78,6 +78,20 @@ TEMPLATE = """<!doctype html><html><head><meta charset="utf-8">
  .sorow .req {{ color:#d23b3b; }}
  .sorow .sofield {{ display:inline-block; width:185px; height:28px; border:1px solid #5a9bd4; border-radius:3px;
    vertical-align:middle; background:#fff; }}
+ .gate {{ margin:15px 0 2px; font-size:13px; color:#3a3d42; }}
+ .gate .glabel {{ display:inline-block; min-width:200px; font-weight:bold; }}
+ .gate .req {{ color:#d23b3b; }}
+ .gate .fdd {{ display:inline-block; width:150px; height:27px; border:1px solid #b6bac0; border-radius:3px;
+   background:#fff; font-size:11.5px; color:#2a2d31; padding:5px 20px 5px 7px; position:relative; vertical-align:middle; }}
+ .gate .fdd .fddchev {{ position:absolute; right:8px; top:8px; color:#6b6f76; font-size:8px; }}
+ .gate .ghint {{ color:#8a8f96; font-style:italic; font-size:11px; margin-left:10px; }}
+ .bhead {{ background:#eef4e2; border:1px solid #d5e0c2; font-weight:bold; font-size:12px; color:#2f4d2f;
+   padding:7px 12px; margin:10px 0 0; }}
+ .bsub {{ font-weight:bold; font-size:12px; color:#3a3d42; margin:14px 0 2px; padding-bottom:3px;
+   border-bottom:1px solid #e2e4e7; }}
+ .bnote {{ font-size:11px; color:#8a6d1f; font-style:italic; margin:4px 0 2px; }}
+ .gibadge {{ font-size:9px; font-weight:bold; background:#1f7a1f; color:#fff; padding:1px 7px; border-radius:8px;
+   margin-left:8px; vertical-align:middle; }}
 </style></head><body>
  <div class="modalbar"><span>SMPL: {title}</span><span class="x">&times;</span></div>
  <div class="strip"></div>
@@ -226,8 +240,44 @@ def longtext_body(step):
     sos=step.get('signoffs',["Performed By","Check By"])
     return f'{_instr(step)}<div class="signoff">{signoff_rows(sos)}</div>'
 
+def blocks_rows(blocks):
+    """Render a composite XStep as a sequence of blocks. Each block dict may carry:
+       'gate': (label, options)  -> a Yes/No dropdown that activates the section below
+       'head': section title (green bar);  'gi': True -> SAP Goods Issue badge on the head
+       'note': italic note;  'fields': form fields  OR  'cols'(+idx_label/rowdata/add_row/index): a table
+       'witness': witness label -> right-aligned signature at the block end"""
+    out=[]
+    for b in blocks:
+        if b.get('gate'):
+            lbl,opts=b['gate']
+            out.append(f'<div class="gate"><span class="glabel">{html.escape(lbl)}<span class="req"> *</span></span>'
+                       f'<span class="fdd">{html.escape(opts)}<span class="fddchev">&#9662;</span></span>'
+                       f'<span class="ghint">&mdash; activates / deactivates the section below</span></div>')
+        # Section header only on tabular blocks (green bar + optional GI badge).
+        # Non-tabular process-instruction blocks carry no title — their fields self-label.
+        if b.get('head') and 'cols' in b:
+            badge=' <span class="gibadge">SAP Goods Issue &middot; Z_PICONS mvt 261</span>' if b.get('gi') else ''
+            out.append(f'<div class="bhead">{html.escape(b["head"])}{badge}</div>')
+        if b.get('note'):
+            out.append(f'<div class="bnote">{html.escape(b["note"])}</div>')
+        if 'fields' in b:
+            out.append(f'<div class="form">{form_rows(b["fields"])}</div>')
+        elif 'cols' in b:
+            show_idx=b.get('index',True)
+            thead=th_cells(b['cols'], b.get('idx_label','#') if show_idx else None)
+            data=(b['rowdata'][0] if b.get('rowdata') else None)
+            out.append(f'<table>{thead}{render_row(b["cols"], data, index=show_idx)}</table>')
+            if b.get('add_row',True): out.append('<div class="addrow">+ Add Row</div>')
+        if b.get('witness'):
+            out.append(f'<div class="witness">{html.escape(b["witness"])}<span class="req">*</span><input></div>')
+    return '<div class="mk">' + ''.join(out) + '</div>'
+
+def blocks_body(step):
+    return f'{_instr(step)}{blocks_rows(step["blocks"])}'
+
 def build_html(step):
-    if 'form' in step: body=form_body(step)
+    if 'blocks' in step: body=blocks_body(step)
+    elif 'form' in step: body=form_body(step)
     elif 'longtext' in step: body=longtext_body(step)
     else: body=table_body(step)
     return TEMPLATE.format(title=html.escape(step['title']), body=body)

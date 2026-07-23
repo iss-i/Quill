@@ -64,12 +64,29 @@ Look for the patterns that repeat. The common ones in any bioprocess record:
   these are the clean reusable versions.
 - **Match by name, then VALIDATE by opening the XStep** (`xs_get_version`) — a name match isn't a fit;
   e.g. *Record Daily Bioreactor Conditions* may need a viral CPE%/Live-Dead variant.
+- **Open the ACTIVE (Released) version — not just any version.** An item can carry many versions; the live one
+  is the **Released** version, which is **not necessarily the highest-numbered** (real case: an item's active
+  version was `0001`, with `0002`/`0003` as later drafts). The read tools resolve it via the picker (Released
+  status wins, else highest 4-digit version name). An item with **no** Released version and non-numeric names
+  is **ambiguous** — the recipe owner must designate one before you can trust which version's content to mirror
+  (real case: *Material Consumption* was unresolvable until version `0002` was released).
 
-### Step 4 — Define the XStep list (reuse vs new)
+### Step 4 — Define the XStep list (classify R / V / N)
 - Map **every** batch-record section to one or more XSteps.
-- Classify each as **Reuse** (from library) or **New build**.
-- The **new** ones cluster around the genuinely process-specific chemistry/biology
-  (e.g. for Merck: virus seed/MOI/infection + the BEI inactivation chain). Most utility blocks are reuse.
+- Classify each with the **three-way tag** (not just reuse-vs-new) — this drives how the EBR renders it:
+  - **R = Reuse** — an existing SMPL / DE1 100 library XStep used **as-is**. **No new mock-up** — it renders in the
+    EBR as a **compact reuse card** (title + one-line description + a `Reuses: SMPL: …` pointer), because the real
+    UI already exists in the library.
+  - **V = Variant** — a **new mock-up** that is a parameterized/range-validated **variant of an existing** library
+    XStep. Carries full mock-up content **and** names the reused base (`reuses=`).
+  - **N = New** — genuinely new; full mock-up, no library base.
+- **Only N and V get mock-ups.** R steps are folder-only + a reuse card. On a real reworked record this lands around
+  **~40% R / ~20% V / ~40% N** — the majority of a record is reuse, and treating everything as "New" (a mock-up per
+  step) is the most common early mistake. (AZ3 VI+C&D reworked to **15 R + 8 V + 15 N**.)
+- The **N** ones cluster around the genuinely process-specific chemistry/biology (virus seed/MOI/infection + the BEI
+  chain; low-pH titration; skid recipe; recovery/dilution). Most front-matter and utility blocks are **R**.
+- **Name the reuse target explicitly** (`reuses="SMPL: …"`) and **verify it exists in DE1 100** (Step 3 / §6) — don't
+  leave it "to be confirmed." A wrong-but-plausible reuse name is worse than an honest gap.
 - Apply the **FM scoping rule**: only main-step FMs count. FMs that appear *only* inside the embedded
   **Conditional Header** or **Optional Signature** reference sub-steps are reference-only — don't document them.
   Exclude standard SAP FMs (e.g. `GET_SYSTEM_TIME_REMOTE`).
@@ -81,7 +98,23 @@ Each mock-up is a UI card showing how the XStep renders in the EBR. One folder p
 - Build a **section-by-section coverage table**: every batch-record section → covering XStep(s).
 - **Flag gaps** — any section with no XStep. Add blocks to close them (e.g. Merck needed
   *Pre-Inactivation/Thaw*; plus discrete *Gas-Flow Verification*, *Vessel Transfer*, *SAP/Excel Transaction*).
+- **Do a deep-review sweep for the *hidden* recordables** — the misses aren't whole sections, they're fields
+  buried in a table you already mapped. Re-walk every batch-record table and hunt specifically for: computed
+  **totals / summary rows** (a "Total … (all cycles)" line under a per-cycle table); **cross-record write-backs**
+  (a step that writes a value back into *another* MPR/section); **sub-tables** buried inside one attachment; and
+  **sibling "results" tables** — **if one "results"/effluent table is customised into a variant, its siblings
+  almost always need the same treatment.** (Real AZ3 finds: the *Total Load Volume (all cycles)* summary, the
+  Strip 2 *Inlet 6 Totalizer* volume, and four effluent-results tables that all had to become the same variant.)
 - Goal: 100% of the record covered, nothing dropped.
+- **Make coverage provable with a Requirements Traceability Matrix (RTM).** The strongest proof is structural: map
+  **every recordable section to exactly one XStep and render the *whole* section verbatim** beneath its card (a
+  "New vs Old" panel — instruction + the exact fields captured, as chips). Then the coverage claim reduces to "is
+  every section mapped?" — which is auditable, and any keyword/harvest heuristic used for reusable blocks becomes a
+  *redundant* view that **cannot drop content**. Emit the RTM as a spreadsheet (one row per instruction group →
+  fulfilling XStep, with a coverage status), plus a **streamlined-analysis reconciliation** sheet (each streamlined
+  step → XStep, flagging Covered / Folded / Gap) and a **Goods-Issue & Labels** sheet (rule 12). Since a spreadsheet
+  can't be viewed in Claude Code, also render the RTM to **PDF/HTML** via the same Chrome pipeline (§7). (AZ3 RTM:
+  464 recordable lines, 100% mapped; the reconciliation surfaced the real gaps to resolve.)
 
 ### Step 7 — Assemble the EBR / PI Sheet (New vs Old comparison)
 - String the XStep cards together **in process order, grouped by phase**.
@@ -94,7 +127,7 @@ Each mock-up is a UI card showing how the XStep renders in the EBR. One folder p
 
 ---
 
-## 3. The three mock-up formats — and when to use each
+## 3. The four mock-up formats — and when to use each
 
 > **Decision rule:** what does the step capture?
 
@@ -103,6 +136,18 @@ Each mock-up is a UI card showing how the XStep renders in the EBR. One folder p
 | **Table** | captures a **list / repeating rows** (+ Add Row), **or** has **Start/End timer** buttons | Instructions panel → **Data Input table** (leftmost **`#` index column**, parameterized columns, ▶Start/▶End, **one data row shown**, + Add Row) → `Performed By` column → `Witness By` footer |
 | **Form (non-table)** | captures **one fixed record** (no repeating rows, no timer) | Instructions panel → **right-aligned label/field pairs**; computed/auto fields **greyed (read-only)**; required fields red `*`; `Performed By *` last |
 | **Long Text Instructions** | captures **no data here** — pure instruction + sign-off, **or** an instruction whose data is recorded in **another** step | A **rich/long instruction text** + **Performed By** and **Check By** signatures. **No table, no form fields.** |
+| **Composite (gated blocks)** | is **one section with several conditional sub-sections** — a paper table like §8.4 "VI Treatment Vessel" (Bag *or* Tank, optional Vent Filter, required Product Filters, Tare Weight) | Instructions panel → a **sequence of blocks**, each a small table or form. A block may be **gated** by a `… Required?` **Yes/No dropdown** that activates/deactivates it; **tabular** blocks get a green section header (+ a **Goods Issue** badge if consumed); **non-tabular** blocks get **no title** (fields self-label). |
+
+> **Composite = a last resort, not a default.** Only use it when the paper genuinely presents one numbered section
+> as a set of mutually-exclusive / optional sub-tables (bag-vs-tank, if-applicable filters). Most steps are one of
+> the first three formats. A composite is authored as an ordered list of blocks; each block is either a **table**
+> (`cols`) or a **form** (`fields`), optionally preceded by a **gate** (`… Required?` dropdown) and marked **`gi`**
+> when its rows are consumed (per-line Goods Issue). **Rule: green section header only on tabular blocks; drop the
+> title entirely on non-tabular blocks** (the client asked for this — a green bar over three yes/no fields is noise).
+> The gate is the visible face of the live **DEACTIVATE/ACTIVATE Setup-Function** pattern: the dropdown value drives
+> whether the block's fields are active or N/A. (Real AZ3: *VI Treatment Vessel Setup* — Bag Required? → bag table
+> (GI); mixer-bag attachment yes/no fields (no title); Tank Required? → tank form; Vent Filter Required? → 3-field
+> table; always-required Product Filter table (per-line GI); Tare Weight form.)
 
 ### Format details
 
@@ -172,11 +217,23 @@ SiMPL MBR), the standard **Activate** wiring, and an **Optional Signature** bloc
 3. **Time / date fields = a button + an FM-filled field beside it (never a typed field).** Whenever a step
    records a **start time, end / finish time, or date**, render a **▶ button** (▶Start / ▶End / ▶Date) with the
    timestamp **field(s) directly beside it**. The field is **populated by a function module** (a system-time FM)
-   when the operator presses the button — it is **read-only**, never hand-keyed. So a "Start Time" column/field
-   is really *two things*: the ▶ button **and** its stamped field. **Placement follows the format:** in a
+   as its **default value** — so the operator confirms a system‑stamped time rather than keying one from scratch —
+   and it is **editable/overridable** (they may legitimately need to correct the date/time). What makes it
+   GxP‑sound is the **`Performed By` signature** on the line (attributable + audit‑trailed), **not** locking the
+   field. Mechanism (real XStep convention): the FM writes a **default variable** (`LV_*_D` / `LV_*_T`) wired as
+   the field's **Default Value** (`PPPI_DEFAULT_VARIABLE`), while the field captures into a separate value
+   variable (`LV_DATE` / `LV_TIME`); set **Reason Required** on the field where a documented reason for change is
+   wanted. So a "Start Time" column/field is really *two things*: the ▶ button **and** its stamped, editable
+   field. **Placement follows the format:** in a
    **table**, the button sits **beside** the stamped field (adjacent cells) — and because start/stop timer
    steps live in table cells, those steps are **tables**; in a **non-tabular (Form)** step, the button sits
    **directly above** the field its output goes into, **not beside it**.
+   **Record Date and Time as SEPARATE fields, not one "Date & Time" field.** There is no combined date-time
+   primitive downstream — a timestamp is a Date field **and** a Time field (in the PI Sheet Sandbox: an
+   `entry_date` + `entry_time`, or `output_date` + `output_time`; §13). The client prefers them split for
+   visibility, so a stamped "Charge Date & Time" or a computed "Expiration Date & Time" renders as two adjacent
+   fields sharing one ▶ button, not a single field. (Real AZ3 example: *WFI Container Setup* — Charge Date /
+   Charge Time and the computed Expiration Date / Expiration Time are four separate fields.)
 4. **Three field roles in a calc/record step — only one is an entry field.** Triage every field before
    drawing it: **(a) Operator inputs** = batch-specific measurements → editable, usually required (red `*`).
    **(b) Standard-constant defaults** = fixed process parameters (e.g. Cell Density `1.0×10⁶ cells/mL`,
@@ -231,10 +288,15 @@ SiMPL MBR), the standard **Activate** wiring, and an **Optional Signature** bloc
    - **(c) Selection fields** — dropdown / radio / checkbox — for a fixed option set (Yes/No, a specific equipment
      ID, Optical-vs-Conventional, a preset amount): **chosen, not typed.** A dropdown restricted to a fixed value
      list is backed by a **characteristic created in CT04** (e.g. `ZSMPL_CHAR_DLIMS_TEST`, `ZSMPL_CHAR_YES_NO`)
-     set as the field's requested value — that limits the field to those values. So when a batch-record column can
-     only hold a handful of set values (e.g. *Item* = Bag / Filter, a Pass/Fail/N-A result, a Yes/No), model it as
-     a **dropdown** and note the CT04 characteristic; if a needed value list doesn't exist yet, it's a new CT04
-     characteristic to create. Example: `SMPL: Sample Submission Chart` → *DLIMS Test* column.
+     set as the field's requested value (`PPPI_REQUESTED_VALUE`) — that limits the field to those values. So when a
+     batch-record column can only hold a handful of set values (e.g. *Item* = Bag / Filter, a Pass/Fail/N-A result,
+     a Yes/No), model it as a **dropdown**. **A mock-up dropdown ALWAYS becomes a real dropdown in the built XStep,
+     and every dropdown requires its own CT04 characteristic (`ZSMPL_CHAR_*` — CABN + allowed CAWN/CAWNT values).**
+     So each dropdown is *two* deliverables: the column **and** the characteristic behind it — always name the
+     characteristic and list its allowed values (create a new one if none fits). **Never downgrade a dropdown to
+     free text** (this client's workflow, confirmed 2026-07-15 — it overrides the generic "specs sometimes mean
+     free text" caveat in the SAP builder guide). Example: `SMPL: Sample Submission Chart` → *DLIMS Test* column
+     (`ZSMPL_CHAR_DLIMS_TEST`).
    All three differ from the three entry roles in rule 4: a **validation/lookup output** is read-only like a
    computed value; a **selection** is chosen. Tell for a validation output: the paper shows a value *derived from*
    another field the operator **enters** (Description from Part No, Exp. Date from Batch) — model it as a greyed
@@ -248,6 +310,67 @@ SiMPL MBR), the standard **Activate** wiring, and an **Optional Signature** bloc
     tables "to save screen space." Harmonize product variants by making **headers, instructions and column titles
     MBR-configurable** so one XStep serves many part numbers. Same instinct as rule 6 (reuse) and the §3
     data-vs-instruction split: smaller pieces reuse better and fit the screen.
+11. **Keep column / field labels short (≈30-char cap).** The live XStep stores an input column's label in
+    `PPPI_INPUT_REQUEST`, which caps at **~30 characters** — an over-long header makes the table instruction fail
+    to build (a bare `CX_CMX_TYPES_EXCEPTION`, no hint). Write mock-up column headers and field labels in the
+    **abbreviated PI-sheet form** (units in parentheses, no sentence fragments): `Net Wt / Vol (kg=L)` not
+    `Product Net Weight / Volume (kg = L)`; `Vol Loaded (L)` not `Actual Volume Loaded per Totalizer (L)`. Put the
+    full description in the **instruction text**, not the header. (Output `PPPI_OUTPUT_TEXT` and instruction stext
+    are more forgiving, but keep everything tight.) Parameter *variable* names are also capped at **10 chars** in
+    SAP — not a mock-up concern, but it's why labels and variables stay terse.
+12. **Sweep for Goods-Issue and Label points — they are load-bearing and easy to miss.** Do a dedicated pass over
+    the record for two signals:
+    - **Goods Issue** — every paper **"SAP Consumption Performed by/Date"** cell (and per-material variants like
+      *"SAP Consumption of 8012555"*) is a material-consumption point. In the digital XStep this is **not** a manual
+      field — it posts automatically via the **Goods Issue process message (`Z_PICONS`, movement type 261)**. Mark
+      every consuming table/step (BOM, buffer/solution additions, filters, bags, resin, WFI, NaOH). Per-line GI on a
+      table means the process message fires on each row's `Performed By`.
+    - **Labels** — every **"label the vessel/sample/bag …"** instruction (usually **SOP-0107056**) is a label-print
+      point. Note vessel labels (treatment vessel, retentate vessel + valves, intermediate/PFI vessels), sample
+      labels, and product labels. (Open question to raise with the client: is a label **printed via a process
+      message to a label printer**, or applied-and-recorded manually? It changes whether the XStep needs a
+      control-function/process-message element.)
+    Cross-check the sweep against your XStep list and **flag any consuming/labeling point not reflected in a step's
+    design** — on real records ~half of these were initially missing. (AZ3: 17 GI points + 7 label points.)
+13. **"Needs an XStep" vs "separate form" — one test.** Does the batch record contain the **fields to capture the
+    measurement**, or does it only **name a sample / reference an external form**? If it only points outward (a
+    sample designation tested per an SOP, a "record … from FORM-XXXX", a separate MPR/worksheet), it is **not** a
+    new XStep — it's covered by the Sampling Record block or is genuinely out of scope. Build an XStep only where the
+    record has capture fields. (Real AZ3: *SoloVPE / SOLO_A280* looked like a gap but is a **sample** (SOP-0107091);
+    its concentration **result** *is* recorded, in the product-info table, so it's captured there — not a worksheet
+    XStep. *VPro filter-integrity* belongs to a **separate record** (MABR-0027575 / PN 8012474); *Cassette Install*
+    is **FORM-0071789**. All three: no new XStep.)
+14. **Front-matter is recordable too — don't skip §1-6.** The equipment/materials **Bill of Materials**, **Additional
+    Manufacturing Supplies** (extra filter/bag used mid-process), **Additional Solution Batches** (a solution-batch
+    switch), and **Process Notes / global limits** are all recordable and need XSteps (Display BOM `R`; Additional
+    Mfg Supplies `V`; Additional Solution Batches `V`; Process Notes `V`/Long-Text). Only the pure narrative
+    (Process Summary, Flowchart, Referenced-Documents SOP list) and the revision history are non-recordable.
+15. **Don't create a redundant block — check whether the data is captured at point-of-use first (the inverse of
+    rule 10).** Before adding a "record all the X batches / all the Y IDs" consolidated front-matter table, ask
+    *where is this actually recorded in the record?* If each value is captured **at its point of use** (the
+    material batch/exp in the §10 acid table, the buffer in the skid-recipe step) and/or in the **§4 BOM**, a
+    separate consolidated table is **redundant** — delete it. Map each section to the **fewest** XSteps that cover
+    its genuine recordables. Tell for a redundant front-matter table: the section is largely a **reference /
+    process-flow diagram** and its only *new* recordable is a small sub-table. (Real AZ3: §5 "Document Process
+    Flow Sheet" — its only recordable is the *Additional Solution Batches* switch table; the solution batch/exp
+    values live at point-of-use + BOM, so the extra "Solution/Buffer Batch Record" step was removed.) This is the
+    counterweight to rule 10 — split when a section mixes concerns, **consolidate/drop** when a block duplicates
+    capture that already happens elsewhere.
+16. **Equipment is assigned once, then retrieved on use with a `Get [Type]` button.** The record assigns every
+    instrument up front in a **Room & Equipment Assign** step (with the calibration check); each later step that
+    *uses* a piece of equipment pulls it via a **`Get [Type]`** button that populates **`[Type] ID` + `[Type]
+    Description`** (+ **`[Type] Cal Due`** for *calibrated* instruments — scale, pH/cond meter, thermometer — but
+    **not** for mixer / stir plate / pump). **Substitute the actual equipment word** for "Equipment": *Get Scale /
+    Balance*, *Get pH / Cond Meter*, *Get Thermometer*, *Get Mixer*, *Get Stir Plate*, *Get Pump*. Two rules of
+    thumb: **(a)** a pH/conductivity meter and a thermometer are **distinct instruments** in the paper (separate
+    IDs) → **two separate Gets**, not one; **(b)** the Get lives in the **reusable block** for that activity
+    (weighing→Product Vessel Weigh, measuring→Product pH/Cond/Temp, mixing→Product Mixing) — a process step that
+    weighs/measures **instantiates that block** rather than duplicating the button; add an *inline* Get only where
+    an N-step embeds the weigh/measure/mix in its own table. To find every Get point, sweep the record for
+    equipment-ID capture cells (`Scale/Balance ID`, `Meter ID`, `Thermometer ID`, `Mixer ID`, `Pump ID`,
+    `Calibration Due Date`) and the equipment nouns; note that **not every BOM instrument is retrieved** — a Filter
+    Integrity Tester assigned in the BOM may only be used on a *separate* form (rule 13). FM: the Get button is an
+    equipment-lookup FM (`GET_ASSIGNED_EQUI_EBR` + `ELB_FM_GET_ASS_EQ_VALID`) resolving the assignment.
 
 ---
 
@@ -265,6 +388,23 @@ These recur in essentially every bioprocess batch record and should almost alway
 - **Record Text / Numeric Value** — capture a single labelled value (an equipment ID, a reading).
 - **pH Probe Calibration / DO Probe Calibration / Probe Info**.
 - **Record Daily Bioreactor Conditions** / Sampling / **Viable Cell Density** / **Sample Submission**.
+- **Offline-meter / effluent results** — a **range-validated variant of *Solution Summary - Data Recording***
+  for pH / conductivity / temperature readings taken off an offline meter (equilibration, strip, storage,
+  product effluent). Shape: a **Get Equipment** button → read-only **Equipment ID / Description** (the offline
+  meter), one **column per measurement** each with an **adjacent read-only UoM output** column (pH, mS/cm, °C),
+  the accept ranges stated in the instruction text, and a per-cycle or per-day index. **Keep every sibling
+  results table the same variant** — they only differ by which measurements/ranges apply.
+- **Incoming / Load Product Information** — a variant of ***Solution Summary - Data Recording*** capturing a
+  starting-material vessel/bag: **tare + net weight**, a **concentration result (g/L, e.g. SoloVPE)**, and the
+  **DLIMS project / sample numbers** it's reported under, one row per vessel. (Covers a paper "Affinity/VF Product
+  Information" table — AZD0543 VI §7.5 / C&D §7.4.)
+- **Confirmed DE1 100 reuse targets** (verified via `shaper_find`, §6): `SMPL: Solution Summary - Data Recording`
+  (results / concentration / pH-cond-temp / hold-time / incoming-product variants), `SMPL: Calc Three Columns`
+  (`Value1 [op] Value2 = Result` — e.g. Net = Gross − Tare), `SMPL: Three Variable Calc` / 4-Variable extension,
+  `SMPL: Sampling Record` + `SMPL: Sample Submission Chart`, `SMPL: Additional Assembly` + `SMPL: Material
+  Consumption` (Z_PICONS Goods Issue), `SMPL: Room/Equipment Assign`, `SMPL: Record Text Value`, `Long Text
+  Instructions (DE2 903)`, `SMPL: Yield Calculations`, `SMPL: Non-Routine Sampling Record`, `SMPL: Comments`,
+  Display BOM, weight pattern (Product Vessel Weigh), weight+timer (Product Mixing).
 - **Filter Integrity Test**, **Centrifugation / Harvest Log**, **Transfer (Solution/Media)**, **Mixing**,
   **Timer (Begin/End/Summary)**, **Label Control & Reconciliation**, **Cleaning / Sanitization**,
   **Storage / Dispense**.
@@ -278,11 +418,18 @@ Formulation, Bulk Dispense, Cold Storage, Pre-Inactivation/Thaw, single-use bag 
 
 ## 6. Sourcing data from SAP (MCP)
 
-- **XSteps:** `xs_find` (locate by name), `xs_folder_tree` / `xs_get_folder_contents` (browse the library),
-  `xs_get_version` shape=`snapshot` (full content — FM calls live at `node.instr.rows`; reference sub-steps
-  named *Conditional Header* / *Optional Signature* are reference-only).
-- **Systems:** `list_connections`. DE1 100 = main XStep library; DE2 903 = sandbox/dev (where `TR - Long Text
-  Instructions` lives); QE2 100 = QA.
+- **XSteps:** `shaper_find` (locate by name), `shaper_folder_tree` / `shaper_get_folder_contents` (browse the
+  library), `shaper_get_version` shape=`snapshot` (full content — FM calls live at `node.instr.rows`; reference
+  sub-steps named *Conditional Header* / *Optional Signature* are reference-only).
+  > **Tool rename:** the XStep tool group was renamed **`xs_*` → `shaper_*`** in an SapFractal build. If a call
+  > errors with *"Tool xs_find not found"* while `list_connections` still works, the server was updated — switch to
+  > `shaper_*` (git-pull the SapFractal project if the deferred-tool list is stale, then re-search).
+  > **Case gotcha (DE1 100):** case-insensitive `shaper_find` hits *"The function UPPER is unknown"* on this system.
+  > Pass **`case_sensitive: true`** with exact-case terms (e.g. `"SMPL: Solution Summary"`). Use it to **confirm
+  > every `reuses=` target actually exists** before calling a step a Reuse.
+- **Systems:** `list_connections`. Connection names use **underscores** — `DE1_100` (main XStep library),
+  `DE2_903` (sandbox/dev, where `TR - Long Text Instructions` lives), `QE2_100` (QA). `list_connections` works even
+  when the `shaper_*` group is unavailable — use it (or a `run_query` count) to confirm the server is reachable.
 - **FMs / DDIC:** `find_objects` → `get_source` (ABAP body & signature), `get_xml` (domain fixed values).
 - **Tables:** `get_table_data` / `run_query` (e.g. TOBJ/TACTZ for auth objects, TADIR for object inventory).
 
@@ -295,24 +442,49 @@ Formulation, Bulk Dispense, Cold Storage, Pre-Inactivation/Thaw, single-use bag 
 - EBR / PI Sheet: all cards assembled into one HTML, rendered **HTML → PDF**
   (`chrome --headless --print-to-pdf`, A3 landscape page).
 - Driven by a small data file (one dict per XStep: title, instructions, and either `cols` for tables,
-  `form` for forms, or a long-text body) + a phase plan for the EBR + an Old↔New crosswalk map.
+  `form` for forms, a long-text body, or a `blocks` list for a composite/gated XStep — each block a `gate`
+  (`… Required?` dropdown) + `head`/`gi` + `fields` or `cols`) + a phase plan for the EBR + an Old↔New crosswalk map.
+- **A shared mock-up construct must be styled in BOTH renderers, or it renders broken in the EBR.** The standalone
+  mock-up template and the EBR card assembler use **different CSS class conventions** for the same thing (standalone
+  styles plain `table` / `.form`; the EBR styles `table.di` / `.xform`). When you add a **new** construct (e.g. the
+  composite `blocks`), emit it under a **scoping wrapper** (`.mk`) and add `.mk`-scoped styles to **both**
+  stylesheets — otherwise the standalone PNG looks fine while the EBR card collapses to **unstyled raw text**
+  (tables with no grid, form fields with no boxes). Symptom seen this build: the §8.4 composite rendered perfectly
+  as a PNG but showed as plain text in the EBR until the EBR CSS got the matching `.mk` rules. Always re-check the
+  new construct **in the assembled EBR**, not just the standalone mock-up.
 - Re-running the generator rebuilds everything, so wording/column/format changes are one-line edits.
+- **Keep the EBR PDF closed when you rebuild.** Chrome `--print-to-pdf` **silently no-ops on a locked file**
+  (exits 0, writes nothing) — an open PDF viewer strands you on a stale export while the HTML keeps updating,
+  which reads as "my change didn't take." Use an **absolute** output path (a relative `--print-to-pdf` path can
+  also silently fail to write), and after a rebuild confirm the PDF's modified-time actually advanced.
+- Published mock-ups also go to the **PI Sheet Sandbox** as JSON — see §13.
 
 ---
 
 ## 8. Quick checklist for a new batch record
 
-- [ ] Read the full record; capture sections + attachments + header fields.
+- [ ] Read the full record; capture sections + attachments + header fields (incl. front-matter §1-6).
 - [ ] List the recurring data-capture patterns.
-- [ ] `xs_find`-search the whole library per pattern; check for an existing client folder.
-- [ ] Build the XStep list; mark **Reuse vs New**; apply the FM scoping rule.
-- [ ] Pick a **format per step** (Table / Form / Long Text Instructions) using the §3 decision rule.
+- [ ] `shaper_find`-search the whole library per pattern (`case_sensitive: true`); check for an existing client folder.
+- [ ] Build the XStep list; tag each **R / V / N** (rule: only N/V get mock-ups); apply the FM scoping rule.
+- [ ] **Name + verify each reuse target** in `DE1_100` (`shaper_find`) — no "to-be-confirmed" reuses.
+- [ ] Pick a **format per step** (Table / Form / Long Text / Composite-gated-blocks) using the §3 decision rule.
 - [ ] **Sweep for constants** — every fixed/standard value becomes a read-only **defaulted output**, not an entry field.
+- [ ] **Sweep for Goods-Issue points** (SAP-Consumption cells → `Z_PICONS` mvt 261) and **Label points** (SOP-0107056);
+      confirm each is reflected in a step (rule 12).
+- [ ] **"Needs-XStep vs separate-form" test** on anything that only names a sample / references an external form (rule 13).
 - [ ] Enforce **one signature per table line**; computed fields read-only; component tables get SAP+batch+expiry.
-- [ ] Build one mock-up per XStep.
-- [ ] Build the **coverage crosswalk**; close every gap.
-- [ ] Assemble the **EBR / PI Sheet** (phase order + header + crosswalk + per-card BR-section chips); export PDF + HTML.
-- [ ] Validate reuse candidates by **opening the real XStep**, not just the name.
+- [ ] Build one mock-up per **N/V** XStep (R = reuse card, no mock-up).
+- [ ] Build the **coverage crosswalk**; close every gap. Front-matter (BOM / Add'l Supplies / Solution Batches /
+      Process Notes) gets XSteps too (rule 14).
+- [ ] Assemble the **EBR / PI Sheet** — **NEW** (POC-style: N/V/R badges + XStep↔MPR crosswalk) and **New vs Old**
+      (same cards + verbatim old-BR panels); export PDF + HTML.
+- [ ] Emit the **RTM** (Step 6): section→XStep trace + streamlined reconciliation + Goods-Issue/Labels sheets; render PDF/HTML too.
+- [ ] Validate reuse candidates by **opening the real XStep** — the **active/Released** version, not just the name.
+- [ ] **Deep-review sweep:** every total/summary row, cross-record write-back, attachment sub-table, and extra
+      in-table measurement is on a card — and sibling **"results" tables use a consistent variant**.
+- [ ] Publish to the **PI Sheet Sandbox** (§13): computed columns typed `output`, dropdowns carry `options`,
+      date+time split; read the record back to verify.
 
 ---
 
@@ -418,6 +590,14 @@ and close gaps.
 
 ## 11. Function Module patterns (how FMs are wired in XSteps)
 
+> **Downstream:** these mock-ups (and the functional specs) are the input to the **SapFractal XStep builder**
+> (`Build Guide/XSTEP_BUILD_GUIDE.md` + `XSTEP_TOOLS.md`) that constructs the real SAP XStep. It **clones the
+> `SMPL: AZ Template XStep`**, which already ships the **Conditional Header** (title + instructions block) and the
+> **Optional Signature** block (**Performed By** + **Witnessed By**) — so a mock-up's header, instructions and
+> footer witness signature are **template-supplied**, not custom-built; the builder adds "only the spec-specific
+> instructions, usually one table." Column labels → `PPPI_INPUT_REQUEST` (≤30 chars, rule 11); dropdowns → CT04
+> characteristics (rule 9c); goods issue → `Z_PICONS` / mvt 261 (rule 5).
+
 Observed in the AZ Bioreactor XSteps — reuse these mental models when designing new steps.
 
 - **FMs fire on XStep lifecycle events**, not just buttons:
@@ -430,6 +610,14 @@ Observed in the AZ Bioreactor XSteps — reuse these mental models when designin
   **update** batch shelf-life (SLED/DOM) or upsert custom `ZTC_*` tables.
 - **Real SAP transactions via process messages:** the "SAP" column on a component table is a **goods movement**
   (e.g. `CREATE_PROC_MSG`, movement 261) — not a checkbox.
+- **Captured results feed downstream systems, so type them — don't free-text them.** A numeric result is a
+  `PPPI_MATERIAL_QUANTITY`, a Yes/No / pass-fail is a **CT04 characteristic**, a date is a date domain, a UoM is
+  `PPPI_UNIT_OF_MEASURE`. The reason is downstream: these values flow to the SAP **Batch Release Hub** (Batch
+  Record Review / deviation / usage-decision / serialization checks), the process order's **inspection lot /
+  usage decision**, and **batch classification** — all of which auto-evaluate only on *typed* data, which is also
+  what makes **review-by-exception** possible. Our developers already build this way; it's captured here as the
+  context behind picking a field's type. (It does **not** change what a per-XStep functional spec documents — the
+  spec stays scoped to the individual XStep as built in CMXSV; see the Functional Spec guide §5.)
 - **The dependency engine = electronic conditional logic:** INITIAL_ACTIVE + MBR_DEP_CHECK_ACTIVE turn the paper
   record's *"if X, proceed / N/A the rest"* branching into enforced perform/verify-before-start gating.
 - **Good-practice patterns to reuse:** dual-mode FMs (write vs read via a flag), ENQUEUE/DEQUEUE around writes,
@@ -474,3 +662,78 @@ Observed in the AZ Bioreactor XSteps — reuse these mental models when designin
 - **Calc outputs carry forward.** One step's computed output becomes the next step's input — Weighted-Average
   Titer's *Final Inv. Log of Titer* feeds MOI Calculation's *Inv. Log Titer*. Mark such inputs as sourced-from-
   step-X (read-only / defaulted from the upstream result), not as fresh operator entries.
+
+---
+
+## 13. Publishing mock-ups to the PI Sheet Sandbox (the JSON target)
+
+Once a mock-up is right, it's published to the **PI Sheet Sandbox** — a hosted PI-sheet representation at
+`https://vantage.iss-i.ca/api/xsteps/`. This is a **concrete JSON form of the mock-up**, and the most literal
+downstream target we have. (It is distinct from the SapFractal SAP builder in §11 / `XSTEP_BUILD_GUIDE.md`;
+confirm with the team whether the Sandbox *feeds* that builder or is a parallel review surface.) One mock-up =
+one Sandbox record.
+
+### API contract
+
+Auth is a bearer token: `Authorization: Bearer <api key>`.
+
+| Verb | Endpoint | Purpose |
+|---|---|---|
+| `GET`   | `/api/xsteps/` | List every record — grab one as a live schema reference. |
+| `GET`   | `/api/xsteps/{id}/` | Read one record. |
+| `POST`  | `/api/xsteps/` | Create (returns `201` + the new `id`). |
+| `PATCH` | `/api/xsteps/{id}/` | Update in place. **`PUT` is NOT supported (returns 404).** |
+
+Always **read the record back** after a write — it confirms the structure persisted and that UTF-8 survived
+(em dashes, °, ≤, etc. round-trip; a mangled character shows up immediately).
+
+### Record shape
+
+```jsonc
+{
+  "title", "description", "category": "custom", "tags": [],
+  "instructions": [{ "id", "name", "color" }],   // instruction "groups" = the step's section(s)
+  "parameters": [],
+  "elements": [                                    // ordered UI elements
+    { "id", "type", "label", "order", "config", "instrId", "instrName", "instrIndex" }
+  ]
+}
+```
+
+### Element types — what each mock-up construct becomes
+
+| Mock-up construct | Sandbox element `type` |
+|---|---|
+| Instruction / conditional-header text | `output_long_text` (`config.content`) |
+| Data-Input table | `ctrl_table` (`config.dynamic` = Add Row, `config.rows`, `config.columns[]`) |
+| Standalone entry field | `entry_char_string` / `entry_numeric` / `entry_date` / `entry_time` |
+| Standalone read-only / computed field | `output_char_string` / `output_numeric` / `output_date` / `output_time` |
+| Performed / Witnessed signature | `entry_parameter` (or `entry_signature`) |
+| FM / Get button (standalone) | `ctrl_function_call` |
+| Goods issue | `ctrl_process_message` |
+| Calculation | `ctrl_calculation` |
+
+### Table column types (`ctrl_table.config.columns[i]`)
+
+This is where the mock-up's column prefixes land — input / output / dropdown / FM button:
+
+| Mock-up column | Sandbox column |
+|---|---|
+| Operator entry (plain) | `{ "type": "input", "header": "…" }` |
+| Computed / read-only (`=`-prefixed) | `{ "type": "output", "header": "…" }` |
+| Dropdown (`%`-prefixed) | `{ "type": "dropdown", "header": "…", "options": [ … ] }` |
+| FM / Get button (`@BTN:` / `Get …`) | `{ "type": "function", "header": "…", "buttonLabel": "…" }` |
+| No `type` given | **defaults to `input`** |
+
+### Gotchas & conventions
+
+- **Type your computed columns `output`.** An untyped column defaults to `input` and renders as an entry field —
+  computed columns (Material Description, Exp. Date, expiry) must be explicitly `output`, or the operator is
+  asked to type a value the system derives. (This is the Sandbox mirror of rule 9a and rule 4c — it bit us on
+  the first upload.)
+- **No combined date-time type** — a "Date & Time" is two elements (`*_date` + `*_time`); see rule 3.
+- **Dropdowns carry their `options[]` inline** — the same value list you name for the CT04 characteristic
+  (rule 9c).
+- **The Sandbox is the source of truth once uploaded.** You can `GET` the record and **re-render the PNG
+  mock-up from it**, keeping the mock-up folder and the Sandbox in sync — drive the renderer off the JSON
+  (`output`/`dropdown` column types → read-only/dropdown styling; `output_*` elements → grey read-only fields).

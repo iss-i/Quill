@@ -31,7 +31,7 @@ from p2lib import is_heading, heading_text
 
 ROOT='..'
 DONOR=ROOT+'/Phase 2 XSteps/SMPL- Three Variable Calc/SMPL_Three Variable Calc XStep Design Specification.docx'
-OUTDIR=ROOT+'/AZ Phase 3 XStep Mock Ups/Additional Manufacturing Supplies'
+OUTDIR=ROOT+'/AZ Phase 3 XStep Mock Ups (POC)/Additional Manufacturing Supplies'
 OUT=OUTDIR+'/SMPL_Additional Manufacturing Supplies XStep Design Specification.docx'
 
 # ---------------------------------------------------------------------------

@@ -1,5 +1,11 @@
 {
   "mcpServers": {
+    "google-drive": {
+      "command": "node",
+      "args": [
+        "mcp-google-drive/server.js"
+      ]
+    },
     "sapfractal": {
       "command": "cmd",
       "args": [

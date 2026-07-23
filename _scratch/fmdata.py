@@ -650,3 +650,124 @@ FMDATA['/SMPL/PPPI_FM_CALC_EXECUTE'] = {
   ('h','Assumptions:'),
   ('b','Operation codes are valid; input values are already numeric floats (converted via /SMPL/PPPI_FM_INPUT_VALUE).'),
  ]}
+
+# ---- AZ Phase 3 input-validation + goods-issue FMs (added 2026-07-14) ----
+# Sourced: GET_MAT_DETAIL local .abap; GET_EXPIRY_DATE DE1_100 zsmpl_fg_az_phase2;
+# CREATE_PROC_MSG DE1_100 zjc_fg_azp2 (the Z_PICONS goods-issue FM, movement type 261).
+FMDATA['ZSMPL_FM_GET_MAT_DETAIL']={
+ 'name':'ZSMPL_FM_GET_MAT_DETAIL',
+ 'imports':[('IM_MATNR','MATNR','Material (part) number entered by the operator')],
+ 'exports':[('EX_MAT_DESC','MAKTX','Material description returned for the part number'),
+            ('EX_UOM','MEINS','Base unit of measure of the material')],
+ 'exceptions':[('MAT_DESC_DNE_FOR_LANGU','No material description exists for the logon language'),
+               ('UOM_NOT_FOUND','No base unit of measure found for the material')],
+ 'pseudo':[
+   ('h','1. Purpose'),
+   ('p','Retrieves the material description and base unit of measure for a material (part) number so the '
+        'Material Description is populated automatically when the operator enters a Part No.'),
+   ('h','2. Input Parameters'),
+   ('b','IM_MATNR - the material (part) number entered by the operator.'),
+   ('h','3. Processing Logic'),
+   ('s','a. Move IM_MATNR to a working material variable.'),
+   ('s','b. Select the material description (MAKTX) from table MAKT for the material in the logon language (SY-LANGU).'),
+   ('s','c. If no description is found in the logon language, re-select MAKT for the material in English ("E").'),
+   ('s','d. Select the base unit of measure (MEINS) from table MARA for the material.'),
+   ('s','e. If no unit of measure is found, raise UOM_NOT_FOUND.'),
+   ('s','f. Return the description in EX_MAT_DESC and the unit of measure in EX_UOM.'),
+   ('h','Additional Notes'),
+   ('h','Error Handling:'),
+   ('b','MAT_DESC_DNE_FOR_LANGU - no material description exists for the material in the requested language.'),
+   ('b','UOM_NOT_FOUND - the material has no base unit of measure in MARA.'),
+   ('h','Dependencies:'),
+   ('b','Material master tables MAKT (descriptions) and MARA (base data) must be maintained for the part.'),
+   ('h','Assumptions:'),
+   ('b','The part number entered corresponds to a material master record; English is available as a fallback language.'),
+ ]}
+FMDATA['ZSMPL_FM_GET_EXPIRY_DATE']={
+ 'name':'ZSMPL_FM_GET_EXPIRY_DATE',
+ 'imports':[('IM_MATNR','MATNR','Material (part) number of the supply (optional)'),
+            ('IM_BATCH','CHARG_D','Batch number entered by the operator (optional)')],
+ 'exports':[('EX_EXP_DATE','VFDAT','Expiration (shelf-life) date returned for the material/batch')],
+ 'exceptions':[('MAT_IS_INITIAL','No material was supplied'),
+               ('BATCH_COMBO_NOT_FOUND','The material/batch combination does not exist in SAP'),
+               ('EXPIRY_DATE_IN_PAST','The batch expiration date is earlier than the current date')],
+ 'pseudo':[
+   ('h','1. Purpose'),
+   ('p','Validates the batch entered against the material and returns the batch expiration date so the Exp. Date '
+        'is populated automatically when the operator enters a Batch No.'),
+   ('h','2. Input Parameters'),
+   ('b','IM_MATNR - the material (part) number of the supply.'),
+   ('b','IM_BATCH - the batch number entered by the operator.'),
+   ('h','3. Processing Logic'),
+   ('s','a. If IM_MATNR is blank, raise MAT_IS_INITIAL.'),
+   ('s','b. Select the expiration date (VFDAT) from batch table MCH1 for the material and batch.'),
+   ('s','c. If the material/batch combination is not found, raise BATCH_COMBO_NOT_FOUND.'),
+   ('s','d. If the expiration date is earlier than the current date (SY-DATLO), raise EXPIRY_DATE_IN_PAST.'),
+   ('s','e. Return the expiration date in EX_EXP_DATE.'),
+   ('h','Additional Notes'),
+   ('h','Error Handling:'),
+   ('b','MAT_IS_INITIAL - the material number was not supplied.'),
+   ('b','BATCH_COMBO_NOT_FOUND - no MCH1 record exists for the material/batch combination.'),
+   ('b','EXPIRY_DATE_IN_PAST - the batch expiration date has already passed.'),
+   ('h','Dependencies:'),
+   ('b','Batch master table MCH1 must hold the material/batch with a shelf-life expiration date (VFDAT).'),
+   ('h','Assumptions:'),
+   ('b','The part number has already been validated; batches are managed with shelf-life expiration in SAP.'),
+ ]}
+FMDATA['ZSMPL_FM_CREATE_PROC_MSG']={
+ 'name':'ZSMPL_FM_CREATE_PROC_MSG',
+ 'imports':[
+   ('I_PLANT','WERKS_D','Plant for the goods issue'),
+   ('I_DATE','DATE','Event date; defaults to the current date if blank (optional)'),
+   ('I_TIME','TIMS','Event time; defaults to the current time if blank (optional)'),
+   ('I_MATNR','MATNR','Material (part) number to be consumed'),
+   ('I_GI_QTY','ERFMG','Goods-issue (consumed) quantity'),
+   ('I_ORDER','AUFNR','Process order (optional)'),
+   ('I_ERFME','MEINS','Unit of measure (optional)'),
+   ('I_BWART','BWART','Movement type - 261 for order consumption (optional)'),
+   ('I_RSNUM','RSNUM','Reservation number (optional)'),
+   ('I_RSPOS','RSPOS','Reservation item (optional)'),
+   ('I_MSG_HEAD','CO_SOURCE','Process-message sender name; defaults to the user (optional)'),
+   ('I_BATCH','CHARG_D','Batch of the material (optional)'),
+   ('I_PHASE','VORNR','Phase / operation number (optional)'),
+   ('I_STLOC','LGORT_D','Storage location for the goods issue'),
+   ('I_FLAG','CHAR1','Conditional trigger flag (optional)'),
+   ('I_MATCH_FLAG','CHAR1','Value the trigger flag must match to proceed (optional)'),
+ ],
+ 'exceptions':[('MESSAGE_CREATION_FAIL','The process message could not be created'),
+               ('CHARACTERISTIC_ERROR','A process-message characteristic was rejected')],
+ 'pseudo':[
+   ('h','1. Purpose'),
+   ('p','Creates the custom goods-issue process message Z_PICONS to consume a material into SAP (movement type '
+        '261, order consumption) when the operator signs a material line, replacing a manual SAP goods-issue '
+        'transaction.'),
+   ('h','2. Input Parameters'),
+   ('b','I_PLANT / I_STLOC - plant and storage location for the goods issue.'),
+   ('b','I_MATNR / I_BATCH / I_GI_QTY / I_ERFME - the material, batch, consumed quantity and unit of measure.'),
+   ('b','I_ORDER / I_PHASE / I_RSNUM / I_RSPOS - process order, phase and reservation reference.'),
+   ('b','I_BWART - movement type (261 for order consumption).'),
+   ('b','I_DATE / I_TIME - event date and time (default to the system date/time).'),
+   ('b','I_FLAG / I_MATCH_FLAG - optional conditional trigger.'),
+   ('h','3. Processing Logic'),
+   ('s','a. If I_FLAG is set and does not equal I_MATCH_FLAG, return without creating a message.'),
+   ('s','b. Condense and upper-case the material and batch; if either is "N/A"/"NA", or the material is blank, '
+        'return without creating a message.'),
+   ('s','c. Default the event date and time to the system date/time when not supplied.'),
+   ('s','d. Build the process-message header for category Z_PICONS (plant and sender name).'),
+   ('s','e. Build the characteristics: event date/time, material, quantity consumed, process order, unit of '
+        'measure, movement type, reservation and item, batch, phase and storage location.'),
+   ('s','f. Call BAPI_PROCESS_MESSAGE_CREATEMLT to create the message.'),
+   ('s','g. Inspect the header, characteristic and general return tables; raise CHARACTERISTIC_ERROR or '
+        'MESSAGE_CREATION_FAIL on any error message.'),
+   ('h','Additional Notes'),
+   ('h','Error Handling:'),
+   ('b','CHARACTERISTIC_ERROR - a characteristic value was rejected by the process-message BAPI.'),
+   ('b','MESSAGE_CREATION_FAIL - the header or general return contained an error message.'),
+   ('b','Materials/batches of "N/A" and blank materials are skipped silently (no message and no error).'),
+   ('h','Dependencies:'),
+   ('b','Process message category Z_PICONS and the standard BAPI_PROCESS_MESSAGE_CREATEMLT; the message is '
+       'posted by the process-message destination that executes the movement.'),
+   ('h','Assumptions:'),
+   ('b','The plant, storage location and movement type are configured for order consumption; the material and '
+       'batch have been validated on the line before signing.'),
+ ]}

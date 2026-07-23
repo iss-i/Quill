@@ -58,3 +58,7 @@ $RECYCLE.BIN/
 # --- Claude Code (keep shared project config, ignore local overrides) ---
 .claude/settings.local.json
 .claude/**/local/
+
+# --- Secrets / local MCP servers ---
+Credentials/
+mcp-google-drive/

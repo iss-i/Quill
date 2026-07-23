@@ -8,7 +8,7 @@ from build_mockups import th_cells, render_row, form_rows, signoff_rows, build_h
 from build_ebr import CSS as BASE_CSS
 from steps_az3 import STEPS, PHASES, OLDREF, BYF
 
-OUTDIR = r"c:\Users\carlo\Dev\TechSpecs\AZ Phase 3 XStep Mock Ups"
+OUTDIR = r"c:\Users\carlo\Dev\TechSpecs\AZ Phase 3 XStep Mock Ups (POC)"
 HTMLDIR = os.path.dirname(os.path.abspath(__file__))
 CHROME = r"C:\Program Files\Google\Chrome\Application\chrome.exe"
 esc = html.escape

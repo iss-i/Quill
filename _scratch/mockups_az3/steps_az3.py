@@ -6,6 +6,31 @@ compact reuse card in the EBR. Section = original MPR (MABR-0023643 / PN 8010457
 def v(x): return f'<span class="v">{x}</span>'
 PB="Performed By*"
 
+# Sec 14.9 AZD8630_ProteinA Method Overview - hardcoded in IV_INSTR (conditional
+# header), not captured. Inline styles: instructions are injected raw into both
+# the mock-up and the EBR card, which don't share a stylesheet.
+_OV = [("3 CV","318 L/hr","Equilibration 1"),
+       ("Step 9.13 / 9.16 / 9.10","318 L/hr","Load"),
+       ("3 CV","318 L/hr","Equilibration 2"),
+       ("3 CV","318 L/hr","Wash"),
+       ("3 CV","318 L/hr","Equilibration 3"),
+       ("N/A","239 L/hr","Elution &mdash; Collection Start: 37.5 mAU / Collection End: 37.5 mAU"),
+       ("3 CV","318 L/hr","Strip 1"),
+       ("1 CV","318 L/hr","Equilibration 4"),
+       ("3 CV","318 L/hr","Strip 2"),
+       ("1 CV","318 L/hr","Equilibration 5"),
+       ("3 CV","318 L/hr","Strip 3")]
+_TD = 'border:1px solid #b9bec4;padding:2px 8px;'
+METHOD_OVERVIEW = (
+  '<div style="font-weight:bold;margin:9px 0 4px;">AZD8630_ProteinA Method Overview</div>'
+  '<table style="border-collapse:collapse;font-size:11px;margin-bottom:4px;width:auto;">'
+  f'<tr style="background:#e8ebee;font-weight:bold;text-align:center;"><td style="{_TD}">Volumes</td>'
+  f'<td style="{_TD}">Target Flowrate</td><td style="{_TD}">Step</td></tr>'
+  + ''.join(f'<tr><td style="{_TD}text-align:center;">{a}</td>'
+            f'<td style="{_TD}text-align:center;">{b}</td><td style="{_TD}">{c}</td></tr>'
+            for a,b,c in _OV)
+  + '</table>')
+
 STEPS = [
  # ---------- A. Process Order Information ----------
  dict(folder="Order Header Details", title="Order Header Details", kind="R", section="Header",
@@ -243,15 +268,22 @@ STEPS = [
    desc="Install the depth filtration units into the skid column position per SOP-0107204 (POD inlet/outlet T's, pressure-sensor connections, bypass line, pinch-clamp flow) and sign off (Day 1 / Day 2). Reuses Long Text Instructions."),
 
  # ---------- E. Depth Filter Flush & Skid Connections ----------
- dict(folder="Depth Filter Flush", title="Depth Filter Pre-Flush / Flush", kind="V", section="Section 12",
+ dict(folder="Depth Filter Pre-Flush Connections", title="Depth Filter Pre-Flush Connections", kind="R", section="Section 12.1",
+   reuses="Long Text Instructions (DE2 903)",
+   desc=("Make the depth-filter pre-flush connections per the recipe (Day 1 / Day 2): Inlet 2 to the Equilibration "
+     "buffer (8004949: 50 mM Tris, pH 7.4), Inlet 1 to WFI, and Outlet 1 to Waste. Sign off. Reuses Long Text "
+     "Instructions."),
+   ),
+ dict(folder="Depth Filter Flush", title="Depth Filter Pre-Flush / Flush", kind="V", section="Section 12.2 / 12.3",
    reuses="SMPL: Additional Assembly (Equil Flush line carries the Z_PICONS Goods Issue)",
-   instructions=('Make the pre-flush connections (Inlet 2: 8004949 50 mM Tris; Inlet 1: WFI; Outlet 1: Waste), then '
-     'flush the depth-filter pods per SOP-0080429 &mdash; bleed the vent valves first. For each flush, perform a '
-     'Manual Run on the AKTA skid (flow paths method-driven; Alarm PT111 High 3.4 bar, Delta 1.3 bar; flow 25% until '
-     'bled, then target per Step 11.5) labelled "Batch ID: PartNumber BatchNumber DepthFilterFlush Date", and record '
-     f'the Batch ID and the POD flush volume: the WFI Flush must be {v("&ge; Step 11.7")} and the Equilibration '
-     f'Flush {v("&ge; Step 11.8")}. Adjust flow to stay under the pressure alarms. The Equilibration buffer flush is '
-     'consumed via the Goods Issue process message (Z_PICONS, mvt 261). One instance per processing day.'),
+   instructions=('With the pre-flush connections made per Step 12.1 (Inlet 2: 8004949 50 mM Tris; Inlet 1: WFI; '
+     'Outlet 1: Waste), flush the depth-filter pods per SOP-0080429 &mdash; bleed the vent valves first. For each '
+     'flush, perform a Manual Run on the AKTA skid (flow paths method-driven; Alarm PT111 High 3.4 bar, Delta 1.3 '
+     'bar; flow 25% until bled, then target per Step 11.5) labelled "Batch ID: PartNumber BatchNumber '
+     'DepthFilterFlush Date", and record the Batch ID and the POD flush volume: the WFI Flush must be '
+     f'{v("&ge; Step 11.7")} and the Equilibration Flush {v("&ge; Step 11.8")}. Adjust flow to stay under the '
+     'pressure alarms. The Equilibration buffer flush is consumed via the Goods Issue process message (Z_PICONS, '
+     'mvt 261). One instance per processing day.'),
    cols=["Flush Step","Batch ID","Flush Volume (L)",PB],
    rowdata=[{"Flush Step":"Depth Filter WFI Flush"}], idx_label="Day #",
    witness_label="Witnessed By", w=1800),
@@ -288,16 +320,39 @@ STEPS = [
  # ---------- F. CaptureSelect Chromatography Run ----------
  dict(folder="Pre-Cycle Setup Verification", title="Pre-Cycle Setup Verification", kind="R", section="Section 14.1",
    desc="Verify CM held ≥12 h at 2-8 °C; column connected; guard-filter vent open, column inlet closed, bleed open, outlet open; product vessel connected (per cycle)."),
- dict(folder="Meter Standardization and POD Chase", title="Meter Standardization & POD Chase", kind="R", section="Section 14.9",
-   desc="Confirm thermometer in calibration; pH meter standardized 4.0-10.0 and conductivity meter standardized (SOP-0080297); calculate POD chase volume (# filters x 10.6 L)."),
+ dict(folder="POD Chase Volume Calculation", title="POD Chase Volume Calculation", kind="V", section="Section 14.5",
+   reuses="SMPL: Calc Three Columns",
+   instructions=('Calculate the POD chase volume &mdash; reuses the SMPL: Calc Three Columns XStep (Value&nbsp;1 '
+     '&times; Value&nbsp;2 = Result), run as one instance per processing day: Number of C0HC Filters (Step 11.3) '
+     '&times; POD Hold-Up Volume (10.6&nbsp;L) = POD Chase Volume.'),
+   cols=["Number of C0HC Filters","@OP:×","POD Hold-Up Volume (L)","@OP:=","=POD Chase Volume (L)",PB],
+   rowdata=[{"POD Hold-Up Volume (L)":"10.6"}], index=False, add_row=False, witness_label="Witnessed By", w=2000),
 
- dict(folder="Chromatography Method Parameters and Start", title="Chromatography Method Parameters & Start", kind="N", section="Section 14.13-14.14",
-   instructions=('Initiate the AZD8630_ProteinA method per SOP-0107212. The bed volume, pressures and load volume '
-     'are carried from Sections 8 and 9. For each cycle, enter the batch Name ID '
-     f'(Format: {v("PartNumber_ProductBatch_Cycle#_AZD8630_ProteinA_Date")}) and stamp the start time. Allowed: '
-     f'Flowrate {v("302-334 L/hr")} (elution {v("226-251")}), Process CV {v("-0.1 to +1.0")} from target.'),
-   cols=["=Bed Volume (L)","=Inlet Press. Max (bar)","=Diff. Press. (barD)","=Load Volume (L)","Cycle Name ID",
-     "@STAMP","~Start Date","~Start Time",PB], witness_label="Verified By", w=2000),
+ dict(folder="Meter Standardization", title="Meter Standardization", kind="R", section="Section 14.6-14.7",
+   reuses="SMPL: Record Text Value (DE1 100)",
+   desc=("Confirm the thermometer is within its calibration interval and record the Thermometer ID; confirm the pH "
+     "meter is standardized between pH 4.0 and 10.0 and the conductivity meter is standardized per SOP-0080297, and "
+     "record the Meter ID. Reuses SMPL: Record Text Value."),
+   ),
+
+ dict(folder="Chromatography Method Parameters", title="Chromatography Method Parameters", kind="N", section="Section 14.9",
+   instructions=('Initiate the AZD8630_ProteinA method per SOP-0107212, document the variables below and input them '
+     'into the method. Bed Volume and Differential Pressure carry from Step 8.1, Inlet Pressure Max from Step 8.2, '
+     f'and Load Volume from Step 9.13 ({v("Day 1 of 2")}) / 9.16 ({v("Day 2 of 2")}) / 9.10 '
+     f'({v("both bags in one day")}). If a CPDS value exceeds the skid rating, record the skid maximum instead '
+     '(5 bar / 4 barD).'
+     + METHOD_OVERVIEW),
+   cols=["=Bed Volume (L)","=Inlet Press. Max (bar)","=Diff. Press. (barD)","=Load Volume (L)",PB],
+   idx_label="Cycle #", witness_label="Verified By", w=1800),
+
+ dict(folder="Chromatography Method Start", title="Chromatography Method Start", kind="N", section="Section 14.13-14.14",
+   instructions=('Start the AZD8630_ProteinA method per SOP-0107212. For each cycle, enter the batch Name ID '
+     f'(Format: {v("PartNumber_ProductBatchNumber_Cycle#_AZD8630_ProteinA_Date")}) and stamp the start time. '
+     f'Allowed during the run: Flowrate {v("302-334 L/hr")} (Elution {v("226-251 L/hr")}), NOR 0.0-350 L/hr; '
+     f'Process CV {v("-0.1 to +1.0 CV")} from target. Verify the flow paths match the recipe &mdash; contact area '
+     'management immediately on any discrepancy. Record any lowered flowrate in Attachment 4.'),
+   cols=["Cycle Name ID","@STAMP","~Start Date","~Start Time",PB],
+   idx_label="Cycle #", witness_label="Witnessed By", w=1800),
 
  dict(folder="Phase Execution and Sign-off", title="Phase Execution & Sign-off", kind="V", section="Section 14", longtext=True,
    signoffs=["Performed By","Witnessed By"],
@@ -312,8 +367,25 @@ STEPS = [
      'Reposition POD clamps inline/bypass when the skid pauses; press CONTINUE. Record any PAUSE / flow-rate change '
      'in the Comments / Adjusted Flowrate attachments.')),
 
- dict(folder="Equilibration Effluent Results", title="Equilibration Effluent Results", kind="R", section="Section 14.15",
-   desc="Confirm equilibration effluent in range (offline meter): pH 7.2-7.6, conductivity, temperature 15-25 °C per cycle. Reuses SMPL: Solution Summary - Data Recording (range-validated)."),
+ dict(folder="Equilibration Effluent Results", title="Equilibration Effluent Results", kind="V", section="Section 14.15",
+   reuses="SMPL: Solution Summary - Data Recording (range-validated variant)",
+   instructions=('Confirm the equilibration effluent is in range using an offline meter and record the pH, '
+     'conductivity and temperature for each cycle (after 2 CVs of Equilibration 1). Get the offline meter '
+     '&mdash; the Equipment ID and Description auto-populate. Verify the Offline pH is within '
+     f'{v("7.2 - 7.6")} (NOR {v("7.0 - 7.8")}) and the Temperature within {v("15 - 25 &deg;C")}; record the '
+     'CV at which each reading was taken. <b>Contact the area supervisor/designee if a result is out of '
+     'specification.</b> One row per cycle; add rows as needed.'),
+   header_fields=[("Get Equipment","b"),("Equipment ID","o"),("Equipment Description","o")],
+   # three "UoM" output columns (trailing spaces keep the dict keys distinct; all display "UoM")
+   cols=["Offline pH","=UoM","Conductivity","=UoM ","Temperature","=UoM  ","CV Where Taken",PB],
+   rowdata=[{"=UoM":"pH","=UoM ":"mS/cm","=UoM  ":"°C"}],
+   idx_label="Cycle #", witness_label="Witnessed By", w=1900),
+ dict(folder="Column Effluent Sample Date and Time", title="Column Effluent Sample Date & Time", kind="N", section="Section 14.16",
+   instructions=('Record the date and time the Affinity Chromatography Column Effluent sample is removed, per '
+     'processing day (first cycle of each day only). Press Get Date/Time to stamp the current Date and Time, then '
+     'sign Performed By. Add one row per processing day.'),
+   cols=["@BTN:Get Date/Time","=Date","=Time",PB],
+   idx_label="Day #", witness_label="Witnessed By", w=1400),
  dict(folder="Column Effluent Sampling", title="Column Effluent Sampling", kind="R", section="Section 14.17",
    desc="First cycle of each day: sample Affinity Column Effluent (8010457-20-1 Day 1 / -20-2 Day 2) per Attachment 1, stamp date/time, aliquot, label, submit to DLIMS."),
 
@@ -321,7 +393,9 @@ STEPS = [
    instructions=('Load the Conditioned Medium (8010441) onto the column (Inlet 1, 318 L/hr). For each cycle, stamp '
      'the Load start and end times and record the Actual Volume Loaded from the skid totalizer. The total load '
      'volume is summed across all cycles.'),
-   cols=["@START","~Load Start Time","@END","~Load End Time","Actual Volume Loaded per Totalizer (L)",PB], w=1900),
+   cols=["@START","~Load Start Time","@END","~Load End Time","Vol Loaded /Totalizer (L)",PB],
+   footer_fields=[("Total Load Volume, All Cycles (L)","o")],
+   idx_label="Cycle #", witness_label="Witnessed By", w=1900),
 
  dict(folder="Elution Collection", title="Elution Collection", kind="N", section="Section 14.29-14.30",
    instructions=('Collect the elution peak into the product vessel (8010534: 25 mM Sodium Acetate, pH 3.5, 239 L/hr). '
@@ -329,23 +403,30 @@ STEPS = [
      f'from the product filter at the start. When the UV returns to {v("37.5 mAU")} the outlet switches back to '
      'Outlet 1. Record the product net weight / volume from the Outlet 4 totalizer (or weigh the eluate if the '
      'totalizer is unavailable) and stamp the Elution End Time, per cycle.'),
-   cols=["Product Net Weight / Volume (kg = L)","@END","~Elution End Time",PB],
+   cols=["Net Wt / Vol (kg=L)","@END","~Elution End Time",PB],
    idx_label="Cycle #", witness_label="Witnessed By", w=1900),
 
- dict(folder="Strip 2 Effluent Results", title="Strip 2 Effluent Results", kind="R", section="Section 14.36-14.38",
-   reuses="SMPL: Solution Summary - Data Recording",
-   desc=("Per cycle, verify the Strip 2 effluent conductivity is within the NOR of 2.2-3.8 mS/cm and the temperature "
-     "is in range (15-27 °C) using an offline meter; record the Inlet 6 totalizer volume at Strip 2 completion "
-     "(transcribed to Attachment 5). Contact a supervisor if out of specification. Reuses SMPL: Solution Summary - "
-     "Data Recording."),
-   ),
- dict(folder="Strip 3 Effluent Results", title="Strip 3 Effluent Results", kind="R", section="Section 14.42-14.44",
-   reuses="SMPL: Solution Summary - Data Recording",
-   desc=("Confirm the pH meter has been standardized between pH 2.0 and 7.0 per SOP-0080297 (record Meter ID). Per "
-     "cycle, verify the Strip 3 effluent pH is ≤ 2.4 (NOR ≤ 2.5) and the temperature is in range "
-     "(15-27 °C) using an offline meter. Contact a supervisor if out of specification. Reuses SMPL: Solution "
-     "Summary - Data Recording."),
-   ),
+ dict(folder="Strip 2 Effluent Results", title="Strip 2 Effluent Results", kind="V", section="Section 14.37-14.38",
+   reuses="SMPL: Solution Summary - Data Recording (range-validated variant)",
+   instructions=('Per cycle, verify the Strip 2 effluent conductivity is within the NOR of '
+     f'{v("2.2 - 3.8 mS/cm")} and the temperature is in range {v("15 - 27 &deg;C")} using an offline meter '
+     '(Get Equipment &mdash; the Equipment ID and Description auto-populate). Also record the Inlet 6 totalizer '
+     'volume at Strip 2 completion (transcribed to Attachment 5: Buffer Totalizer Volumes). <b>Contact a '
+     'supervisor if the conductivity is out of specification.</b> One row per cycle.'),
+   header_fields=[("Get Equipment","b"),("Equipment ID","o"),("Equipment Description","o")],
+   cols=["Conductivity","=UoM","Temperature","=UoM ","Inlet 6 Totalizer Vol (L)",PB],
+   rowdata=[{"=UoM":"mS/cm","=UoM ":"°C"}],
+   idx_label="Cycle #", witness_label="Witnessed By", w=1850),
+ dict(folder="Strip 3 Effluent Results", title="Strip 3 Effluent Results", kind="V", section="Section 14.43-14.44",
+   reuses="SMPL: Solution Summary - Data Recording (range-validated variant)",
+   instructions=('Confirm the pH meter has been standardized between pH 2.0 and 7.0 per SOP-0080297 (Get Equipment '
+     '&mdash; the Equipment ID/Description auto-populate). Per cycle, verify the Strip 3 effluent pH is '
+     f'{v("&le; 2.4")} (NOR {v("&le; 2.5")}) and the temperature is in range {v("15 - 27 &deg;C")} using an '
+     'offline meter. <b>Contact a supervisor if the pH is out of specification.</b> One row per cycle.'),
+   header_fields=[("Get Equipment","b"),("Equipment ID","o"),("Equipment Description","o")],
+   cols=["Offline pH","=UoM","Temperature","=UoM ",PB],
+   rowdata=[{"=UoM":"pH","=UoM ":"°C"}],
+   idx_label="Cycle #", witness_label="Witnessed By", w=1700),
 
  # ---------- G. Column Storage ----------
  dict(folder="Column Storage Buffer and Parameters", title="Column Storage Buffer & Parameters", kind="N", section="Section 15.1-15.5",
@@ -356,7 +437,7 @@ STEPS = [
      'L/hr). Record the Name ID and stamp the storage Start Date & Time. The storage buffer is consumed via the '
      'Goods Issue process message (Z_PICONS, mvt 261). One instance per processing day.'),
    form=[("Storage Buffer PN (8004953)","o"),("Storage Buffer Batch No.","r"),("Storage Buffer Exp. Date","o"),
-     ("Column Bed Volume (L)","o"),("Column Inlet Pressure Max (bar)","o"),("Column Differential Pressure (barD)","o"),
+     ("Column Bed Volume (L)","o"),("Inlet Press. Max (bar)","o"),("Diff. Pressure (barD)","o"),
      ("Storage Flow Rate (L/hr)","r"),("Storage Method Name ID","r"),("Storage Start Date & Time","dt"),
      ("Performed By","r"),("Verified By","r")], w=1600),
 
@@ -368,14 +449,18 @@ STEPS = [
      'Sanitization Hold Start Time (Step 14.48) and the Hold End Time; the Hold Duration is calculated '
      '(End &minus; Start). One instance per processing day.'),
    form=[("Sanitization Hold Start Time","t"),("Hold End Time","t"),
-     ("Hold Duration (30-120 min, target 35)","o"),("Performed By","r"),("Witnessed By","r")], w=1600),
+     ("Hold Duration (min)","o"),("Performed By","r"),("Witnessed By","r")], w=1600),
 
- dict(folder="Column Storage Effluent Results", title="Column Storage Effluent Results", kind="R", section="Section 15.9",
-   reuses="SMPL: Solution Summary - Data Recording",
-   desc=("At the end of Column Storage, verify the effluent pH is within 4.8-5.2 and the temperature is in range "
-     "(15-25 °C) using an offline meter, per processing day. Contact the area supervisor/designee if the pH is out "
-     "of specification. Reuses SMPL: Solution Summary - Data Recording."),
-   ),
+ dict(folder="Column Storage Effluent Results", title="Column Storage Effluent Results", kind="V", section="Section 15.9",
+   reuses="SMPL: Solution Summary - Data Recording (range-validated variant)",
+   instructions=('At the end of Column Storage, verify the effluent is in range using an offline meter (Get '
+     'Equipment &mdash; the Equipment ID and Description auto-populate) and record the pH and temperature per '
+     f'processing day. Verify the pH is within {v("4.8 - 5.2")} and the temperature within {v("15 - 25 &deg;C")}. '
+     '<b>Contact the area supervisor/designee if the pH is out of specification.</b> One row per day.'),
+   header_fields=[("Get Equipment","b"),("Equipment ID","o"),("Equipment Description","o")],
+   cols=["Offline pH","=UoM","Temperature","=UoM ",PB],
+   rowdata=[{"=UoM":"pH","=UoM ":"°C"}],
+   idx_label="Day #", witness_label="Witnessed By", w=1700),
 
  dict(folder="Column Storage Disconnect and Disposition", title="Column Storage Disconnect & Disposition", kind="R", section="Section 15.10-15.15",
    reuses="Long Text Instructions (DE2 903)",
@@ -394,8 +479,15 @@ STEPS = [
    desc="Mix product ≥15 min (LevTech/Mobius): mixer ID, agitation RPM, start/end time, mixing duration."),
  dict(folder="Product Sampling and DLIMS Submission", title="Product Sampling & DLIMS Submission", kind="R", section="Section 16.3",
    desc="Remove product sample (8009938-30) per Attachment 1, stamp date/time, aliquot, label, submit to DLIMS. Reuses SMPL: Sampling Record."),
- dict(folder="Product pH Conductivity Temperature", title="Product pH / Conductivity / Temperature", kind="R", section="Section 16.4",
-   desc="Place 10 mL of product in a conical and measure pH, conductivity, temperature. Reuses SMPL: Solution Summary - Data Recording."),
+ dict(folder="Product pH Conductivity Temperature", title="Product pH / Conductivity / Temperature", kind="V", section="Section 16.4",
+   reuses="SMPL: Solution Summary - Data Recording (range-validated variant)",
+   instructions=('Place 10 mL of product in a 50 mL conical tube and measure the pH, conductivity and temperature '
+     'using an offline meter (Get Equipment &mdash; the Equipment ID and Description auto-populate). Record the '
+     'results on the final processing day.'),
+   header_fields=[("Get Equipment","b"),("Equipment ID","o"),("Equipment Description","o")],
+   cols=["Offline pH","=UoM","Conductivity","=UoM ","Temperature","=UoM  ",PB],
+   rowdata=[{"=UoM":"pH","=UoM ":"mS/cm","=UoM  ":"°C"}],
+   idx_label="#", witness_label="Witnessed By", w=1850),
  dict(folder="Product Storage and Cross-Record", title="Product Storage & Cross-Record", kind="R", section="Section 16.8",
    desc="Record initial storage condition (2-8 / 15-25 °C) + storage start time/date; cross-write Load Start Time back to the Pod Harvest MPR."),
 
@@ -446,11 +538,13 @@ PHASES = [
     "Record Meter ID","Record Thermometer ID","Pod Holder and Pressure Sensors",
     "Install Depth Filtration Units"]),
  ("Phase 4 — Depth Filter Flush & Skid Connections",
-   ["Depth Filter Flush","Skid pH Probe Standardization","Skid Buffer Inlet Connections","Column Guard Filter"]),
+   ["Depth Filter Pre-Flush Connections","Depth Filter Flush","Skid pH Probe Standardization",
+    "Skid Buffer Inlet Connections","Column Guard Filter"]),
  ("Phase 5 — CaptureSelect Chromatography Run",
-   ["Pre-Cycle Setup Verification","Meter Standardization and POD Chase",
-    "Chromatography Method Parameters and Start","Phase Execution and Sign-off",
-    "Equilibration Effluent Results","Column Effluent Sampling","Load Recording","Elution Collection",
+   ["Pre-Cycle Setup Verification","POD Chase Volume Calculation","Meter Standardization",
+    "Chromatography Method Parameters","Chromatography Method Start","Phase Execution and Sign-off",
+    "Equilibration Effluent Results","Column Effluent Sample Date and Time","Column Effluent Sampling",
+    "Load Recording","Elution Collection",
     "Strip 2 Effluent Results","Strip 3 Effluent Results"]),
  ("Phase 6 — Column Storage",
    ["Column Storage Buffer and Parameters","Sanitization Hold and Pre-Storage Equilibration",
@@ -503,7 +597,12 @@ for s in STEPS:
     s.setdefault('rows',1)
     w=s.get('w',1740); cpl=max(120,int(w/8.6))
     instr=s.get('instructions','')
-    lines=max(1, math.ceil(len(_plain(instr))/cpl), instr.count('<li>')+1) if instr else 1
+    # a table in the instructions lays out as one line per <tr> (+ title/margins),
+    # so measure it by row count and the prose around it by length
+    prose=re.sub(r'<table.*?</table>','',instr,flags=re.S)
+    trs=instr.count('<tr>')
+    lines=max(1, math.ceil(len(_plain(prose))/cpl), prose.count('<li>')+1) if instr else 1
+    if trs: lines += trs+4
     if 'form' in s: n=sum(3 if (len(it)>1 and it[1]=='dt') else 1 for it in s['form'])
     elif 'longtext' in s: n=len(s.get('signoffs',[]))
     elif s.get('rowdata'): n=len(s['rowdata'])

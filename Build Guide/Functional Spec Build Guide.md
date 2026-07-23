@@ -8,6 +8,15 @@ Companion to *Batch Record to XStep Mockups - Build Guide.md* (that guide gets y
 gets you from the mock-up to the signed-off design spec). Captured from the AZ Phase 1/Phase 2 and Merck 2000L
 SUB engagements.
 
+**Downstream:** the finished spec + mock-up feed the **SapFractal XStep builder** (`XSTEP_BUILD_GUIDE.md` +
+`XSTEP_TOOLS.md`), which constructs the real SAP XStep in cmxsvn (clone AZ template → add params → typed table
+columns → wire FMs / process messages / signatures → `xs_check_semantic` → Simulate). Write the spec so it drops
+straight into that build — the FM names, bindings, dropdown characteristics and labels you document are wired
+verbatim. See the ⭐ convention table in §5. The mock-up is **also** published to the **PI Sheet Sandbox** (a
+JSON PI-sheet — see the Mockups Build Guide §13); the spec's field roles map 1:1 to its element/column types
+(**entry → `input`, computed → `output`, dropdown → `dropdown`, FM button → `function`**), so the roles you
+assign each field carry all the way through.
+
 ---
 
 ## 1. What the spec is (and the two build modes)
@@ -139,10 +148,23 @@ so any accepted Phase-2 doc works as a shell.
 
 ### Which FMs an XStep actually calls
 
-If the XStep exists in SAP: `xs_get_version` (shape=`snapshot`) on the item, then grep the snapshot for
+If the XStep exists in SAP: `shaper_get_version` (shape=`snapshot`) on the item, then grep the snapshot for
 `PPPI_FUNCTION_NAME` (buttons / event handlers / main FM) **and** `PPPI_VALIDATION_FUNCTION` (column /
 signature **validators**). Capture **both** — validators are real FMs. If it's a mock-up only (no XStep yet),
 you're *designing* the FM set — pick it from the archetype (§5) and the mock-up's controls.
+
+> **Tool rename + case gotcha:** the XStep MCP tool group was renamed **`xs_*` → `shaper_*`** in an SapFractal
+> build (`shaper_find`, `shaper_get_version`, `shaper_folder_tree`, `shaper_search_instructions`, …). If a call
+> errors *"Tool xs_find not found"* while `list_connections` works, git-pull SapFractal and use the `shaper_*`
+> names. On DE1 100, `shaper_find` case-insensitive search fails with *"The function UPPER is unknown"* — pass
+> **`case_sensitive: true`** with exact-case terms. Use `shaper_find` to **confirm a reuse-target XStep exists**
+> before a functional spec references it as the base.
+
+**Read the ACTIVE (Released) version.** `xs_get_version` resolves the active version via the picker — Released
+status wins, else the highest 4-digit `VERS_NAME`. The active version is **not always the highest-numbered**
+(a live item's active version was `0001`, with `0002`/`0003` as later drafts). If an item has **no** Released
+version and non-numeric names the picker is **ambiguous** — pass an explicit `version_id` and confirm which one
+is live. Document the FMs and parameters from the version that's actually released, not whichever sorts last.
 
 ### The scoping rule (what to document)
 
@@ -161,7 +183,7 @@ Build Guide §9 catalog). The recurring building blocks:
 
 | Control on the mock-up | FM(s) |
 |---|---|
-| **▶ Record / ▶Start / ▶End button** stamping a date/time | `/SMPL/PPPI_FM_GET_DATE_TIME` (read-only stamp; never a typed field) |
+| **▶ Record / ▶Start / ▶End button** stamping a date/time | `/SMPL/PPPI_FM_GET_DATE_TIME`, or a timer family (`STR_PROC_STRT_TM` / `GET_PROC_TM` / `CLEAR_PROC_TM`). Stamps a **default variable** (`LV_*_D`/`LV_*_T`) wired as the field's **Default Value** (`PPPI_DEFAULT_VARIABLE`); the field captures into a separate `LV_DATE`/`LV_TIME` and stays **editable** — the `Performed By` signature is the GxP control, not read-only. |
 | **Numeric field with a range** `(min–max)` | `/SMPL/PPPI_FM_MIN_MAX` (or a tolerance validator) |
 | **Date field** (expiry, calibration due) | `ZSMPL_FM_CHECK_CHAR_DATE` (format yyyy.mm.dd / "N/A" / not-in-past) |
 | **Equipment / probe / vessel** with lot + expiry | `GET_ASSIGNED_EQUI_EBR` + `ELB_FM_GET_ASS_EQ_VALID` |
@@ -171,6 +193,9 @@ Build Guide §9 catalog). The recurring building blocks:
 | **Performed By** signature (one per row) | `SIG_ADD_DB_CB` (+ `SIG_VALIDATION`), often with `MBR_DEP_ADD_PERFORM` |
 | **Witness By / Check By** footer signature | `VALI_SUPE_SIG` |
 | **Conditional "if X, proceed / N/A the rest"** | `INITIAL_ACTIVE` + `MBR_DEP_CHECK_ACTIVE` (on nearly every step) |
+| **Gated sub-section** (a `… Required?` Yes/No dropdown that activates/deactivates a block — composite XSteps) | the **Setup-Function DEACTIVATE / ACTIVATE** pattern driven by the dropdown value (`PROC_INSTR DEACTIVATE`/`ACTIVATE` with the block's NID) — same family as `INITIAL_ACTIVE`/`MBR_DEP_CHECK_ACTIVE`, one gate per conditional block |
+| **Consumed material** (paper "SAP Consumption Performed by/Date"; per-line on a table) | **Goods Issue process message `Z_PICONS`, movement type 261** — automatic, not a manual field. Fires per row on the line's `Performed By` |
+| **"Label the vessel/sample …" (SOP-0107056)** | a **label-print control function / process message to the label printer** *(confirm with client — may instead be applied-and-recorded manually, i.e. instruction-only)* |
 
 Signature plumbing **varies per doc** — mirror the closest accepted sibling. E.g. *Harvest Log* uses
 `SIG_ADD_DB_CB` + `VALI_SUPE_SIG` + `MBR_DEP_ADD_PERFORM`; *Bioreactor Sampling* uses the sig callbacks
@@ -193,6 +218,68 @@ interface (`get_source`) and check its parameters against the step's actual colu
 **"Use an existing DE1 100 FM first; author a new one only when nothing fits"** — and when nothing fits, say
 so explicitly in the spec rather than forcing a bad match.
 
+### ⭐ Canonical FM / domain conventions (validated against the SAP XStep builder)
+
+The spec you write is the **input to the SapFractal XStep builder** (`Build Guide/XSTEP_BUILD_GUIDE.md` +
+`XSTEP_TOOLS.md`), which wires exactly the FMs and bindings you document. Its convention tables confirm the FM
+set we've been using — pick from these first (they're what the builder expects):
+
+| Control on the mock-up | FM / domain the builder wires |
+|---|---|
+| Part No. → Material Description | `ZSMPL_FM_GET_MAT_DETAIL`, `validated_value_param: IM_MATNR` (out `EX_MAT_DESC`) |
+| Batch No. → Exp. Date | `ZSMPL_FM_GET_EXPIRY_DATE`, validates `IM_BATCH` **and requires `IM_MATNR`** (out `EX_EXP_DATE`, date) |
+| Goods issue / SAP consumption | process message **`Z_PICONS`** (underscore) + `ZSMPL_CHAR_MOVEMENT_TYPE = 261` (order consumption) |
+| ▶ Record date/time | `/SMPL/PPPI_FM_GET_DATE_TIME` — outputs **`EV_DATE_DEFAULT`** / `EV_TIME` into a **default variable** (`LV_*_D`/`LV_*_T`) set as the field's `PPPI_DEFAULT_VARIABLE`; the field itself captures `LV_DATE`/`LV_TIME` and stays **editable** (operator may correct it — the `Performed By` signature is the control) |
+| Per-row Performed By | `/SMPL/PPPI_FM_SIG_ADD_DB_CB`, strategy `SAPPOCSS`; validator `/SMPL/PPPI_FM_VALI_SUPE_SIG` |
+| Get Equipment / scale / probe | `/SMPL/ELB_FM_GET_ASSIGNED_EQUI`, **EQTYP** `B`=scales/balances, `M`=welders/sealers, `Q`=testers |
+| Leftmost `#` row index | `ZSMPL_FM_CUSTOM_INDEX` / `/SMPL/PPPI_FM_SET_LINE_IDX`, domain **`ZSMPL_CHAR_GI_INITIALS`** default `"1"` |
+| Numeric quantity column | domain `PPPI_MATERIAL_QUANTITY` |
+| Offline-meter results (pH / conductivity / temperature, with accept ranges) | **Get Equipment** `/SMPL/ELB_FM_GET_ASSIGNED_EQUI` (offline meter, EQTYP `Q`) + per-measurement range validation `/SMPL/PPPI_FM_MIN_MAX` or `ZSMPL_FM_CALC_TOLERANCE`. A generic tolerance/min-max FM may expose **more targets than the step uses** (e.g. CALC_TOLERANCE takes 3; a 2-measurement step feeds 2) — that's fine, document only the fed ones. |
+
+**The AZ template already provides the header + both signatures.** The builder clones `SMPL: AZ Template XStep`,
+which ships a **Conditional Header** (title + instruction block) and an **Optional Signature** block (**Performed
+By** + **Witnessed By**). So the header/instructions and the Verified/Witnessed-By footer are **template-supplied**
+— the builder just "adds the spec-specific instructions, usually one table." Keep documenting the activation /
+signature FMs (they're what the step *uses*), but know they come from the template, not custom wiring.
+
+**Dropdowns are real and each needs a CT04 characteristic.** In this client's workflow a spec/mock-up dropdown
+**always** becomes a real dropdown, and every dropdown requires a **`ZSMPL_CHAR_*` CT04 characteristic** (CABN +
+allowed values). Treat each dropdown column as *two* deliverables — see §6 (name the characteristic + its values
+in Configuration Specification and Assumptions).
+
+**The builder can author new Z FMs** (`xs_create_function_module` in FUGR `ZAI_XSTEP_FMG`). So a spec that flags
+genuine new development (§5 ⭐) is buildable — reuse-first just keeps it simpler.
+
+**All `IV_*` params are spec-worthy — document the full MBR-authorable input set.** The `IV_*` parameters are
+the step's MBR/recipe-authorable interface, so **document every one of them**, including the standard template
+inputs `IV_ACTIVE`, `IV_ACT_FLP`, `IV_HEADER`, `IV_INSTR`, `IV_PL_TXT`, `IV_PRINT`, `IV_SIGN` (and `IV_TITLE1`).
+It's still worth **noting which are template-supplied** — inherited from the AZ template, so the builder does
+**not** re-create them (XSTEP_BUILD_GUIDE §7.10) — versus **new step-specific** `IV_*` (a target amount, a
+min/max bound, a recipe-driven label/flag) that the builder adds with the two-level scope it expects: an
+**outer T-root** declaration (`PMODE='F'`, default value) **and** an **inner main-step reference** (`PMODE='R'`).
+Call out that pairing for each new IV so the builder wires it correctly.
+
+**"Authored in MBR" is a claim to VERIFY, not to trust.** Client specs routinely say a target / tolerance / UoM
+is "authored in SiMPL MBR" when the live XStep actually **hardcodes** it — e.g. a tolerance baked into an FM
+call (`ZSMPL_FM_CALC_TOLERANCE`, `IM_PERCENT = 5`) or a UoM held as a fixed local param (`LT_UOM = KG`), neither
+of which the recipe overlays. The real per-recipe values (e.g. `IV_TAR_A = 3.15`, `IV_TAR_B = 51.975`) live on
+the **T-root `IV_*` parameters / the recipe**, not in the spec. When documenting Configuration, run
+`xs_list_parameters` on the live XStep and distinguish **true `IV_*` (recipe-overlaid)** from **hardcoded**
+values — and **flag any spec claim that doesn't match what the XStep actually does** (a spec that says
+"tolerance authored in MBR" when it's a hardcoded `IM_PERCENT` is a real defect worth surfacing).
+
+**Capture results as typed, machine-readable characteristics — it's *why* the domain choice matters.** Every
+recorded value carries a real domain, never free text: quantities → `PPPI_MATERIAL_QUANTITY`; Yes/No / pass-fail /
+disposition → a **CT04 characteristic** (`ZSMPL_CHAR_*`, e.g. Yes/No or pass-fail); dates → a date domain; UoM →
+`PPPI_UNIT_OF_MEASURE`. Our developers already do this at the XStep build level — the point for spec-authoring is
+that **the reason is downstream**: these values flow to the SAP **Batch Release Hub** release checks (Batch Record
+Review, deviation, usage decision, serialization), to the process order's **inspection lot / usage decision**, and
+to **batch classification characteristics**, all of which auto-evaluate only if the value is *typed data, not
+prose*. So when you assign a field's domain in the spec, pick the type that lets the value be read as data. **This
+is background knowledge for choosing the domain — do NOT write the downstream batch-release contract into each
+XStep spec.** The spec stays scoped to the individual XStep as built in CMXSV (its FMs, params, columns,
+validations, signatures, process messages, layout).
+
 ---
 
 ## 6. Writing the sections (content guide)
@@ -205,7 +292,9 @@ so explicitly in the spec rather than forcing a bad match.
   validation, electronic signature trail, one reusable block vs a table reprinted per occurrence).
 - **Authorization** — standard SiMPL EBR security model + PFCG role + SAP digital signature.
 - **Assumptions/ Dependencies** — bullets: the FMs exist/active; master-data prerequisites; units; ranges;
-  any out-of-scope item flagged.
+  any out-of-scope item flagged. **For every dropdown column, list the required CT04 characteristic**
+  (`ZSMPL_CHAR_*`) and its allowed values as a prerequisite — it's a build deliverable (create it if it doesn't
+  exist). E.g. WFI Container Setup assumes `ZSMPL_CHAR_WFI_ITEM` = { Bag, Filter }.
 - **Validation Checks** — 3-col table (Field / Validation / Function Module). **Name an FM only where it truly
   drives that check.** (Don't repeat a signature-validation FM on every range row — describe the behavior in
   words and cite the range FM only. The FM's proper home is the field it actually validates + its own
@@ -222,7 +311,12 @@ so explicitly in the spec rather than forcing a bad match.
 - **Function Module(s)** — intro line, then the emitted interface blocks (see §7).
 - **Pseudocode** — the emitted pseudocode blocks (see §7).
 - **Configuration Specification(s)** — 3-col table (Parameter / Value / Description): header text, instruction,
-  each button/field/validator, ranges/setpoints, Add Row.
+  each button/field/validator, ranges/setpoints, Add Row. **Give each dropdown column a row naming its CT04
+  characteristic** (`ZSMPL_CHAR_*`) and allowed values (e.g. `Item | Dropdown (CT04) | ZSMPL_CHAR_WFI_ITEM =
+  Bag / Filter`). Keep column **labels ≤ ~30 chars** (they become `PPPI_INPUT_REQUEST`, which caps there) and
+  remember backing **variable names cap at 10 chars** — favour terse labels; the long description lives in the
+  instruction, not the header. **Document all `IV_*` params** — they're the MBR-authorable interface (§5); mark
+  which are template-supplied vs new step-specific, and give each new one its outer-`F` / inner-`R` two-level pairing.
 - **Test Scenarios** — 3-col (# / Scenario / Expected Result): a happy path per control, each validation
   failure (with the exception name), Add Row, the mandatory-signature block, and re-open persistence.
 - **Document References** — the Manufacturing Directions, the SiMPL library, and the reference archetype spec.
