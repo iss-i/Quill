@@ -193,7 +193,7 @@ Build Guide §9 catalog). The recurring building blocks:
 | **Performed By** signature (one per row) | `SIG_ADD_DB_CB` (+ `SIG_VALIDATION`), often with `MBR_DEP_ADD_PERFORM` |
 | **Witness By / Check By** footer signature | `VALI_SUPE_SIG` |
 | **Conditional "if X, proceed / N/A the rest"** | `INITIAL_ACTIVE` + `MBR_DEP_CHECK_ACTIVE` (on nearly every step) |
-| **Gated sub-section** (a `… Required?` Yes/No dropdown that activates/deactivates a block — composite XSteps) | the **Setup-Function DEACTIVATE / ACTIVATE** pattern driven by the dropdown value (`PROC_INSTR DEACTIVATE`/`ACTIVATE` with the block's NID) — same family as `INITIAL_ACTIVE`/`MBR_DEP_CHECK_ACTIVE`, one gate per conditional block |
+| **Gated sub-section** (a `… Required?` Yes/No dropdown that activates/deactivates a block — composite XSteps) | **Not an FM — setup Commands with Formula triggers** (confirmed on live `SMPL: EFS Additional Staging`). The dropdown is a CT04 char (`ZSMPL_CHAR_YES_NO`) → local `LV_DROP`; the block carries `TABLE.ACTIVATE`/`TABLE.DEACTIVATE` (and grouping-level `PROC_INSTR.ACTIVATE`/`DEACTIVATE`, `LOCK`/`UNLOCK`), each with a Formula trigger on the gate value — DEACTIVATE = `(LV_ACTIVE<>1 AND IV_ACT_FLP<>1) OR (LV_ACTIVE=1 AND IV_ACT_FLP=1) OR (LV_DROP=2)`, ACTIVATE = complement (`LV_DROP=2`⇒No⇒deactivate). Document these Commands + the trigger formula in **Configuration**, one gate per conditional block. `INITIAL_ACTIVE` is present but only sets the base initial-active state — it is **not** the gate. |
 | **Consumed material** (paper "SAP Consumption Performed by/Date"; per-line on a table) | **Goods Issue process message `Z_PICONS`, movement type 261** — automatic, not a manual field. Fires per row on the line's `Performed By` |
 | **"Label the vessel/sample …" (SOP-0107056)** | a **label-print control function / process message to the label printer** *(confirm with client — may instead be applied-and-recorded manually, i.e. instruction-only)* |
 
@@ -258,6 +258,17 @@ It's still worth **noting which are template-supplied** — inherited from the A
 min/max bound, a recipe-driven label/flag) that the builder adds with the two-level scope it expects: an
 **outer T-root** declaration (`PMODE='F'`, default value) **and** an **inner main-step reference** (`PMODE='R'`).
 Call out that pairing for each new IV so the builder wires it correctly.
+
+**A validated limit/rule is a PARAMETER on the existing step — not a new XStep or extra columns.** An acceptance
+**range (min/max)** on a numeric value is the `IV_MIN` / `IV_MAX` parameters of the existing `SMPL: Record Numeric
+Value` + its built-in `/SMPL/PPPI_FM_MIN_MAX` validator (verified in DE1 100 — `IV_MIN` "Minimum Range" / `IV_MAX`
+"Maximum Range", blank until the recipe sets them). So a range-checked value **is documented as the existing
+`Record Numeric Value` with `IV_MIN`/`IV_MAX` populated + the `MIN_MAX` validator** — do **not** spec a new/variant
+object, separate min/target/max steps, or an in/out-of-range **decision dropdown** (the validator's error handling
+is the branch). Same for other built-in validators (`YES_NO_VALID`, `CHECK_CHAR_DATE`, `PPPI_FM_VALI_MAT`) and the
+per-row `Performed By` (`SIG_ADD_DB_CB` fires per completing row). The Mockups Build Guide §11 carries the
+**verified FM catalogue** (block → validation FM / event FM / parameters) confirmed against the live library —
+mirror it when documenting the FM set, and keep the spec scoped to the one XStep as built in CMXSV.
 
 **"Authored in MBR" is a claim to VERIFY, not to trust.** Client specs routinely say a target / tolerance / UoM
 is "authored in SiMPL MBR" when the live XStep actually **hardcodes** it — e.g. a tolerance baked into an FM

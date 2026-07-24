@@ -369,8 +369,129 @@ SiMPL MBR), the standard **Activate** wiring, and an **Optional Signature** bloc
     an N-step embeds the weigh/measure/mix in its own table. To find every Get point, sweep the record for
     equipment-ID capture cells (`Scale/Balance ID`, `Meter ID`, `Thermometer ID`, `Mixer ID`, `Pump ID`,
     `Calibration Due Date`) and the equipment nouns; note that **not every BOM instrument is retrieved** — a Filter
-    Integrity Tester assigned in the BOM may only be used on a *separate* form (rule 13). FM: the Get button is an
-    equipment-lookup FM (`GET_ASSIGNED_EQUI_EBR` + `ELB_FM_GET_ASS_EQ_VALID`) resolving the assignment.
+    Integrity Tester assigned in the BOM may only be used on a *separate* form (rule 13). The reusable block behind
+    every `Get [Type]` is **`SMPL: Equipment Select`** (DE1 100) — prefer it over `Record Text Value` even for
+    meter / thermometer / Pendotech IDs, since those are calibrated. FM: the Get button is an equipment-lookup FM
+    (`GET_ASSIGNED_EQUI_EBR` + `ELB_FM_GET_ASS_EQ_VALID`) resolving the assignment.
+17. **Assemble a composite from a stack of existing blocks before building a New XStep — the "hidden Conditional
+    Header" pattern.** A step that looks like one bespoke composite is usually **2–3 existing DE1 100 blocks
+    stacked**. Every XStep template carries a **Conditional Header (SXS reference)** that can be *hidden*; stack the
+    blocks and hide the header on the 2nd/3rd so the group renders as **one XStep in the EBR** while staying separate
+    reusable references underneath. **Decompose before you build** — reserve **N** for logic no stack can express.
+    Building-block vocabulary (all confirmed in DE1 100, §6):
+    - `SMPL: Material Consumption` — one material line + goods issue; `SMPL: Component Goods Issue` — one GI step over
+      several materials.
+    - `SMPL: Record Text Value` / `SMPL: Record Numeric Value` — a single labelled value (ID, count, reading).
+    - `SMPL: Equipment Select` — the equipment/instrument Get (rule 16).
+    - `SMPL: Calc Three Columns` (2 inputs) · `SMPL: Three Variable Calc` (3 inputs) · `SMPL: Calc Range Values`
+      (ranged result).
+    - dynamic dropdowns (Yes/No etc.) · `SXS: Text Instructions with Sign-off` (Long Text Instructions).
+    Worked examples (Jason, AZ POC): *Product Collection Vessel Setup* = `Equipment Select` (scale) + `Record Numeric
+    Value` (tare) + `Material Consumption` (bag) + 3× dynamic dropdowns (attachments); *Pod Holder & Pressure Sensors*
+    = `Record Text Value` (holder ID) + 2× `Material Consumption` (sensors) + `Equipment Select` w/ calibration
+    (Pendotech). Same "gated blocks" shape as §3, but the blocks are **library references**, not bespoke mock-up
+    sections. In the EBR crosswalk, an assembled step's `Reuses:` names the **stack** (e.g. "Equipment Select +
+    Record Numeric Value + Material Consumption"), not "new".
+18. **Near-match → ask the client (don't silently default, don't over-build).** When the reuse search (§6) turns up a
+    block that matches **except a small field variant** — one or two fields different, same structure/purpose
+    (canonical: `SMPL: Equipment Select` exists but lacks AZ's required **Calibration Due Date**) — do **not** quietly
+    fall back to the generic block **or** immediately declare a new variant. Raise it and ask: *"`<block>` in DE1 100
+    is a near-match but is missing `<field(s)>` — is there a step in a **client system** that already fulfils this
+    variant?"* The answer (which system / no / not sure) decides reuse-the-client-variant / build-new / flag-open.
+    **Client systems beyond DE1 100 may hold variants we can't see**, so a DE1 100 near-miss is not proof the variant
+    doesn't exist. **Batch** these questions at the end of a decomposition pass; a structural / purpose difference is
+    just "new", not a variant question.
+19. **Goods issue with no batch field — source the upstream PN/batch, and confirm.** Some consuming steps have **no
+    batch field** (conditioned medium, the column, incoming product) yet still must post an SAP goods issue. Don't
+    assume — flag *how* the `Z_PICONS` (mvt 261) consumption is sourced; the usual answer is **consume the upstream
+    MPR's PN / batch** (e.g. the Pod Harvest product). Note it on the card and raise it as an open config question for
+    the functional spec.
+20. **Collapsible blocks auto-collapse into one table when stacked — the dynamic-authoring mechanism (Jason Craig).**
+    Certain building blocks are **collapsible**: each is a *single process instruction* — **`Material Consumption`,
+    Dynamic Dropdown, `Record Text Value`, `Solution Summary - Data Recording`** (and similar single-instruction
+    blocks). **Authoring 2+ of the same collapsible block in a row makes the EBR collapse them into one table.** This
+    is *how* a stack of references renders as the clean multi-row table drawn in the mock-up — so **build a multi-row
+    table by stacking N collapsible blocks, not by authoring a bespoke table XStep**, and express per-cycle / per-day /
+    per-material repetition the same way (no custom step). It complements rule 17: **hide-the-header** makes a stack
+    *look* like one XStep; **collapse** makes a stack of the **same** collapsible block *become* one table. Requirement:
+    the grouping's objects must all sit in a **single process instruction** — mixed-instruction groupings don't
+    collapse. Worked mappings (AZ3): product-filter / bag / vent-filter tables = N× `Material Consumption`; effluent /
+    pH-cond-temp results tables = N× `Solution Summary - Data Recording`; the attachment Yes/No fields = N× Dynamic
+    Dropdown; skid / CIPDS / cassette ID lists = N× `Record Text Value`.
+21. **A dropdown that activates/deactivates a section must live in the SAME XStep as the section it gates — this can
+    force a bespoke New XStep even when the fields are all reusable.** In PI-PCS, conditional activation is driven by a
+    valuated characteristic (the dropdown) evaluated against **sibling/child steps in the same XStep tree**. You
+    **cannot** author a standalone "dropdown XStep" and have it reach *down* and activate/deactivate a *separate* XStep
+    below it in the recipe. Consequence for decomposition: rule 17's "hide-the-header stack" is fine for a *sequential*
+    group of independent blocks, but the moment one block is a **gate** (Yes/No or a branch decision) that turns
+    another block in the group on/off, the gate **and everything it gates must be built as one XStep** — so that group
+    can no longer be modelled as independent sibling references; it becomes a **single (often New) XStep** whose mock-up
+    shows the gate dropdown immediately above the section it controls. Test while decomposing: *"does this dropdown only
+    record a value (→ collapsible reference, rule 20), or does its value switch another field/section on or off (→ must
+    be co-located, this rule)?"* Worked example (AZ3 VI §8 **Treatment Vessel Setup**): the *Use-Affinity-vessel? / Bag?
+    / Tank? / vent-filter / filters-attached* dropdowns each activate the section beneath them, so although every field
+    maps to `Select Vessel Type & Tare Weight` + `Material Consumption`, it is built as **one New XStep** with all gates
+    inline — not a stack of sibling reuse references. (The mock-up renderer models a gate with a `gate:(label,options)`
+    block that prints an "activates/deactivates the section below" hint above the gated block.) Same test flags any
+    decision-with-branches step (temperature decision tree, dilution-required?, cassette re-use?, continue-DF?): decide
+    per step whether the branch is heavy enough to warrant a bespoke gated mock-up or is a simple in-line Yes/No that a
+    single reused decision block covers.
+    **How it is wired (confirmed from the live `SMPL: EFS Additional Staging` XStep):** the gate is *not* a function
+    module. The dropdown is a restricted CT04 characteristic (`ZSMPL_CHAR_YES_NO` = Yes/No) captured to a local value
+    `LV_DROP`; the gated section carries setup **Commands** — `TABLE.ACTIVATE` / `TABLE.DEACTIVATE` (and, at grouping
+    level, `PROC_INSTR.ACTIVATE` / `PROC_INSTR.DEACTIVATE`, plus `LOCK` / `UNLOCK`) — each with a **Formula trigger**
+    evaluating the gate value: DEACTIVATE on `( LV_ACTIVE <> 1 AND IV_ACT_FLP <> 1 ) OR ( LV_ACTIVE = 1 AND IV_ACT_FLP
+    = 1 ) OR ( LV_DROP = 2 )`, ACTIVATE on the complement (`LV_DROP = 2` ⇒ No ⇒ deactivate). `/SMPL/PPPI_FM_INITIAL_ACTIVE`
+    is present but only sets the *base* initial-active state — it is not the gate. Because these Commands act on
+    sibling/child nodes in the same XStep tree, the gate and gated section must live in one XStep (the structural reason
+    for this rule). The mock-up still just shows the gate dropdown above its section; document the Commands + trigger in
+    the functional spec's Configuration section, not on the mock-up.
+22. **Every table/block that triggers a process message needs its own Performed By — as the table's final column.** If
+    a block *fires an SAP process message* when executed — most commonly a **Goods Issue** (`Z_PICONS`, mvt 261) for
+    consumed components, but also any other posting/message trigger — it **must carry a Performed By**, because the
+    message posts under the operator who executed it. Model it as the **last column of that table** (`… , PB]`), not a
+    separate signature line below the table — the signature is per row, so it stays with the material line that posts.
+    Any table with the green **SAP Goods Issue** badge (material / bag / filter / component consumption) gets the
+    trailing `Performed By*` column; tables that only record equipment IDs or reference data and post nothing (e.g. the
+    Tank Information setup table) do **not** need one. Worked example (AZ3 VI §8): the Bag, Vent Filter and Product
+    Filter tables each post a Goods Issue → each ends with a Performed By column; the Tank table posts nothing → no
+    Performed By.
+23. **No multi-select — split a "mark all that apply" field into separate Yes/No dropdowns.** SiMPL XSteps do **not**
+    support a multi-select control. Any paper-BR field that says *"mark the applicable …"* / *"check all that apply"*
+    (attachments present, filters attached, lines connected, etc.) must be modelled as **one Yes/No dropdown per
+    option**, not a single multi-value picker. Worked examples (AZ3 VI §8): *"Mark filters attached when tare
+    obtained: Product filter / Vent filter / No filters (bag)"* → three dropdowns (**Product Filter attached?**,
+    **Vent Filter attached?**, **No filters — vessel is a bag?**), each Yes/No; the mixer-bag attachments
+    (mixer drive / top base / magnetic clamp) → three Yes/No dropdowns likewise.
+24. **Still draw a representative PI Sheet visual for a block-stack reuse — don't leave it text-only in the
+    comparison doc.** A block-stack step (rule 17) is a REUSE, not a New object, so it needs no bespoke build — but
+    when you present it in the EBR / crosswalk *for comparison against the paper record*, a text summary of "what it
+    reuses" is hard to check against the old form. Render the assembled stack as an inline mock-up **and keep the
+    REUSE labelling**: show the badge, the `Reuses:` line naming the constituent blocks, a caption stating it is a
+    block stack (no new object), then the visual. Label each constituent block in the visual so the reader can map it
+    back — table blocks use the green section header, fields blocks use a per-block sub-label (`bsub` in the renderer)
+    reading e.g. *"SMPL: Equipment Select — pH / Conductivity Meter"*. This keeps "what it looks like on the PI Sheet"
+    and "what it's built from" visible together. (AZ3 VI+C&D: all 17 block-stack R steps carry a `blocks=` mock-up
+    rendered inline in both EBR PDFs.)
+25. **A limit/rule the block *validates against* is a PARAMETER, not a new XStep — check before you split or
+    branch.** Many "fields" a paper record shows are not separate recordable objects but **parameters** or **built-in
+    validators** already inside a reused block, so adding them changes **nothing** in the stack or XStep count — you
+    populate a parameter on the one instance. Verified canonical case: an acceptance **range (min/max)** on a numeric
+    value is the `IV_MIN` / `IV_MAX` parameters of the existing **`SMPL: Record Numeric Value`** plus its built-in
+    `/SMPL/PPPI_FM_MIN_MAX` validator (confirmed in DE1 100, §11 catalogue). So a range-checked value **stays one
+    reused `Record Numeric Value`** — do **not** add an XStep, do **not** split into separate min/target/max/actual
+    steps, and do **not** add a decision dropdown for the in/out-of-range branch (the validator's error handling does
+    the branch; see the VI Temperature Check). In the mock-up, **do not render `IV_MIN`/`IV_MAX` as fields** — they are
+    configured parameters, not things the operator sees as cells; state the range in the **instructions** (so the MBR
+    author knows what to set on the step) and rely on the validator's **error messaging** to tell the operator why an
+    entry is rejected. The mock-up shows just the single entry field. (Exception: a block *built to display targets* —
+    `SMPL: Solution Summary - Data Recording` — does carry Min/Max Target columns; that is its native layout, so there
+    the targets are shown.)
+    Same logic for other built-ins: Yes/No (`PPPI_FM_YES_NO_VALID`), within-expiry date (`CHECK_CHAR_DATE`), material
+    PN/batch (`PPPI_FM_VALI_MAT`), and the per-row **Performed By** on a goods-issue table (the `SIG_ADD_DB_CB`
+    callback fires per completing row — not a new step). Decomposition test: *"is this a value the operator records, or
+    a limit/rule the block validates against?"* — the latter is a parameter/validator on an existing step; the stack is
+    unchanged.
 
 ---
 
@@ -381,8 +502,11 @@ These recur in essentially every bioprocess batch record and should almost alway
 - **Signatures** (Performed By / Witness/Check By) — native to every step.
 - **Room/Equipment Assign** — equipment, scales, tanks, probes, freezers, autoclave, with calibration/steril expiry.
 - **Component / Material Addition** (+ SAP goods issue, batch, expiry) — incl. *Weight/Volumetric Component Measurements*.
-- **2-/3-/4-Variable Calc** — volume, MOI, formulation, tolerance, depth-filter sizing. The **4 Variable Calc** is
-  a newer extension of *Three Variable Calc* for 4 variables or mixed `×`/`+` formulas.
+- **Calc blocks — pick by input count.** **2 inputs → `SMPL: Calc Three Columns`** (`Value1 [op] Value2 = Result`
+  — e.g. Net = Gross − Tare, the depth-filter A÷B=C calcs); **3 inputs → `SMPL: Three Variable Calc`** (or the
+  4-Variable extension for 4 vars / mixed `×`+`+`); **a ranged result → `SMPL: Calc Range Values`** (e.g. flux
+  500/600/700). **There is no "Two Variable Calc" object** — a two-input calc *is* `Calc Three Columns` (Jason's
+  correction on the AZ POC crosswalk).
 - **Long Text Instructions** (the shell in DE2 903) — any instruction-only / sign-off step (verifications, line
   connections, installs, general notes). One shell, content authored in MBR.
 - **Record Text / Numeric Value** — capture a single labelled value (an equipment ID, a reading).
@@ -398,13 +522,15 @@ These recur in essentially every bioprocess batch record and should almost alway
   starting-material vessel/bag: **tare + net weight**, a **concentration result (g/L, e.g. SoloVPE)**, and the
   **DLIMS project / sample numbers** it's reported under, one row per vessel. (Covers a paper "Affinity/VF Product
   Information" table — AZD0543 VI §7.5 / C&D §7.4.)
-- **Confirmed DE1 100 reuse targets** (verified via `shaper_find`, §6): `SMPL: Solution Summary - Data Recording`
-  (results / concentration / pH-cond-temp / hold-time / incoming-product variants), `SMPL: Calc Three Columns`
-  (`Value1 [op] Value2 = Result` — e.g. Net = Gross − Tare), `SMPL: Three Variable Calc` / 4-Variable extension,
-  `SMPL: Sampling Record` + `SMPL: Sample Submission Chart`, `SMPL: Additional Assembly` + `SMPL: Material
-  Consumption` (Z_PICONS Goods Issue), `SMPL: Room/Equipment Assign`, `SMPL: Record Text Value`, `Long Text
-  Instructions (DE2 903)`, `SMPL: Yield Calculations`, `SMPL: Non-Routine Sampling Record`, `SMPL: Comments`,
-  Display BOM, weight pattern (Product Vessel Weigh), weight+timer (Product Mixing).
+- **Confirmed DE1 100 reuse targets / building blocks** (verified via `shaper_find`, §6): `SMPL: Solution Summary -
+  Data Recording` (results / concentration / pH-cond-temp / hold-time / incoming-product variants), `SMPL: Calc
+  Three Columns` (2-input), `SMPL: Three Variable Calc` (3-input), `SMPL: Calc Range Values` (ranged),
+  `SMPL: Equipment Select`, `SMPL: Record Text Value`, `SMPL: Record Numeric Value`, `SMPL: Material Consumption`,
+  `SMPL: Component Goods Issue`, `SMPL: Additional Assembly` (Z_PICONS Goods Issue), `SMPL: Room/Equipment Assign`,
+  `SMPL: Sampling Record` + `SMPL: Sample Submission Chart`, `SMPL: Non-Routine Sampling Record`,
+  `SMPL: Yield Calculations`, `SMPL: Solution Final Storage`, `SXS: Text Instructions with Sign-off`
+  (DE2 903: Long Text Instructions), `SXS: Phase Comments` (there is **no** clean "SMPL: Comments"),
+  Display BOM Material Table, `SMPL: Mixing Time` (Product Mixing), weight pattern (`SMPL: Record Scale Weight`).
 - **Filter Integrity Test**, **Centrifugation / Harvest Log**, **Transfer (Solution/Media)**, **Mixing**,
   **Timer (Begin/End/Summary)**, **Label Control & Reconciliation**, **Cleaning / Sanitization**,
   **Storage / Dispense**.
@@ -467,7 +593,16 @@ Formulation, Bulk Dispense, Cold Storage, Pre-Inactivation/Thaw, single-use bag 
 - [ ] List the recurring data-capture patterns.
 - [ ] `shaper_find`-search the whole library per pattern (`case_sensitive: true`); check for an existing client folder.
 - [ ] Build the XStep list; tag each **R / V / N** (rule: only N/V get mock-ups); apply the FM scoping rule.
-- [ ] **Name + verify each reuse target** in `DE1_100` (`shaper_find`) — no "to-be-confirmed" reuses.
+- [ ] **Decompose composites into a stack of existing blocks first** (rule 17) — assemble from `Material Consumption` /
+      `Component Goods Issue` / `Record Text-Numeric Value` / `Equipment Select` / `Calc Three Columns` / `Calc Range
+      Values` / dynamic dropdowns / Long Text, stacked under a hidden Conditional Header; reserve **N** for what no stack covers.
+- [ ] **Build multi-row tables by stacking collapsible blocks** (rule 20) — 2+ `Material Consumption` / Dynamic Dropdown /
+      `Record Text Value` / `Solution Summary - Data Recording` in a row collapse into one table; don't author a bespoke table XStep.
+- [ ] **Name + verify each reuse target** in `DE1_100` (`shaper_find`) — no "to-be-confirmed" reuses. Pick the calc
+      block by input count (2→Calc Three Columns, 3→Three Variable Calc, ranged→Calc Range Values).
+- [ ] **Near-match → ask the client** (rule 18): a block matching except 1–2 fields → ask if a client-system variant
+      exists (which system / no / not sure); batch these questions.
+- [ ] **GI with no batch field** (rule 19): flag how the goods issue is sourced (usually the upstream PN/batch).
 - [ ] Pick a **format per step** (Table / Form / Long Text / Composite-gated-blocks) using the §3 decision rule.
 - [ ] **Sweep for constants** — every fixed/standard value becomes a read-only **defaulted output**, not an entry field.
 - [ ] **Sweep for Goods-Issue points** (SAP-Consumption cells → `Z_PICONS` mvt 261) and **Label points** (SOP-0107056);
@@ -618,10 +753,29 @@ Observed in the AZ Bioreactor XSteps — reuse these mental models when designin
   what makes **review-by-exception** possible. Our developers already build this way; it's captured here as the
   context behind picking a field's type. (It does **not** change what a per-XStep functional spec documents — the
   spec stays scoped to the individual XStep as built in CMXSV; see the Functional Spec guide §5.)
-- **The dependency engine = electronic conditional logic:** INITIAL_ACTIVE + MBR_DEP_CHECK_ACTIVE turn the paper
-  record's *"if X, proceed / N/A the rest"* branching into enforced perform/verify-before-start gating.
+- **The dependency engine = electronic conditional logic:** the paper record's *"if X, proceed / N/A the rest"*
+  branching is enforced by **setup Commands with Formula triggers** — `TABLE.ACTIVATE`/`DEACTIVATE` and
+  `PROC_INSTR.ACTIVATE`/`DEACTIVATE` (+`LOCK`/`UNLOCK`) whose trigger evaluates a gate dropdown's `LV_DROP` value
+  (confirmed on `SMPL: EFS Additional Staging`); `INITIAL_ACTIVE` + `MBR_DEP_CHECK_ACTIVE` set the base active-state /
+  perform-verify gating but are **not** the dropdown gate itself. See the Mockups guide rule 21.
 - **Good-practice patterns to reuse:** dual-mode FMs (write vs read via a flag), ENQUEUE/DEQUEUE around writes,
   validators on every input, and a custom `ZTC_*` table layer for EBR-captured data (queryable/reportable).
+
+**Verified FM catalogue — DE1_100 `SiMPL XStep Library - Process Manu.` (read the real blocks with `shaper_get_version shape:"snapshot"`; parse FUNC/IN/SIG rows for `PPPI_FUNCTION_NAME` / `PPPI_VALIDATION_FUNCTION` + `PPPI_EVENT`).** Namespaces: `/SMPL/PPPI_FM_*` (core), `/SMPL/ELB_FM_*` (equipment), `/SMPL/MBR_DEP_*` (deployment), `ZSMPL_FM_*` (AZ custom, FUGR `ZAI_XSTEP_FMG`). Every block also carries `PPPI_FM_INITIAL_ACTIVE` (activation) + `MBR_DEP_CHECK_ACTIVE` (save) + signature FMs — assume them, don't draw them.
+
+| Building block | Validation FM (on column) | Key event-handler FM(s) | Mock-up implication |
+|---|---|---|---|
+| Record Numeric Value | `/SMPL/PPPI_FM_MIN_MAX` | `SET_FLOAT_VALUE` | Range-checked numeric = plain entry + Min/Max targets; the FM enforces range + error handling → **no decision dropdown for in/out-of-range** (this is why the VI Temperature Check dropped its dropdown). |
+| Equipment Select | `/SMPL/ELB_FM_GET_ASS_EQ_VALID` | `ZSMPL_FM_GET_ASSIGNED_EQUI_EBR` (Get button) | "Get [Type]" button auto-fills ID / Description / **Calibration Due Date**. |
+| Material Consumption / Component Goods Issue | `/SMPL/PPPI_FM_VALI_MAT` | `PPPI_FM_GI_SETUP` + `GI_SETUP_LINE` (`Z_PICONS`, mvt 261); `ZSMPL_FM_GET_MAT_ITEMS_EBR` | Green **SAP Goods Issue** badge + **Performed By** column (rule 22); PN/batch is validated, not free-text. |
+| Calc Three Columns / Three Variable / Range Values | `/SMPL/PPPI_FM_CALC_VALIDATE` | `CALC_SETUP` / `RANGE_CALC_SETUP` / `INPUT_VALUE` / `OUTPUT_VALUE` | Inputs entered, result is a computed read-only cell (`=` prefix); ranges give Min/Target/Max. |
+| Dropdown (Yes/No) Check & Val. | `/SMPL/PPPI_FM_YES_NO_VALID` | — | CT04-restricted dropdown; one dropdown per option (no multi-select, rule 23). |
+| Timer (Begin/End/Summary, Start-End Process) | — | `GET_PROC_STRT_TM` / `STR_PROC_STRT_TM` / `GET_PROC_TM` / `CLEAR_PROC_TM` | Record buttons stamp start/end; duration is computed. |
+| Date fields (expiry, storage) | `/SMPL/PPPI_FM_CHECK_CHAR_DATE` | — | Dates are validated (within-expiry) — a date domain, not free-text. |
+| Any signed step | `/SMPL/PPPI_FM_SIG_VALIDATION`, `VALI_SUPE_SIG` | `SIG_ADD_DB_CB` / `SIG_POPULATE_CB` | Signature validated + persisted; supervisor sign-off is a distinct validator. |
+| Vessel weigh / tables | `ZSMPL_FM_GET_MAT_ITEMS_EBR` | `ZSMPL_FM_WEIGHT_TRANSFER`, `SET_LINE_IDX` / `ZSMPL_FM_INCREMENT_TABLE_LINE` (`TABLE.LINE_ADDED`) | Net = Gross − Tare carried by an FM; table rows auto-index. |
+
+Lifecycle events seen: `DOCUMENT.GENERATED` (instantiate), `PARAMETER_CHANGED` (recalc / re-activate), `DOCUMENT.SAVING` (dependency check), `PROC_INSTR.COMPLETING` (persist), `TABLE.LINE_ADDING/ADDED`, `TABLE_LINE.COMPLETING`, `TABLE_LINE.ACTIVATED`.
 
 ---
 

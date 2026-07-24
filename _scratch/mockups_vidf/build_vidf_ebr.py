@@ -27,6 +27,8 @@ EXTRA_CSS = """
  .rdesc{font-size:11.5px;color:#3a3d42;line-height:1.5;}
  .reuses{font-size:10.5px;color:#2f6d2f;margin-top:6px;} .reuses b{color:#1f7a1f;}
  .reuses .tbd{color:#b26a00;}
+ .mkcap{font-size:10.5px;color:#3a3d42;font-style:italic;margin:12px 0 2px;border-top:1px dashed #cfd4d9;padding-top:9px;}
+ .mkcap b{color:#2f6d2f;font-style:normal;}
  .kban{font-size:11px;color:#555;margin:6px 0 16px;} .kban b{color:#2f4d2f;}
  .gate{margin:15px 0 2px;font-size:13px;color:#3a3d42;}
  .gate .glabel{display:inline-block;min-width:200px;font-weight:bold;} .gate .req{color:#d23b3b;}
@@ -112,35 +114,46 @@ def _reuses_line(step):
         return '<div class="reuses"><span class="tbd">Reuse target: to be confirmed in DE1 100</span></div>'
     return ''
 
+def _has_mockup(step):
+    return any(k in step for k in ('blocks', 'form', 'longtext', 'cols'))
+
+def _mockup_inner(step):
+    """Render the inline PI-Sheet visual for a step from its mock-up data (blocks / form / longtext / table)."""
+    if 'blocks' in step:
+        return blocks_rows(step['blocks'])
+    if 'form' in step:
+        return f'<div class="xform">{form_rows(step["form"])}</div>'
+    if 'longtext' in step:
+        return f'<div class="xsignoff">{signoff_rows(step.get("signoffs",["Performed By","Witnessed By"]))}</div>'
+    show_idx = step.get('index', True)
+    thead = th_cells(step['cols'], step.get('idx_label', '#') if show_idx else None)
+    rows = (render_row(step['cols'], step['rowdata'][0], index=show_idx) if step.get('rowdata')
+            else render_row(step['cols'], index=show_idx))
+    wl = esc(step.get('witness_label', 'Witness By'))
+    hdr = header_field_rows(step['header_fields']) if step.get('header_fields') else ''
+    ftr = f'<div class="xform">{form_rows(step["footer_fields"])}</div>' if step.get('footer_fields') else ''
+    witness = (f'<div class="witness">{wl}<span class="req"> *</span> <span class="b"></span></div>'
+               if step.get('witness', True) else '')
+    addrow = '<div class="addrow">+ Add Row</div>' if step.get('add_row', True) else ''
+    return (hdr + '<div class="di-label">Data Input</div>'
+            f'<table class="di">{thead}{rows}</table>{addrow}{ftr}{witness}')
+
 def card(step, show_old=True):
     ref = OLDREF.get(step['folder'], '')
     head = (f'<div class="xhead"><span class="xtitle">SMPL: {esc(step["title"])}{badge(step["kind"])}</span>'
             f'<span class="xref">Original BR: {esc(ref)}</span></div>')
     old = old_block(step['folder']) if show_old else ''
     if step['kind'] == 'R':
-        body = f'<div class="rdesc">{esc(step.get("desc", ""))}</div>{_reuses_line(step)}{old}'
-        return f'<div class="xcard reuse">{head}<div class="xbody">{body}</div></div>'
+        body = f'<div class="rdesc">{esc(step.get("desc", ""))}</div>{_reuses_line(step)}'
+        if _has_mockup(step):
+            body += ('<div class="mkcap">&#9660; Representative <b>PI Sheet view</b> &mdash; this is a '
+                     '<b>block stack</b> (no new object), assembled from the reused DE1&nbsp;100 blocks named above; '
+                     'each labelled section / table below is one of those blocks as it renders in the EBR:</div>'
+                     f'{_mockup_inner(step)}')
+        return f'<div class="xcard reuse">{head}<div class="xbody">{body}{old}</div></div>'
     instr = (f'<div class="sec-head">Instructions</div><div class="sec-body">{step.get("instructions","")}</div>'
              + _reuses_line(step))
-    if 'blocks' in step:
-        inner = instr + blocks_rows(step['blocks'])
-    elif 'form' in step:
-        inner = instr + f'<div class="xform">{form_rows(step["form"])}</div>'
-    elif 'longtext' in step:
-        inner = instr + f'<div class="xsignoff">{signoff_rows(step.get("signoffs",["Performed By","Witnessed By"]))}</div>'
-    else:
-        show_idx = step.get('index', True)
-        thead = th_cells(step['cols'], step.get('idx_label', '#') if show_idx else None)
-        rows = (render_row(step['cols'], step['rowdata'][0], index=show_idx) if step.get('rowdata')
-                else render_row(step['cols'], index=show_idx))
-        wl = esc(step.get('witness_label', 'Witness By'))
-        hdr = header_field_rows(step['header_fields']) if step.get('header_fields') else ''
-        ftr = f'<div class="xform">{form_rows(step["footer_fields"])}</div>' if step.get('footer_fields') else ''
-        witness = (f'<div class="witness">{wl}<span class="req"> *</span> <span class="b"></span></div>'
-                   if step.get('witness', True) else '')
-        addrow = '<div class="addrow">+ Add Row</div>' if step.get('add_row', True) else ''
-        inner = (instr + hdr + '<div class="di-label">Data Input</div>'
-                 f'<table class="di">{thead}{rows}</table>{addrow}{ftr}{witness}')
+    inner = instr + _mockup_inner(step)
     return f'<div class="xcard">{head}<div class="xbody">{inner}{old}</div></div>'
 
 def cover(show_old=True):

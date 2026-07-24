@@ -253,6 +253,10 @@ def blocks_rows(blocks):
             out.append(f'<div class="gate"><span class="glabel">{html.escape(lbl)}<span class="req"> *</span></span>'
                        f'<span class="fdd">{html.escape(opts)}<span class="fddchev">&#9662;</span></span>'
                        f'<span class="ghint">&mdash; activates / deactivates the section below</span></div>')
+        # Optional per-block sub-label (names the reused library block behind this section);
+        # opt-in via 'bsub' so existing mock-ups are unchanged.
+        if b.get('bsub'):
+            out.append(f'<div class="bsub">{html.escape(b["bsub"])}</div>')
         # Section header only on tabular blocks (green bar + optional GI badge).
         # Non-tabular process-instruction blocks carry no title — their fields self-label.
         if b.get('head') and 'cols' in b:

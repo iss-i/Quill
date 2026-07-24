@@ -31,8 +31,9 @@ from p2lib import is_heading, heading_text
 
 ROOT='..'
 DONOR=ROOT+'/Phase 2 XSteps/SMPL- Three Variable Calc/SMPL_Three Variable Calc XStep Design Specification.docx'
-OUTDIR=ROOT+'/AZ Phase 3 XStep Mock Ups (POC)/Additional Manufacturing Supplies'
+OUTDIR=ROOT+'/AZ Phase 3 Virus Inactivation and filtration/Functional Specs'
 OUT=OUTDIR+'/SMPL_Additional Manufacturing Supplies XStep Design Specification.docx'
+IMG_SRC=ROOT+'/AZ Phase 3 Virus Inactivation and filtration/XStep mockups/New XSteps/Common - Additional Manufacturing Supplies/image.png'
 
 # ---------------------------------------------------------------------------
 # Authored FMs (sourced from DE1 100 / local Function Modules folder), injected
@@ -325,7 +326,7 @@ Bul('Autoclave Exp. Date - entry, validated as a date (yyyy.mm.dd or "N/A").')
 Bul('Performed By - signature, required (one per row); signing raises the Z_PICONS goods-issue consumption.')
 P('Additional rows can be added with Add Row; the rows are numbered automatically. A step-level Witnessed By '
   'signature is captured in the footer.')
-add(IMG(OUTDIR+'/image.png'))
+add(IMG(IMG_SRC))
 BL()
 
 H('Function Module(s)')
@@ -374,14 +375,15 @@ BL()
 
 H('Document References')
 T2(['Reference No.','Document Title'],
-   [['1','AZD8630 - Affinity (CaptureSelect CH1-XL) Manufacturing Directions (MABR-0023643, PN 8010457)'],
-    ['2','SiMPL XStep Library - Process Manufacturing (DE1 100)'],
-    ['3','SMPL: Room/Equipment Assign XStep Design Specification V1.3 (reference template)']])
+   [['1','AZD0543 - Virus Inactivation (Low pH) Manufacturing Directions (PN 8012441)'],
+    ['2','AZD0543 - Concentration & Diafiltration Manufacturing Directions (PN 8012475)'],
+    ['3','SiMPL XStep Library - Process Manufacturing (DE1 100)'],
+    ['4','SMPL: Room/Equipment Assign XStep Design Specification V1.3 (reference template)']])
 BL()
 
 H('Revision History')
 T3(['Version No.','Description','Date'],
-   [['1.0','Initial document','2026-07-14']])
+   [['1.0','Initial document','2026-07-23']])
 
 # ---------------- fixes + save ----------------
 B.neutralise_empty_headings(body)

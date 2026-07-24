@@ -152,7 +152,7 @@ SEC2FOLDER = {
    6:  "Common - Process Notes and Global Limits",
    7:  "CDF - Minimum Membrane Surface Area",
    8:  "CDF - Run Skid Recipe",
-   9:  "Common - Hold Time Table",
+   9:  "Common - Product Mixing",
    10: "CDF - Run Skid Recipe",
    11: "CDF - Record CIPDS Skid Cassette Info",
    12: "CDF - Process Input Calculations",
